@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/member-regis', 'Auth\RegisterController@registerUser')->name('user.register');
+Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('member.update');
+Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
+Route::get('/downlaod-proposal', 'ProposalController@download')->name('proposal.download');
+Route::post('/upload-proposal', 'ProposalController@upload')->name('proposal.upload');
+Route::get('/payment', 'PaymentController@index')->name('payment.index');
+Route::post('/payment', 'PaymentController@upload')->name('payment.upload');

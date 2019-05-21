@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Payment;
+use Illuminate\Http\Request;
+use Validator;
+use Auth;
+
+class PaymentController extends Controller
+{
+    public function index()
+    {
+        $payment = Payment::where('user_id', Auth::user()->id)->first();
+        return view('payment', compact('payment'));
+    }
+
+    public function upload(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'payment' => 'required'
+        ]);
+            
+        if($validator->fails()){
+            return back()->withErorrs($validator);
+        }
+        $payment = Payment::where('user_id', Auth::user()->id)->first();
+
+        $fileNameWithExt = $request->payment->getClientOriginalName();
+        $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+        $extension = $request->payment->getClientOriginalExtension();
+        $fileNametoStore = $filename.'_'.time().'.'.$extension;
+        $path= $request->payment->storeAs('public/payment', $fileNametoStore);
+
+        if($payment == null){
+            Payment::create([
+                'user_id' => Auth::user()->id,
+                'payment' => $fileNametoStore
+            ]);
+        }else{
+            unlink(storage_path('app/public/payment/'.$payment->payment));
+            $payment->payment = $fileNametoStore;
+            $payment->save();
+        }
+        return back()->with('success', 'Success Upload payment');
+    }
+}

@@ -122,7 +122,6 @@ class RegisterController extends Controller
             'phone' => $phone[$i],
             'line' => $line[$i],
             'ktp' => $fileNametoStore[$i],
-            'role' => 'Member'
         ]);
        }   
        return redirect()->route('login');
