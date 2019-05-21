@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 2em 0 4em 0;;
+    background: #f5f5f5;
+    overflow-x: hidden;
+    /* background-image: linear-gradient(45deg,#2AF598,#08B3E5); */
+}
+h2{
+    text-align: center;
+    margin-bottom: 1em;
+    border-bottom: 1px rgba(0, 0, 0, .8) solid;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1em;
+    border-bottom: 1px rgba(0, 0, 0, .8) solid;
+}
+.gambar-input{
+    height:inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    width: 85%;
+    margin-top: 2em;
+    background-image: url('../image/fluid-bg.png');
+    background-position: 0%;
+    background-size: cover;
+    border-radius: 20px;
+    animation: reveal 2s;
+    position: relative;
+}
+#grup > .row > .input-container, #member1 > .row > .input-container{
+    padding: 2em;
+    border-radius: inherit;
+    background: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.form-container > .row > .input-container{
+    padding: 2em;
+    border-radius: inherit;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.img-fluid{
+    max-width: 80%;
+}
+form > h3{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.form-ktp > .form-control{
+    padding-left: 0;
+    border: none;
+}
+.form-ktp > input{
+    outline: none;
+}
+.form-ktp > input:focus{
+    outline: none;
+}
+#plus{
+    margin: 1.5em auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+#plus > div{
+    margin-left: .5em;
+    font-weight: 900;
+}
+#plus > span{
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    font-size: 2.5em;
+    color: white;
+    background: #38c172;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#plus > span:hover{
+    background: #148242;
+}
+#plus>span:hover + .text-success{
+    color: #148242 !important;
+}
+.button-dismiss{
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+    background: #dc3545;
+    font-weight: bolder;
+    display: flex;
+    position: absolute;
+    top: -0.5em;
+    right:-0.5em;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes reveal{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes hide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translatex(120%);
+    }
+}
+.row input{
+    border-radius: 20em;
+}
+
+input[type="file"]{
+    border-radius: 0%;
+}
+.btn-regis{
+    display: block;
+    margin: 1em auto 0 auto;
+    background-color:#148242;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 2em;
+}
+@media only screen and (max-width:768px) {
+    .input-container{
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 20px!important;
+        border-bottom-right-radius: 20px!important;
+    }
+}
+  

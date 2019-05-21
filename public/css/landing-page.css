@@ -1,0 +1,541 @@
+:root{
+    --primary-blue : #c3def3;
+    --secondary-blue : #daecf8;
+    --dark-blue : #365676;
+}
+body{
+    margin: 0;
+}
+
+
+.landing-page{
+    min-height: 100vh;
+    background-color: rgba(255, 255,255,1);
+    background-image: url('../image/landing-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 0;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: none;
+    margin: .5em 0; 
+
+    
+}
+
+.nav-left {
+    max-width: 3em;
+}
+
+
+.btn-burger{
+    width: 36px;
+    height: 36px;
+    background: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    text-align:center;
+}
+
+.btn-burger:focus{
+    outline: none;
+}
+
+.span-1,.span-2,.span-3{
+    background-color:var(--dark-blue);
+    width: 28px;
+    height: 3px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.btn-burger-toggle{
+    position: relative;
+}
+
+.btn-burger-toggle > .span-1{
+    transform: rotate(135deg);
+    position: absolute;
+    background: white;
+    width: 30px;
+    z-index: 300;
+}
+.btn-burger-toggle > .span-2{
+    transform: rotate(45deg);
+    width: 30px;
+    background: white;
+    position: absolute;
+    z-index: 300;
+
+}
+.btn-burger-toggle > .span-3{
+    transform: rotate(135deg);
+    width: 30px;
+    background: white;
+    position: absolute;
+    z-index: 300;
+    
+}
+
+
+.section-navbar{
+    display: none;
+    position: fixed;
+    z-index: 0;
+    left: 100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: green;
+    transition: left .5s  ease-in-out;
+}
+.section-navbar-left{
+    left: 0 !important;
+}
+.no-burger > a{
+    color: var(--dark-blue);
+    padding: .8em;
+    cursor: pointer;
+    margin: .8em;
+    transition: .5s;
+}
+.no-burger > a:hover{
+    font-size: 1.2em;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.containers > h5 {
+    margin: 1.2em 0;
+}
+
+.containers > label{
+    cursor: pointer;
+}
+
+.bic-img{
+    max-width: 35%;
+    margin: 10% 0;
+}
+
+.section-2{
+    min-height: 100vh;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 450px;
+}
+
+.containers > h1{
+    font-size: 3.5em;
+}
+
+.my-button{
+    width: 12em;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.my-button > div{
+    width: 75%;
+    background: #88b8e5;
+    display: flex;
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.my-button > span{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #88b8e5;
+    color: #88b8e5;
+    border-left: none;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.section-2{
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.direction-wrap{
+    flex-direction: row-reverse;
+}
+
+.time-line{
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 5em 0;
+    background: #365676;
+    align-items: center;
+    box-sizing: border-box;
+}
+.card{
+    margin: 1em 0;
+    height: 14em;
+}
+
+.ball{
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d3d3d3;
+}
+.social-media > span > a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+.flex-centers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us{
+    min-height: 100vh;
+    background: #575989;
+    color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.event-exp{
+    width: 100%;
+    min-height: 100vh;
+    background: red;
+}
+
+.container-sosmed{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    height: 10vh;
+    align-content: space-around;
+    color: white;
+}
+
+
+.container-sosmed > * {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.container-sosmed > i{
+    font-size: 2em;
+    margin-right: .5em;
+}
+
+
+.contact-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-left > img{
+    width: 50%;
+}
+.contact-right {
+    width: 50%;
+}
+.form-container{
+    width: 70%;
+    height: 30em;
+    border-radius: 1em;
+    background: white;
+    color: #365676;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 80%;
+}
+
+.form-container > h4{
+    margin-bottom: 1em;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.timeline *{
+    box-sizing: border-box;
+}
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .containert {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .containert::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .active-time::after {
+      background: #FF9F55;
+  }
+  
+  /* Place the container to the left */
+  .left-t {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right-t {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left-t::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-t::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-t::after {
+    left: -13px;
+  }
+  
+  /* The actual content */
+  .contentt {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .containert {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .containert::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left-t::after, .right-t::after {
+    left: 19px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right-t {
+    left: 0%;
+    }
+
+.event-exp > .carousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explaination{
+    width: 80%;
+    height: 60%;
+    background: green;
+}
+.social-media{
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-media > span{
+    width: 50%;
+}
+.email-small{
+    display: none;
+}
+.email-big{
+    display: block;
+}
+.location{
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+@media only screen and (max-width:768px){
+    .btn-burger{
+        display: flex;
+        position: relative;
+    }
+    .landing-content-left{
+        width: 100%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+    .landing-content-right{
+        width: 100%;
+        background-color: white;
+    }
+    .section-navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .no-burger{
+        display:none;
+    }
+    .bic-img{
+        max-width: 50%;
+        margin: 10% 0;
+    }
+    .containers {
+        width: 80%;
+        font-size: 10px;
+    }
+    .my-button{
+        margin: auto;
+        font-size: 16px;
+    }
+    .landing-page{
+        min-height: 100vh;
+        overflow: auto;
+    }
+    .contact-left{
+        width: 100%;
+        margin: 20vh 0;
+    }
+    .contact-right{
+        width: 100%;
+        margin-bottom: 20vh;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .bic-img{
+        max-width: 80%;
+        margin: 20% 0;
+    }
+    .contact-left{
+        width: 100%;
+        margin: 10vh 0;
+    }
+    .contact-left > img{
+        width: 70%;
+    }
+    .social-media{
+        width: 90%;
+    }
+    .contact-right{
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .email-small{
+        display: block;
+    }
+    .email-big{
+        display: none;
+    }
+}
