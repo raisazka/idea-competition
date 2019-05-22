@@ -64,8 +64,8 @@ $(document).ready(function(){
         if($('#password').val().length < 8){
             $(a).parent().find('.pass_wrong').append("must be at least 8").css('font-size','.8em');   
         }
-        else{
-            alert("masuk");
+        else
+        {
             $('#c-password').parent().find('.passc_wrong').empty();
             if(a.val() !== $('#c-password').val()){
                 $('#c-password').parent().find('.passc_wrong').append("confirmastion is wrong").css('font-size','.8em');

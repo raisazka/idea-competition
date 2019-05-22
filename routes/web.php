@@ -12,8 +12,11 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-Route::get('/', function(){
+Route::get('/regis', function(){
     return view('registration');
+});
+Route::get('/logins',function(){
+    return view('login');
 });
 Auth::routes();
 
