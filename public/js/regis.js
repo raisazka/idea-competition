@@ -64,8 +64,7 @@ $(document).ready(function(){
         if($('#password').val().length < 8){
             $(a).parent().find('.pass_wrong').append("must be at least 8").css('font-size','.8em');   
         }
-        else
-        {
+        else{
             $('#c-password').parent().find('.passc_wrong').empty();
             if(a.val() !== $('#c-password').val()){
                 $('#c-password').parent().find('.passc_wrong').append("confirmastion is wrong").css('font-size','.8em');
@@ -122,9 +121,14 @@ $(document).ready(function(){
     function validate_file(a){
         $(a).parent().find('.ktp_wrong').empty();
         var ext = a.val().split('.').pop().toLowerCase();
-        if(a.val()==="")
-        if($.inArray(ext, ['png','jpg','jpeg','pdf']) == -1) {
+        if(a.val()===""){
             $(a).parent().find('.ktp_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
+        }
+        else{
+            if($.inArray(ext, ['png','jpg','jpeg','pdf']) == -1) {
+                $(a).parent().find('.ktp_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
+                $(a).val('');
+            }
         }
         
     }
