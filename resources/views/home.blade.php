@@ -71,5 +71,6 @@
     </div>
 <a href="{{route('proposal.index')}}">Upload Proposal</a>
 <a href="{{route('payment.index')}}">Upload Payment</a>
+<a href="{{route('group.index')}}">Edit Group</a>
 </div>
 @endsection

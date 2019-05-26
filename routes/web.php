@@ -23,3 +23,5 @@ Route::get('/downlaod-proposal', 'ProposalController@download')->name('proposal.
 Route::post('/upload-proposal', 'ProposalController@upload')->name('proposal.upload');
 Route::get('/payment', 'PaymentController@index')->name('payment.index');
 Route::post('/payment', 'PaymentController@upload')->name('payment.upload');
+Route::get('/edit-group', 'GroupController@index')->name('group.index');
+Route::patch('/edit-group', 'GroupController@update')->name('group.update');
