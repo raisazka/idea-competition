@@ -107,7 +107,7 @@
                                 </span>
                             </div>              
                         </div>
-                        <div class="row">
+                        <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center justify-content-md-between justify-content-lg-between">
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                                 <label @if($loop->first)for="cv" @elseif($loop->index ==1)for="cv1" @else for="cv2" @endif>Curriculum Vitae</label>
                                 <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('cv') is-invalid @enderror" @if($loop->first)id="cv" @elseif($loop->index ==1)id="cv1" @else id="cv2" @endif name="cv" required autofocus>
@@ -117,6 +117,7 @@
                                     @endif
                                 </span>
                             </div>  
+                            <button class="btn-update " id="btn-update-member" type="button">Update Data</button>
                         </div>
                     </form>
                 </div>
@@ -129,7 +130,7 @@
                 <div class="container input-container col-lg-8 col-md-8 col-sm-12 col-xs-12 order-sm-first order-xs-first">
                     <h1>Grup</h1>
                     <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xs-12">
                             <label for="Group">Group Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" id="Group" name="name" value="{{ old('name') }}" autocomplete="name" placeholder="Group Name" required autofocus>
                             <span class="name_wrong" style="color:red; font-weight:700; font-size: .8em">
@@ -138,7 +139,7 @@
                                 @endif
                             </span>
                         </div>
-                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                        <div class="form-group col-md-12 col-lg-12 col-sm-12 col-xs-12">
                             <label for="username">Username</label>
                             <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" value="{{ old('username') }}" placeholder="Username" autocomplete="username" required autofocus >
                             <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
@@ -147,41 +148,14 @@
                                 @endif
                             </span>
                         </div>
-                        <div class="form-group col-12">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" value="{{ old('password') }}" autocomplete="password"  placeholder="Enter Password"  required autofocus >
-                            <span class="pass_wrong" style="color:red; font-weight:700; font-size: .8em">
-                                @if ($errors->has('password'))
-                                    {{ $errors->first('password') }}
-                                @endif
-                            </span>
-                        </div>
-                        <div class="form-group col-12">
-                            <label for="c-password">Confirm Password</label>
-                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="c-password" value="{{ old('password') }}" name="password" placeholder="Confirm Password" required autofocus>
-                            <span class="passc_wrong" style="color:red; font-weight:700; font-size: .8em">
-                                @if ($errors->has('password'))
-                                    {{ $errors->first('password') }}
-                                @endif
-                            </span>
-                        </div>
-                        <div class="form-check" style="margin-left:1em;">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Agree with Terms & Condition</label>
-                        </div>
                     </div>
-                    <button class=" btn-regis" id="btn-register" type="button">Register</button>
+                    <button class=" btn-update text-center" id="btn-register" type="button">Update Data</button>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid form-container " id="info">
-            <div class="row">
-                <h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? click-here</h5>
             </div>
         </div>
     </div>
     <img src="image/wave_bawah.png" class="wave wave_bawah">
     <script src="js/app.js"></script>
-    <script src="js/regis.js"></script>
+    <script src="js/dashboard-home.js"></script>
 </body>
 </html>

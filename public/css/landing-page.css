@@ -3,7 +3,9 @@
 	--secondary-blue: #daecf8;
 	--dark-blue: #365676;
 }
-
+html{
+	scroll-behavior: smooth;
+}
 body {
     margin: 0;
 }
@@ -27,7 +29,7 @@ body {
 }
 
 .nav-have{
-	background: #b8d7f5;
+	background: #556489;
 	color:white;
 }
 
@@ -113,7 +115,7 @@ body {
 .span-1,
 .span-2,
 .span-3 {
-	background-color: var(--dark-blue);
+	background-color: white;
 	width: 28px;
 	height: 3px;
 	border-radius: 10px;
@@ -122,19 +124,26 @@ body {
 
 .btn-burger-toggle {
 	position: relative;
+	background: #dc3545;
+	border-radius: 10em;
+	transition: .5s;
+}
+
+.color-super-dark{
+	background-color: var(--dark-blue);
 }
 
 .btn-burger-toggle>.span-1 {
 	transform: rotate(135deg);
 	position: absolute;
 	background: white;
-	width: 30px;
+	width: 25px;
 	z-index: 300;
 }
 
 .btn-burger-toggle>.span-2 {
 	transform: rotate(45deg);
-	width: 30px;
+	width: 25px;
 	background: white;
 	position: absolute;
 	z-index: 300;
@@ -142,12 +151,20 @@ body {
 
 .btn-burger-toggle>.span-3 {
 	transform: rotate(135deg);
-	width: 30px;
+	width: 25px;
 	background: white;
 	position: absolute;
 	z-index: 300;
 }
-
+.section-navbar-list > a{
+	color: white;
+	background: #212529;;
+	font-size: 1.5em;
+	padding: .2em 1em;
+	border-radius: 2em;
+	cursor: pointer;
+	text-decoration: none;	
+}
 .section-navbar {
 	display: none;
 	position: fixed;
@@ -157,7 +174,7 @@ body {
 	height: 100vh;
 	width: 100%;
 	color: white;
-	background: green;
+	background: #EFF3F4;;
 	transition: left .5s ease-in-out;
 }
 .navbar-mobile{
@@ -730,8 +747,9 @@ form {
 		}
 		.section-navbar {
 			display: flex;
+			width: 100%;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
 		}
 		.no-burger {

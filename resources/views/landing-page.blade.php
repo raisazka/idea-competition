@@ -21,24 +21,26 @@
         </div>
         <div class="nav-right">
             <div class="no-burger">
-                <a href="section-2">What is BIC</a>
-                <a href="">What is BNCC</a>
-                <a href="">Benefit</a>
-                <a href="">Registration</a>
+                <a href="#section-2">What is BIC</a>
+                <a href="#regis-page">Registration</a>
+                <a href="#time-line">Timeline</a>
+                <a href="#contact-us">Contact Us</a>
             </div>
             <button class="btn-burger">
-                <span class="span-1"></span>
-                <span class="span-2"></span>
-                <span class="span-3"></span>
+                <span class="span-1 color-super-dark"></span>
+                <span class="span-2 color-super-dark"></span>
+                <span class="span-3 color-super-dark"></span>
             </button>
         </div>
     </div>
    
     <div class="section-navbar">
-        <div class="section-navbar-list">What is BIC</div>
-        <div class="section-navbar-list"><a href="">What is BNCC</a></div>
-        <div class="section-navbar-list"><a href="">Benefit</a></div>
-        <div class="section-navbar-list"><a href="">Registration</a></div>
+        <img src="image/wave_atas.png" style="width:100%;">
+        <div class="section-navbar-list"><a href="#section-2">What is BIC</a></div>
+        <div class="section-navbar-list"><a href="#regis-page">Registration</a></div>
+        <div class="section-navbar-list"><a href="#time-line">Timeline</a></div>
+        <div class="section-navbar-list"> <a href="#contact-us">Contact Us</a></div>
+        <img src="image/wave_bawah.png" style="width:100%">
     </div>
     <div class="landing-content">
         <div class="containers">

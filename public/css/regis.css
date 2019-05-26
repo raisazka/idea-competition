@@ -164,6 +164,18 @@ input[type="file"]{
     border-radius: 2em;
     transition: .5s;
 }
+.btn-update{
+    display: block;
+    background-color:#212529!important;
+    color:white;
+    border: #212529 solid 2px; 
+    font-weight: bold;
+    cursor: pointer;
+    height: 3em;
+    padding: .1em 1em;
+    border-radius: 2em;
+    transition: .5s;
+}
 .content-promosi{
     width: 100%;
     transform: translateY(-5em);
@@ -192,6 +204,9 @@ input[type="file"]{
 .btn-regis:hover{ 
     color:#EFF3F4;
     background: #212529 !important; 
+}
+.btn-update:hover{
+    transform: scale(1.05);
 }
 @media only screen and (max-width:768px) {
     .gambar-input{
