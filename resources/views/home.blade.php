@@ -34,18 +34,20 @@
                        
                     <hr>
                     @foreach ($members as $member)
-                        @if($loop->first)
-                        <h2>Leader</h2>
-                        @else
-                        <h2>Member</h2>
-                        @endif
+                    @if($loop->first)
+                    <h2>Leader</h2>
+                    @elseif($loop->index == 1)
+                    <h2>Member 1</h2>
+                    @else
+                    <h2>Member 2</h2>
+                    @endif
                     <form action="{{route('member.update', $member->id)}}" enctype="multipart/form-data" method="POST">
                         @csrf
                         @method('PATCH')
                             <div class="row">
                             <div class="col-lg-6" id="member{{$member->id}}">
                                     <label for="member_name">Member Name</label>
-                                        <input id="member_name" type="text" class="form-control" name="member_name" placeholder="Member Name" value="{{$member->member_name}}">
+                                        <input id="member_name" type="text" class="form-control" name="member_name" placeholder="Member Name" value="{{$member->member_name}}" >
                                             <label for="email">E-Mail</label>
                                         <input id="email" type="text" class="form-control" name="email" placeholder="Member E-mail" value="{{$member->email}}">
                                     <label for="phone">Phone Number</label>

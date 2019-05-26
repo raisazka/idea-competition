@@ -58,15 +58,4 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
     }
-    // public function authenticate(Request $request)
-    // {
-    //     dd(Auth::attempt(['username' => $request->email]));
-    //     if (Auth::attempt(['username' => $request->email, 'password' => $request->pasword])) {
-    //         Authentication passed...
-    //         return redirect()->intended('dashboard');
-    //     }
-    //     else{
-    //         return redirect('logins')->with('message','Invalid Credential')->withInput();
-    //     }
-    // }
 }

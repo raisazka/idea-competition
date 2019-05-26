@@ -39,7 +39,7 @@
         <div class="container-fluid form-container" id="grup">
             <div class="row">
                 <div class="container-fluid gambar-input col-lg-4 col-md-4 col-sm-12 col-xs-12 "> <img src="image/team.png" class="img-fluid" alt="hello"> </div>
-                <div class="container input-container col-lg-8 col-md-8 col-sm-12 col-xs-12 order-sm-last order-xs-last">
+            <div class="container input-container col-lg-8 col-md-8 col-sm-12 col-xs-12 order-sm-last order-xs-last">
                     <h1>Login</h1>
                     <div class="row">
                         <div class="form-group col-12">
