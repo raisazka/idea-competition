@@ -77,38 +77,36 @@ class RegisterController extends Controller
 
        $validator = Validator::make($request->all(),[
             "name"  => "required|string|min:5",
-            "username" => 'required|string|alpha_dash',
+            "username" => 'required|string|alpha_dash|distinct|unique:users,username',
             "password" => 'required|string|min:6',
             "member_name.*" => 'required|max:255',
-            "email.*" => 'required|email|distinct',
-            "phone.*" => 'required|max:12',
-            "line.*" => 'required|max:255',
+            "email.*" => 'required|email|distinct|unique:members,email',
+            "phone.*" => 'required|max:12|distinct|unique:members,phone',
+            "line.*" => 'required|max:255|distinct|unique:members,line',
             "dob.*" => 'required|date',
             "ktp.*" => 'required'
         ]);
-
+        
        $name = $request->name;
        $username = $request->username;
        $password = $request->password;
-
        $m_name = $request->member_name;
        $email = $request->email;
        $dob = $request->dob;
        $phone = $request->phone;
        $line = $request->line;
        $ktp = $request->file('ktp');
-
+       
        $count = count($email);
-
        if($validator->fails()){
-           return back()->withErrors($validator);
-       }
-
-       $group = new User;
-       $group->name = $name;
-       $group->username = $username;
-       $group->password = Hash::make($password);
-       $group->save();
+            return back()->withErrors($validator)->withInput();
+        }
+        
+        $group = new User;
+        $group->name = $name;
+        $group->username = $username;
+        $group->password = Hash::make($password);
+        $group->save();
        for($i=0; $i < $count; $i++){
         $fileNameWithExt[] = $ktp[$i]->getClientOriginalName();
         $filename[] = pathinfo($fileNameWithExt[$i], PATHINFO_FILENAME);

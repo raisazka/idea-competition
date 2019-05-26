@@ -26,7 +26,8 @@
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_bawah">
-    <form action="google.com" method="get">
+    <form action="{{url('login')}}" method="POST">
+        @csrf
         <div class="content-promosi text-center container">
             <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
             <h1>With</h1>
@@ -43,13 +44,21 @@
                     <div class="row">
                         <div class="form-group col-12">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required>
-                            <span style="color:red; font-size:0; font-weight:700;  " class="line_wrong" ></span>
+                            <input type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" name="username" value="{{ old('username') }}" placeholder="Username" required autofocus >
+                            <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                 @error('username')
+                                    <strong>{{ $message }}</strong>
+                                @enderror
+                            </span>
                         </div>
                         <div class="form-group col-12">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
-                            <span style="color:red; font-size:0; font-weight:700;" class="pass_wrong" ></span>
+                            <label for="password">Password</label>                            
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"  name="password" autocomplete="current-password"  placeholder="Enter Password"  required autofocus >
+                            <span class="pass_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                 @error('password')
+                                    <strong>{{ $message }}</strong>
+                                @enderror
+                            </span>
                         </div>
                     </div>
                     <button class="btn btn-regis" id="btn-login">Login</button>

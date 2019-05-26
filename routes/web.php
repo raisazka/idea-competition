@@ -21,6 +21,7 @@ Route::get('/logins',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/logins','Auth\LoginController@authenticate')->name('user.logins');
 Route::post('/member-regis', 'Auth\RegisterController@registerUser')->name('user.register');
 Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('member.update');
 Route::get('/proposal', 'ProposalController@index')->name('proposal.index');

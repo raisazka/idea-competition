@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
+
 class LoginController extends Controller
 {
     /*
@@ -37,13 +38,16 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
      /**
      * Get the needed authorization credentials from the request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+    public function username()
+    {
+        return 'username';
+    }
     protected function credentials(Request $request)
     {
         $field = filter_var($request->get($this->username()), FILTER_VALIDATE_EMAIL)
@@ -54,4 +58,15 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
     }
+    // public function authenticate(Request $request)
+    // {
+    //     dd(Auth::attempt(['username' => $request->email]));
+    //     if (Auth::attempt(['username' => $request->email, 'password' => $request->pasword])) {
+    //         Authentication passed...
+    //         return redirect()->intended('dashboard');
+    //     }
+    //     else{
+    //         return redirect('logins')->with('message','Invalid Credential')->withInput();
+    //     }
+    // }
 }
