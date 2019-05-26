@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                                 <label @if($loop->first)for="name" @elseif($loop->index ==1)for="name1" @else for="name2" @endif>Full Name</label>
-                                <input type="text" class="form-control @error('member_name') is-invalid @enderror" value="{{$member->member_name}}" autocomplete="member_name" name="member_name" @if($loop->first)id="name" @elseif($loop->index ==1)id="name1" @else id="name2" @endif  placeholder="Full Name" required autofocus disabled>
+                                <input type="text" style="border:none; font-weight:900;" class="form-control @error('member_name') is-invalid @enderror" value="{{$member->member_name}}" autocomplete="member_name" name="member_name" @if($loop->first)id="name" @elseif($loop->index ==1)id="name1" @else id="name2" @endif  placeholder="Full Name" required autofocus disabled>
                                 <span class="name_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('member_name'))
                                         {{ $errors->first('member_name') }}
@@ -70,7 +70,7 @@
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                                 <label @if($loop->first)for="email" @elseif($loop->index ==1)for="email1" @else for="email2" @endif>Email</label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" @if($loop->first)id="email" @elseif($loop->index ==1)id="email1" @else id="email2" @endif value="{{$member->email}}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
+                                <input type="email" disabled style="border:none; font-weight:900;" class="form-control @error('email') is-invalid @enderror" name="email" @if($loop->first)id="email" @elseif($loop->index ==1)id="email1" @else id="email2" @endif value="{{$member->email}}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
                                 <span class="email_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('email'))
                                         {{ $errors->first('email') }}
@@ -90,22 +90,22 @@
                             </div>
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                                 <label @if($loop->first)for="dob" @elseif($loop->index ==1)for="dob1" @else for="dob2" @endif>Date Of Birth</label>
-                                <input type="date" min="1997-01-01" max="2002-01-01" name="dob" value="{{$member->dob}}" class="form-control  @error('dob') is-invalid @enderror" @if($loop->first)id="dob" @elseif($loop->index ==1)id="dob1" @else id="dob2" @endif placeholder="Date Of Birth" required autofocus>
+                                <input type="date" disabled style="border:none; font-weight:900;" min="1997-01-01" max="2002-01-01" name="dob" value="{{$member->dob}}" class="form-control  @error('dob') is-invalid @enderror" @if($loop->first)id="dob" @elseif($loop->index ==1)id="dob1" @else id="dob2" @endif placeholder="Date Of Birth" required autofocus>
                                 <span class="dob_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('dob'))
                                         {{ $errors->first('dob') }}
                                     @endif
                                 </span>
                             </div>
-                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
+                            {{-- <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                                 <label @if($loop->first)for="ktp" @elseif($loop->index ==1)for="ktp1" @else for="ktp2" @endif>Kartu Mahasiswa</label>
-                                <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp') is-invalid @enderror" @if($loop->first)id="ktp" @elseif($loop->index ==1)id="ktp1" @else id="ktp2" @endif name="ktp" required autofocus>
+                                <input type="file"  accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp') is-invalid @enderror" @if($loop->first)id="ktp" @elseif($loop->index ==1)id="ktp1" @else id="ktp2" @endif name="ktp" required autofocus>
                                 <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('ktp'))
                                         {{ $errors->first('ktp') }}
                                     @endif
                                 </span>
-                            </div>              
+                            </div>               --}}
                         </div>
                         <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center justify-content-md-between justify-content-lg-between">
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">

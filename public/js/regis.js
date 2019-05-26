@@ -4,15 +4,14 @@ var dis_1;
 var dis_2;
 var email_error ='Email Must be gmail and include @'
 $(document).ready(function(){
-    
     $('#member1').hide();
     $('#member2').hide();
     req_member1(false);
     req_member2(false);
     Be_return();
-    $('#try').click(function(){
-        auto_isi();
-    });
+    // $('#try').click(function(){
+    //     auto_isi();
+    // });
     function add_people(){
         if(flag1 === 0){
             flag1 = 1;
@@ -92,6 +91,7 @@ $(document).ready(function(){
         else{
             mem2 = true;
         }
+        alert(same);
         group = validate_group();
         if(lead === true && mem1 === true && mem2 === true && group === true){
             $('#btn-register').prop('type','submit');
@@ -255,6 +255,36 @@ $(document).ready(function(){
                 $(a).parent().find('.dob_wrong').append("must be around 17-24 years old").css('font-size','.8em');
                 return false;
             }
+            return true;
+        }
+    }
+    function same_name(a,b,c,d){
+        if(a.val()===b.val()&&b.val()===c.val()){
+            console.log("di func1");
+            $(a).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            $(b).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            $(c).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            return false;
+        }
+        else if(a.val()===b.val()){
+            console.log("di func2");
+            $(a).parent().find('.name_wrong').append("cannot be the same").css('font-size','.8em');
+            $(b).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            return false;
+        }
+        else if(a.val()===c.val()){
+            console.log("di func3");
+            $(a).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            $(c).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            return false;
+        }
+        else if(b.val()===c.val()){
+            console.log("di func4");
+            $(b).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            $(c).parent().find(d).append("cannot be the same").css('font-size','.8em');
+            return false;
+        }
+        else{
             return true;
         }
     }

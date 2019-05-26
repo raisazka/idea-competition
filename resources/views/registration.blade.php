@@ -279,7 +279,7 @@
         </div>
         <div class="container-fluid form-container " id="info">
             <div class="row">
-                <h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? click-here</h5>
+            <a href="{{url('login')}}"><h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? click-here</h5></a>
             </div>
         </div>
     </form>
