@@ -7,7 +7,9 @@ use App\Member;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\RegisterMail;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -123,7 +125,8 @@ class RegisterController extends Controller
             'line' => $line[$i],
             'ktp' => $fileNametoStore[$i],
         ]);
-       }   
+       }
+       Mail::to($email[0])->send(new RegisterMail);
        return redirect()->route('login');
     }
 }

@@ -48,17 +48,8 @@ class HomeController extends Controller
         $member = Member::findOrFail($id);
         unlink(storage_path('app/public/ktp/'.$member->ktp));
     
-        $fileNameWithExt = $request->ktp->getClientOriginalName();
-        $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-        $extension = $request->ktp->getClientOriginalExtension();
-        $fileNametoStore = $filename.'_'.time().'.'.$extension;
-        $path= $request->ktp->storeAs('public/ktp', $fileNametoStore);
-
-        $fileNameWithExt2 = $request->cv->getClientOriginalName();
-        $filename2 = pathinfo($fileNameWithExt2, PATHINFO_FILENAME);
-        $extension2 = $request->cv->getClientOriginalExtension();
-        $fileNametoStore2 = $filename2.'_'.time().'.'.$extension2;
-        $path2= $request->cv->storeAs('public/cv', $fileNametoStore2);
+        uploadFile($request->ktp, 'public/ktp');
+        uploadFile($request->cv, 'public/cv');
 
         $member->update([
             'member_name' => $request->member_name,
@@ -71,6 +62,15 @@ class HomeController extends Controller
         ]);
 
         return back()->with('success', 'Success Update Member Data');
+    }
+
+    public function uploadFile($data, $folder)
+    {
+        $fileNameWithExt = $data->getClientOriginalName();
+        $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+        $extension = $data->getClientOriginalExtension();
+        $fileNametoStore = $filename.'_'.time().'.'.$extension;
+        $path= $data->storeAs($folder, $fileNametoStore);
     }
 
 }
