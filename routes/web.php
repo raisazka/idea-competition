@@ -29,8 +29,8 @@ Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('me
 Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
 Route::get('/downlaod-proposal', 'ProposalController@download')->name('proposal.download');
 Route::post('/upload-proposal', 'ProposalController@upload')->name('proposal.upload');
-Route::get('/payment', 'PaymentController@index')->name('payment.index');
-Route::post('/payment', 'PaymentController@upload')->name('payment.upload');
+Route::get('/payments', 'PaymentController@index')->name('payment.index');
+Route::post('/payments', 'PaymentController@upload')->name('payment.upload');
 Route::get('/edit-group', 'GroupController@index')->name('group.index');
 Route::patch('/edit-group', 'GroupController@update')->name('group.update');
 
