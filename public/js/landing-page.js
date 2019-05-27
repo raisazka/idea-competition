@@ -2,6 +2,15 @@ var position = $(window).scrollTop();
 var temp;
 var section2 = $('#section-2').height();
 var ctr=0;
+var myVar;
+function myFunction() {
+myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+    $('#loader').css('filter','opacity(0)');
+    $('.body-content').css('display','block');
+}
 $(document).ready(function(){
     let opentoggle = () =>{
         $(".btn-burger").toggleClass("btn-burger-toggle");   
