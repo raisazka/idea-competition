@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/landing-page.css')}}">
-<link href="{{asset('fontawesome-free-5.8.2-web/css/fontawesome.css')}}" rel="stylesheet">
-    <link href="{{asset('fontawesome-free-5.8.2-web/css/brands.css')}}" rel="stylesheet">
-    <link href="{{asset('fontawesome-free-5.8.2-web/css/solid.css')}}" rel="stylesheet">
-    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/landing-page.css">
+    <link href="fontawesome-free-5.8.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.8.2-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-5.8.2-web/css/solid.css" rel="stylesheet">
+    <title>Document</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
