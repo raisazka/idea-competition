@@ -91,13 +91,13 @@ $(document).ready(function(){
         else{
             mem2 = true;
         }
-        alert(same);
         group = validate_group();
         if(lead === true && mem1 === true && mem2 === true && group === true){
             $('#btn-register').prop('type','submit');
         }
         else{
             $('#btn-register').prop('type','button');
+            alert('plis check your data troughtly')
         }
     });
     function req_member1(a){
