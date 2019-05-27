@@ -12,6 +12,23 @@
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
     <div class="form-form-form">
+            <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
         <div class="content-promosi text-center container">
             <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
             <h1>With</h1>
@@ -38,10 +55,44 @@
                             <input disabled style="border-radius:0; border:none;font-weight:900;font-size:1.5em;padding:6px 0;" type="text" class="form-control" id="username" name="username" value="{{ $user->username }}" placeholder="Username" autocomplete="username" required autofocus >
                         </div>
                     </div>
+                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">Payment status</label><br>
+                            <span class="text-danger" style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >You have not paid please proceed payment before 20 june 2019</span>
+                        </div>
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <a href="{{route('payment.index')}}" class="anti-a"> <button class="button-payment">Pay Now</button></a>
+                        </div>
+                    </div>
+                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">Proposal Tempalte</label><br>
+                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pegerjaan case BIC</span>
+                        </div>
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
+                        </div>
+                    </div>
+                    <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
+                        @csrf
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">Submit Proposal</label><br>
+                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" id="proposal" class=" @error('proposal') is-invalid @enderror"  name="proposal" style="border:none; padding:auto 0;" required autofocus>
+                            <br>
+                            <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                @if ($errors->has('proposal'))
+                                    {{ $errors->first('proposal') }}
+                                @endif
+                            </span>
+                        </div>
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <button class="button-payment" type="button" id="btn-proposal">Submit Proposal</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    @foreach ($members as $member)
+    @foreach ($user->members as $member)
         @if($loop->first)
             <div class="container-fluid form-container">
                 <div class="row">

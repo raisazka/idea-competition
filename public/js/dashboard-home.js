@@ -37,6 +37,16 @@ $(document).ready(function(){
             $(this).prop('type','button');
         }
     });
+    $('#btn-proposal').click(function(){
+        var propo
+        propo = validate_file($('#proposal'));
+        if(line === true && phone === true && cv === true){
+            $(this).prop('type','submit');
+        }
+        else{
+            $(this).prop('type','button');
+        }
+    });
     function validate_line(a){
         $(a).parent().find('.line_wrong').empty();
         if(!line_v.test(a.val())){
@@ -74,16 +84,5 @@ $(document).ready(function(){
             }
         }
         
-    }
-    function validate() {
-        $("#file_error").html("");
-        $(".demoInputBox").css("border-color","#F0F0F0");
-        var file_size = $('#file')[0].files[0].size;
-        if(file_size>2097152) {
-            $("#file_error").html("File size is greater than 2MB");
-            $(".demoInputBox").css("border-color","#FF0000");
-            return false;
-        } 
-        return true;
     }
 });

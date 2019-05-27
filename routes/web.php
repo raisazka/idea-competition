@@ -13,7 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/regis','WelcomeController@register');
-Route::get('/logins','WelcomeController@login');
+Route::get('/login','WelcomeController@login');
 Route::get('/dashboard','WelcomeController@dashboard');
 
 Auth::routes();

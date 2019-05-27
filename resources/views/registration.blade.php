@@ -269,7 +269,7 @@
                             </span>
                         </div>
                         <div class="form-check" style="margin-left:1em;">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                             <label class="form-check-label" for="exampleCheck1">Agree with Terms & Condition</label>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
         </div>
         <div class="container-fluid form-container " id="info">
             <div class="row">
-            <a href="{{url('logins')}}"><h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? login now</h5></a>
+            <a href="{{url('login')}}"><h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? login now</h5></a>
             </div>
         </div>
     </form>

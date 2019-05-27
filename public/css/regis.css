@@ -16,7 +16,37 @@ input{
 .wave{
     width: 100%;
 }
-
+.button-payment{
+    background: #556489;
+    color: white;
+    padding: .5em .8em;
+    display: block;
+    border:none;
+    cursor: pointer;
+    border-radius: 2em;
+    transition: .5s
+}
+.anti-a:hover{
+text-decoration: none;
+}
+.button-payment:hover{
+    color: white;
+    background: #212529;
+    text-decoration: none;  
+    transform: scale(1.1);
+}
+button:active{
+    border: none;
+    transform: scale(1.2);
+    outline: none !important;
+}
+button:focus{
+    outline: none;
+}
+.anti-a:hover{
+    border: none;
+    outline: none !important;
+}
 h2{
     text-align: center;
     margin-bottom: 1em;
