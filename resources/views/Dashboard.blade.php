@@ -8,27 +8,34 @@
     <link rel="stylesheet" href="css/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="css/regis.css">
+    <link href="fontawesome-free-5.8.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.8.2-web/css/solid.css" rel="stylesheet">
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
     <div class="form-form-form">
-            <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center" >
+                        <h3>Are you sure want to log out ?</h3>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between" style="border:none">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Log Out</button>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </div>
-                </li>
+                </div>
+            </div>
+        </div>
         <div class="content-promosi text-center container">
             <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
             <h1>With</h1>
@@ -39,6 +46,11 @@
                 {{session()->get('success')}}
             </div>
             @endif
+        </div>
+        <div class="text-right" >
+            <button type="button" class="btn btn-danger float-button" data-toggle="modal" data-target="#exampleModalLong">
+                Log Out <i class="fas fa-sign-out-alt"></i>
+            </button>
         </div>
         <div class="container-fluid form-container" id="grup">
             <div class="row">
@@ -174,7 +186,7 @@
                             </div>  
                         </div>
                         <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center justify-content-md-end justify-content-lg-end">
-                            <button class="btn-update " @if($loop->first)id="btn-up" @elseif($loop->index ==1)id="btn-up-1" @else id="btn-up-2" @endif type="button">Update Data</button>
+                            <button class="btn-update " style="margin-right:15px;" @if($loop->first)id="btn-up" @elseif($loop->index ==1)id="btn-up-1" @else id="btn-up-2" @endif type="button">Update Data</button>
                         </div>
                     </form>
                 </div>
