@@ -50,6 +50,17 @@ html{
 body {
     margin: 0;
 }
+.btn-arrow{
+	transform: translateX(-2em);
+	transition: .5s ease-in-out;
+}
+.my-button:hover > .btn-arrow{
+	transform: translateX(0);
+	z-index: 0;
+}
+.my-button>div{
+	z-index: 3;
+}
 .landing-content>.containers>h2{
 	font-weight: 600;
 }
@@ -76,7 +87,11 @@ body {
 	background-attachment: fixed;
 	background-position: 100% 0;
 }
-
+.anti-a:hover{
+    border: none;
+    text-decoration: none;
+    outline: none !important;
+}
 .navbar {
 	position: fixed;
 	z-index: 4;
@@ -631,7 +646,7 @@ form {
 	font-weight: 100;
 	color: #000000;
 }
-.inner-content button{
+.inner-content>a.anti-a>button{
 	border: solid 2px #181818;
 	background: none;
 	width: 8em;
@@ -643,7 +658,7 @@ form {
 	transition: .5s;
 	cursor: pointer;
 }
-.inner-content > button:hover{
+.inner-content >a.anti-a> button:hover{
 	background: #181818;
 	border: none;
 	color: white;	
