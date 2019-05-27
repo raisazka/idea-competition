@@ -9,6 +9,12 @@ use Auth;
 
 class PaymentController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $payment = Payment::where('user_id', Auth::user()->id)->first();
