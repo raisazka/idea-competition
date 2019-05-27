@@ -164,6 +164,9 @@ input[type="file"]{
     border-radius: 2em;
     transition: .5s;
 }
+.btn-regis:focus{
+    outline: none!important;
+}
 .btn-update{
     display: block;
     background-color:#212529!important;
@@ -175,6 +178,9 @@ input[type="file"]{
     padding: .1em 1em;
     border-radius: 2em;
     transition: .5s;
+}
+.btn-update:focus{
+    outline: none!important;
 }
 .content-promosi{
     width: 100%;
