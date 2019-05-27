@@ -125,6 +125,6 @@ class RegisterController extends Controller
         ]);
        }
        Mail::to($email[0])->send(new RegisterMail);
-       return redirect()->route('login');
+       return redirect()->route('index.login');
     }
 }

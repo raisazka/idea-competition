@@ -42,7 +42,8 @@ class PaymentController extends Controller
         if($payment == null){
             Payment::create([
                 'user_id' => Auth::user()->id,
-                'payment' => $fileNametoStore
+                'payment' => $fileNametoStore,
+                'status' => 'Pending'
             ]);
         }else{
             unlink(storage_path('app/public/payment/'.$payment->payment));

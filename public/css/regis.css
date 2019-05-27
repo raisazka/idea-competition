@@ -29,6 +29,8 @@ input{
 .anti-a:hover{
 text-decoration: none;
 }
+
+
 .float-button{
     position: fixed;
     font-size: 1.2em;
@@ -41,6 +43,7 @@ text-decoration: none;
 .float-button>i{
     margin-left: .2em;
 }
+
 .button-payment:hover{
     color: white;
     background: #212529;

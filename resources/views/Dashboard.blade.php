@@ -29,6 +29,7 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-danger" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">Log Out</button>
+
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
@@ -36,6 +37,7 @@
                 </div>
             </div>
         </div>
+
         <div class="content-promosi text-center container">
             <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
             <h1>With</h1>

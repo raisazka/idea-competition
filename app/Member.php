@@ -9,4 +9,9 @@ class Member extends Model
     protected $fillable = [
         'group_id', 'member_name', 'email', 'phone', 'line', 'dob', 'ktp', 'role'
     ];
+
+    public function users()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }
