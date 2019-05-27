@@ -8,7 +8,6 @@
 
         @if ($payment == null)
             <h1>Anda Belum Bayar</h1>
-
         @else
             <label>Bukti Bayar Anda</label>
     <a href="{{asset('storage/payment/'.$payment->payment)}}">

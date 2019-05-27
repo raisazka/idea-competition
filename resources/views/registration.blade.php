@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="css/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="css/regis.css">
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
-    <form action="{{url('member-regis')}}" method="post" class="form-form-form" enctype="multipart/form-data">
+    <form action="{{route('user.register')}}" method="post" class="form-form-form" enctype="multipart/form-data">
         @csrf
         <div class="content-promosi text-center container">
             <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">

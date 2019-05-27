@@ -91,7 +91,6 @@ $(document).ready(function(){
         else{
             mem2 = true;
         }
-        alert(same);
         group = validate_group();
         if(lead === true && mem1 === true && mem2 === true && group === true){
             $('#btn-register').prop('type','submit');
