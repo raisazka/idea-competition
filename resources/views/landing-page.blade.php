@@ -288,7 +288,7 @@
 </div>
 
 
-<script src="js/app.js"></script>
-<script src="js/landing-page.js"></script>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/landing-page.js')}}"></script>
 </body>
 </html>
