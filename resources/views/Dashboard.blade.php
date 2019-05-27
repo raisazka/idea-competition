@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="css/regis.css">
-    <link href="fontawesome-free-5.8.2-web/css/fontawesome.css" rel="stylesheet">
-    <link href="fontawesome-free-5.8.2-web/css/solid.css" rel="stylesheet">
+    <link href="{{asset('fontawesome-free-5.8.2-web/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="{{asset('fontawesome-free-5.8.2-web/css/brands.css')}}" rel="stylesheet">
+    <link href="{{asset('fontawesome-free-5.8.2-web/css/solid.css')}}" rel="stylesheet">
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
@@ -69,16 +70,37 @@
                             <input disabled style="border-radius:0; border:none;font-weight:900;font-size:1.5em;padding:6px 0;" type="text" class="form-control" id="username" name="username" value="{{ $user->username }}" placeholder="Username" autocomplete="username" required autofocus >
                         </div>
                     </div>
-                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
+                    <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">Payment status</label><br>
-                            <span class="text-danger" style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >You have not paid please proceed payment before 20 june 2019</span>
+                            <span @if($user->payments == null || $user->payments->status == "Rejected")class="text-danger" @elseif($user->payments->status == "Pending") class="text-warning-dark" @elseif($user->payments->status == "Verified") class="text-success" @else class="text-danger" @endif style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >
+                                @if($user->payments == null)
+                                    You have not paid please proceed payment before 20 june 2019
+                                @elseif($user->payments->status == "Pending")
+                                    your payment is waiting to be Verified
+                                @elseif($user->payments->status == "Verified")
+                                    Your payment is Verified 
+                                @elseif($user->payments->status == "Rejected")
+                                    Your Payment is Rejected please check it throughtly
+                                @else
+                                    Something is wrong
+                                @endif
+                            </span>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <a href="{{route('payment.index')}}" class="anti-a"> <button class="button-payment">Pay Now</button></a>
+                            @if($user->payments == null || $user->payments->status == "Rejected")
+                                <a href="{{route('payment.index')}}" class="anti-a"> <button class="button-payment">Pay Now</button></a>
+                            @elseif($user->payments->status == "Pending")
+                                <i class="fas fa-clock text-warning-dark" style="font-size:2em"></i>
+                            @elseif($user->payments->status == "Verified")
+                                <i class="fas fa-check-circle text-success" style="font-size:2em"></i>
+                            @endif
+
                         </div>
                     </div>
-                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
+                @if($user->payments == null)
+                @elseif($user->payments->status == "Verified")    
+                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">    
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">Proposal Tempalte</label><br>
                             <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pegerjaan case BIC</span>
@@ -103,6 +125,7 @@
                             <button class="button-payment" type="button" id="btn-proposal">Submit Proposal</button>
                         </div>
                     </form>
+                    @endif
                 </div>
             </div>
         </div>
