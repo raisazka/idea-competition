@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+    background: #EFF3F4;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: linear-gradient(45deg,#2AF598,#08B3E5); */
+}
+input{
+    background: transparent!important;
+    border-color: #212529 !important;
+}
+::placeholder{}
+.wave{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 1em;
+    border-bottom: 1px rgba(0, 0, 0, .8) solid;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1em;
+    border-bottom: 1px rgba(0, 0, 0, .8) solid;
+}
+.gambar-input{
+    height:inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gambar-input > img.img-fluid{
+    animation: lompat 7s ease-in-out infinite;
+}
+@keyframes lompat{
+    0%{
+        transform: translateY(.5em);
+    }
+    40%{
+        transform: translateY(-1em);
+    }
+    100%{
+        transform: translateY(.5em);
+    }
+}
+.form-container{
+    width: 85%;
+    background-position: 0%;
+    background-size: cover;
+    border-radius: 20px;
+    animation: reveal 2s;
+    position: relative;
+    margin-top: 2em;
+}
+.form-container > .row > .input-container{
+    padding: 2em;
+    border-radius: inherit;
+    background: transparent;
+    border: solid .1em #181818;  
+    border-radius: 20px;
+}
+.img-fluid{
+    max-width: 80%;
+}
+form > h3{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.form-ktp > .form-control{
+    padding-left: 0;
+    border: none;
+}
+.form-ktp > input{
+    outline: none;
+}
+.form-ktp > input:focus{
+    outline: none;
+}
+#plus{
+    margin: 1.5em auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+#plus > div{
+    margin-left: .5em;
+    font-weight: 900;
+}
+#plus > span{
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    font-size: 2.5em;
+    color: white;
+    background: #38c172;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#plus > span:hover{
+    background: #148242;
+}
+#plus>span:hover + .text-success{
+    color: #148242 !important;
+}
+.button-dismiss{
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+    background: #dc3545;
+    font-weight: bolder;
+    display: flex;
+    position: absolute;
+    top: -0.5em;
+    right:-0.5em;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes reveal{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes hide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translatex(120%);
+    }
+}
+.row input{
+    border-radius: 20em;
+}
+
+input[type="file"]{
+    border-radius: 0%;
+}
+.btn-regis{
+    display: block;
+    margin: 1em auto 0 auto;
+    background-color:transparent!important;
+    color:#212529;
+    border: #212529 solid 2px; 
+    font-weight: bold;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: 2em;
+    transition: .5s;
+}
+.btn-update{
+    display: block;
+    background-color:#212529!important;
+    color:white;
+    border: #212529 solid 2px; 
+    font-weight: bold;
+    cursor: pointer;
+    height: 3em;
+    padding: .1em 1em;
+    border-radius: 2em;
+    transition: .5s;
+}
+.content-promosi{
+    width: 100%;
+    transform: translateY(-5em);
+}
+.content-promosi > h1{
+    border: none;
+    font-weight: bolder;
+    margin: 0;
+    margin: .5em 0;
+}
+
+.content-promosi > .bic-logo{
+    max-width: 12em ;
+    display: block;
+    margin: 1em auto;
+}
+.content-promosi > img{
+    max-width: 15em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+.content-promosi > h3{
+    font-weight: bolder;
+}
+.btn-regis:hover{ 
+    color:#EFF3F4;
+    background: #212529 !important; 
+}
+.btn-update:hover{
+    transform: scale(1.05);
+}
+@media only screen and (max-width:768px) {
+    .gambar-input{
+        padding: 2em 0;
+    }
+}
+  

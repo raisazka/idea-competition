@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $members = Member::where('user_id', Auth::user()->id)->get();
-        return view('home', compact('members'));
+        return view('Dashboard', compact('members'));
     }
 
     public function updateMemberData(Request $request,$id)
