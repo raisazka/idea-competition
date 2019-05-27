@@ -22,7 +22,7 @@
         <div class="nav-right">
             <div class="no-burger">
                 <a href="#section-2">What is BIC</a>
-                <a href="#regis-page">Registration</a>
+                <a href="#register-page">Registration</a>
                 <a href="#time-line">Timeline</a>
                 <a href="#contact-us">Contact Us</a>
             </div>
@@ -37,7 +37,7 @@
     <div class="section-navbar">
         <img src="image/wave_atas.png" style="width:100%;">
         <div class="section-navbar-list"><a href="#section-2">What is BIC</a></div>
-        <div class="section-navbar-list"><a href="#regis-page">Registration</a></div>
+        <div class="section-navbar-list"><a href="#register-page">Registration</a></div>
         <div class="section-navbar-list"><a href="#time-line">Timeline</a></div>
         <div class="section-navbar-list"> <a href="#contact-us">Contact Us</a></div>
         <img src="image/wave_bawah.png" style="width:100%">
@@ -45,14 +45,15 @@
     <div class="landing-content">
         <div class="containers">
             <h1><b>BNCC</b><br> Idea Competition</h1>
-            <h5>lorem ipsum dolor sit amet lorem ipsum dolor sit amet amet amet amet the best 2019</h5>
+            <h2><i>"Influence Business <br>Through Innovative Idea"</i></h2>
+            <h4>23 - 24 June 2019</h4>
+            <h4><i class="fas fa-map-marker-alt icon-location"></i>Fooutcourt binus anggrek</h4>
             <label for="button-regis">
-                <div class="my-button">
-                    <div>Learn More</div>
+                <a style="text-decoration:none" href="#register-page"><div class="my-button">
+                    <div>Register Now</div>
                     <span>&rarr;</span>
-                </div>
+                </div></a>
             </label>
-            <input type="hidden" id="button-regis">
         </div>
         <img src="image/LogoBIC.png" class="img-fluid bic-img" alt="">    
     </div>
@@ -62,13 +63,16 @@
         <div class="containers">
             <h1>What is</h1>
             <h2> BNCC Idea Competition ?</h2>
-            <h6 style="text-align:justify">BNCC Idea Competition merupakan lomba business IT case dimana 
-                peserta akan diberikan suatu persoalan yang dimiliki perusahaan 
-                dan setiap peserta wajib menyelesaikannya menggunakan solusi 
-                teknologi melalui karya tulis atau proposal. Selain itu, ada juga 
-                expo atau exhibition dimana terdapat perusahaan-perusahaan yang 
-                akan melakukan branding dan pengenalan tentang perusahaan tersebut.
-            </h6>
+            <h5 style="text-align:justify">
+                    BNCC Idea Competition merupakan lomba business IT 
+                    case dimana peserta akan diberikan suatu persoalan yang 
+                    dimiliki perusahaan dan setiap peserta wajib menyelesaikannya 
+                    menggunakan solusi teknologi melalui karya tulis atau proposal. 
+                    Selain itu, ada juga expo atau exhibition dimana terdapat 
+                    perusahaan-perusahaan yang akan melakukan branding dan pengenalan 
+                    tentang perusahaan tersebut melalui interactive challenges dengan 
+                    pengunjung expo.
+            </h5>
         </div>
         <img src="image/flatBIC.png" class="img-fluid bic-img" alt="">    
     </div>
@@ -140,12 +144,12 @@
 <div class="time-line" id="time-line">
     <h1>TIMELINE</h1>
     <div class="timeline">
-        <div class="try-time-line try-time-left">
+        {{-- <div class="try-time-line try-time-left">
             <div class="containert left-t active-time">
                 <div class="contentt shadow">
                     <h1 class="text-center">24 Mei 2019</h1>
                     <h2 class="text-center">Open Registration
-                        <br><br>
+                        
                     <button class="btn-timeline">Click here to Register</button>
                     </h2>
                 </div>
@@ -153,17 +157,17 @@
             <div class="containert-icon">
                 <img class="img-fluid" src="image/OpenRegis1-01.png" alt="openregis">
             </div>
-        </div>
+        </div> --}}
         <div class="try-time-line try-time-right">
             <div class="containert-icon">
                 <img class="img-fluid" src="image/Distribution-01.png" alt="openregis">
             </div>
-            <div class="containert right-t">
+            <div class="containert right-t active-time">
                 <div class="contentt shadow">
                     <h1 class="text-center">30 Mei 2019</h1>
                     <h2 class="text-center">Case Distribution
-                        <br><br>
-                    <button class="btn-timeline">Click</button>
+                        
+                    {{-- <button class="btn-timeline">Click here</button> --}}
                     </h2>                
                 </div>
             </div>
@@ -173,8 +177,8 @@
                 <div class="contentt shadow">
                     <h1 class="text-center">14 Juni 2019</h1>
                     <h2 class="text-center">Closed Registration & Proposal Must be Submmited
-                        <br><br>
-                    <button class="btn-timeline">Click here for more info</button>
+                        
+                    {{-- <button class="btn-timeline">Click here for more info</button> --}}
                     </h2>
                 </div>
             </div>
@@ -190,8 +194,8 @@
                 <div class="contentt shadow">
                     <h1 class="text-center">20 June 2019</h1>
                     <h2 class="text-center">Semi-Final Annoucement
-                        <br><br>
-                    <button class="btn-timeline">Click here for more info</button>
+                        
+                    {{-- <button class="btn-timeline">Click here for more info</button> --}}
                     </h2>                
                 </div>
             </div>
@@ -201,8 +205,8 @@
                 <div class="contentt shadow">
                     <h1 class="text-center">22 June 2019</h1>
                     <h2 class="text-center">Technical Meeting
-                        <br><br>
-                    <button class="btn-timeline">Click here for more info</button>
+                        
+                    {{-- <button class="btn-timeline">Click here for more info</button> --}}
                     </h2>
                 </div>
             </div>
@@ -218,8 +222,8 @@
                 <div class="contentt shadow">
                     <h1 class="text-center">25-26 June 2019</h1>
                     <h2 class="text-center">BIC Finale & Expo
-                        <br><br>
-                    <button class="btn-timeline">Click here for more info</button>
+                        
+                    {{-- <button class="btn-timeline">Click here for more info</button> --}}
                     </h2>                
                 </div>
             </div>

@@ -9,10 +9,24 @@ html{
 body {
     margin: 0;
 }
-.btn-logout{
-	
+.landing-content>.containers>h2{
+	font-weight: 600;
 }
-
+.contentt{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.contentt>h1{
+	display: inline;
+}
+.contentt>h2{
+	display: inline;
+}
+.icon-location{
+	margin-right: .5em;
+}
 .landing-page {
 	min-height: 100vh;
 	background-color: rgba(255, 255, 255, 1);
