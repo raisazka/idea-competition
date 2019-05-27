@@ -2,11 +2,6 @@
 
 @section('content')
 <div class="container">
-        @if(Session::has('success'))
-        <div class="alert alert-success">
-            {{Session::get('success')}}
-        </div>
-        @endif
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -23,25 +18,23 @@
                           <tr>
                             <th scope="col">No</th>
                             <th scope="col">Group Name</th>
-                            <th scope="col">Payment</th>
-                            <th scope="col">Verify</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">E-Mail</th>
+                            <th scope="col">Whatsapp</th>
+                            <th scope="col">KTP</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach ($users as $user)
+                          @foreach ($members as $member)
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$user->name}}</td>
+                            <td>{{$member->users->name}}</td>
+                            <td>{{$member->member_name}}</td>
+                            <td>{{$member->email}}</td>
+                            <td>{{$member->phone}}</td>
                             <td>
-                                <a href="{{asset('storage/payment/'.$user->payments->payment)}}">
-                                    <img src="{{asset('storage/payment/'.$user->payments->payment)}}" alt="no-image" height="100" width="200">
+                                <a href="{{asset('storage/ktp/'.$member->ktp)}}">
+                                <img src="{{asset('storage/ktp/'.$member->ktp)}}" alt="no-image" height="50" width="100">
                                 </a>
-                            </td>
-                            <td>
-                            <form action="{{route('admin.verify', $user->id)}}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success"{{$user->payments->status == 'Verified' ? 'disabled':'' }}>Verify</button>
-                            </form>
                             </td>
                           @endforeach
                         </tbody>
