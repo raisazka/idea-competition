@@ -18,12 +18,13 @@ class PaymentController extends Controller
     public function upload(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'payment' => 'required'
+            'payment' => 'required|max:2048|mimes:jpg,jpeg,png'
         ]);
             
         if($validator->fails()){
-            return back()->withErorrs($validator);
+            return back()->with('error', $validator->errors()->first());
         }
+
         $payment = Payment::where('user_id', Auth::user()->id)->first();
 
         $fileNameWithExt = $request->payment->getClientOriginalName();

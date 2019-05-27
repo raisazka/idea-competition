@@ -24,13 +24,14 @@ class ProposalController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'proposal' => 'required'
+            'proposal' => 'required|max:2048|mimes:pdf,docx'
         ]);
-            
-            if($validator->fails()){
-                return back()->withErorrs($validator);
-            }
+
         $proposal = Proposal::where('user_id', Auth::user()->id)->first();
+
+        if($validator->fails()){
+            return back()->with('error', $validator->errors()->first());
+        }
 
         $fileNameWithExt = $request->proposal->getClientOriginalName();
         $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
@@ -38,7 +39,7 @@ class ProposalController extends Controller
         $fileNametoStore = $filename.'_'.time().'.'.$extension;
         
 
-        if($proposal == null){
+        if($proposal->proposal == null){
             Proposal::create([
                 'user_id' => Auth::user()->id,
                 'proposal' => $fileNametoStore
