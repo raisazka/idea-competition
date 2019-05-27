@@ -26,9 +26,7 @@ input{
     border-radius: 2em;
     transition: .5s
 }
-.anti-a:hover{
-text-decoration: none;
-}
+
 
 
 .float-button{
@@ -60,6 +58,7 @@ button:focus{
 }
 .anti-a:hover{
     border: none;
+    text-decoration: none;
     outline: none !important;
 }
 h2{

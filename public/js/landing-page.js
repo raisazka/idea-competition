@@ -6,10 +6,13 @@ var myVar;
 function myFunction() {
 myVar = setTimeout(showPage, 3000);
 }
-
 function showPage() {
     $('#loader').css('filter','opacity(0)');
     $('.body-content').css('display','block');
+    setTimeout(done,600);
+}
+function done(){
+    $('#loader').css('display','none');
 }
 $(document).ready(function(){
     let opentoggle = () =>{

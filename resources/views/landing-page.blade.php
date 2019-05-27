@@ -56,7 +56,7 @@
                 <label for="button-regis">
                     <a style="text-decoration:none" href="#register-page"><div class="my-button">
                         <div>Register Now</div>
-                        <span>&rarr;</span>
+                        <span class="btn-arrow">&rarr;</span>
                     </div></a>
                 </label>
             </div>
@@ -111,7 +111,7 @@
                         Ducimus laboriosam quasi in illum sequi! Velit dolorem sit eos 
                         aliquid iste!
                     </h4>
-                    <button type="submit">REGISTER</button>
+                <a class="anti-a" href="{{url('regis')}}"><button type="submit">REGISTER</button></a>
                 </div>
             </div>
         </div>
