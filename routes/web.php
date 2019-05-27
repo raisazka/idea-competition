@@ -19,7 +19,7 @@ Route::get('/dashboard','WelcomeController@dashboard');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/logins','Auth\LoginController@authenticate')->name('user.logins');
+Route::post('/logins','Auth\LoginController@authenticate')->name('logins');
 Route::post('/member-regis', 'Auth\RegisterController@registerUser')->name('user.register');
 Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('member.update');
 Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
@@ -29,3 +29,12 @@ Route::get('/payment', 'PaymentController@index')->name('payment.index');
 Route::post('/payment', 'PaymentController@upload')->name('payment.upload');
 Route::get('/edit-group', 'GroupController@index')->name('group.index');
 Route::patch('/edit-group', 'GroupController@update')->name('group.update');
+
+Route::prefix('god')->group(function () {
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    //Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('login', 'Auth\AdminAuthController@login')->name('admin.auth.login');
+    Route::post('login', 'Auth\AdminAuthController@loginAdmin')->name('admin.auth.loginAdmin');
+    Route::post('logout', 'Auth\AdminAuthController@logout')->name('admin.auth.logout');
+  });
+  
