@@ -97,6 +97,7 @@ $(document).ready(function(){
         }
         else{
             $('#btn-register').prop('type','button');
+            alert('plis check your data troughtly')
         }
     });
     function req_member1(a){

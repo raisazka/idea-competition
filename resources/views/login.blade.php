@@ -66,8 +66,10 @@
             </div>
         </div>
         <div class="container-fluid form-container " id="info">
-            <div class="row">
-                <h5 class="col-12" style="text-decoration:underline; cursor:pointer; text-align:right;">don't have account? click-here</h5>
+            <div class="row" >
+            <a class="col-12 text-right" href="{{url('regis')}}" >
+                <h5  style="text-decoration:underline; cursor:pointer;" id="try">don't have account? register now</h5>
+            </a>
             </div>
         </div>
     </form>
