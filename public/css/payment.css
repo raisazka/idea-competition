@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 150vh;
+    background: #EFF3F4;
+    width: 100%;
+}
+.wave{
+    width: 100%;
+}
+.text-header{
+    text-decoration: underline;
+}
+@media only screen and (max-width:500px){
+    .text-header{
+        text-align: center;
+    }
+}
+.card-payment{
+    border: solid .15em #181818;  
+    border-radius: 2em;
+    background: transparent;
+}
+.no-bg *{
+    background: none;
+}
+.end, .start{
+    margin: 3em 0;
+}
+input#payment{
+    background: none!important;
+    border:none!important;
+    outline: none!important;
+    padding: 6px 0;
+}
+input#payment:focus{
+    background: none!important;
+    border:none!important;
+    outline: none!important;
+}
+input#payment:active{
+    background: none!important;
+    border:none!important;
+    outline: none!important;
+}
+input#payment:hover{
+    background: none!important;
+    border:none!important;
+    outline: none!important;
+}
+
+.btn-me{
+    border-radius: 2em;
+    color: white;
+    border: none;
+    background: #181818;
+    font-weight: 600;
+    transition: .5s;
+    outline: none;
+}
+.btn-me:hover{
+    background: #556489;
+    transform: translateY(-.2em) scale(1.1);
+}
+.btn-me:active{
+    background-color:#7288af;
+    transform: translateY(0) scale(1.15);
+    outline: none;  
+}
+.btn-me:focus{
+    outline: none;
+}

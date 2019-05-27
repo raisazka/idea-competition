@@ -109,6 +109,15 @@
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
                         </div>
                     </div>
+                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">    
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">BIC Case</label><br>
+                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Selesaikan Case ini sebelum tanggal 14 Juni 2019</span>
+                        </div>
+                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
+                        </div>
+                    </div>
                     <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
                         @csrf
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">

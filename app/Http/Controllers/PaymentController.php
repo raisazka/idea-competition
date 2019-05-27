@@ -50,6 +50,6 @@ class PaymentController extends Controller
             $payment->payment = $fileNametoStore;
             $payment->save();
         }
-        return back()->with('success', 'Success Upload payment');
+        return redirect('home')->with('success', 'Success Upload payment');
     }
 }
