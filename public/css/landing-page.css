@@ -9,6 +9,9 @@ html{
 body {
     margin: 0;
 }
+.btn-logout{
+	
+}
 
 .landing-page {
 	min-height: 100vh;
