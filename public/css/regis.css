@@ -264,5 +264,8 @@ input[type="file"]{
     .gambar-input{
         padding: 2em 0;
     }
+    .content-promosi > .bic-logo{
+        margin-top: 5em ;
+    }
 }
   

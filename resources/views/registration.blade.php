@@ -18,7 +18,7 @@
             <h1>With</h1>
             <img src="image/tiket.png" alt="">
             <h3>BNCC Idea Competition</h3>
-            <h3>Solve The Case WIth Your Best It Solution</h3>
+            <h3>Solve The Case With Your Best IT Solution</h3>
             <h3>Registration Deadline : 12 june 2019</h3>
         </div>
         <div class="container-fluid form-container">  
