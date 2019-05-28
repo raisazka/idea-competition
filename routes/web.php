@@ -33,6 +33,9 @@ Route::get('/payments', 'PaymentController@index')->name('payment.index');
 Route::post('/payments', 'PaymentController@upload')->name('payment.upload');
 Route::get('/edit-group', 'GroupController@index')->name('group.index');
 Route::patch('/edit-group', 'GroupController@update')->name('group.update');
+Route::get('/register-expo', 'ExpoController@create')->name('expo.regis');
+Route::post('/register-expo', 'ExpoController@register')->name('expo.store');
+Route::get('/get-qr', 'ExpoController@index')->name('index.qr');
 
 Route::prefix('god')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');

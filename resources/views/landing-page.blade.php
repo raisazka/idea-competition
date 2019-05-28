@@ -96,7 +96,7 @@
                         Ducimus laboriosam quasi in illum sequi! Velit dolorem sit eos 
                         aliquid iste!
                     </h4>
-                    <button type="submit">REGISTER</button>
+                    <a class="anti-a" href="{{route('expo.regis')}}"><button type="submit">REGISTER</button></a>
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-center">
