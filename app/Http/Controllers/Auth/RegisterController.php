@@ -76,18 +76,22 @@ class RegisterController extends Controller
 
     public function registerUser(Request $request)
     {
+        $messages = [
+            'unique' => 'Already Taken'
+         ];
 
-       $validator = Validator::make($request->all(),[
+         $this->validate($request, [
             "name"  => "required|string|min:5",
             "username" => 'required|string|alpha_dash|distinct|unique:users,username',
             "password" => 'required|string|min:6',
             "member_name.*" => 'required|max:255',
             "email.*" => 'required|email|distinct|unique:members,email',
             "phone.*" => 'required|max:12|distinct|unique:members,phone',
-            "line.*" => 'required|max:255|distinct|unique:members,line',
+            "line.*" => 'required|max:255|distinct|unique:members,line|alpha_dash',
             "dob.*" => 'required|date',
-            "ktp.*" => 'required'
-        ]);
+            "ktp.*" => 'required|mimes:jpg,png,jpeg|max:2048'
+         ], $messages);
+
         
        $name = $request->name;
        $username = $request->username;
@@ -100,9 +104,6 @@ class RegisterController extends Controller
        $ktp = $request->file('ktp');
        
        $count = count($email);
-       if($validator->fails()){
-            return back()->withErrors($validator)->withInput();
-        }
         
         $group = new User;
         $group->name = $name;
