@@ -20,25 +20,18 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* overflow: hidden; */
-	/* margin: -75px 0 0 -75px;
-	border: 16px solid #f3f3f3;
-	border-radius: 50%;
-	border-top: 16px solid #3498db;
-	width: 120px;
-	height: 120px; */
 	-webkit-transition:  .5s ease-in-out;
 	transition: .5s ease-in-out;
   }
   .img-loaderi{
-	  width: 15%;
+	  width: 15em;
 	  transform: translateY(-2em);
 	  animation: logo 2s infinite cubic-bezier(0.280, 0.840, 0.420, 1);
   }
   @keyframes logo {
 	0%   { transform: scale(1,1)      translateY(-2em); }
 	10%  { transform: scale(1.1,.9)   translateY(-2em); }
-	30%  { transform: scale(.9,1.1)   translateY(-7em); }
+	30%  { transform: scale(.9,1.1)   translateY(-6.5em); }
 	50%  { transform: scale(1.05,.95) translateY(-2em); }
 	57%  { transform: scale(1,1)      translateY(-4em); }
 	64%  { transform: scale(1,1)      translateY(-2em); }
@@ -60,7 +53,7 @@ body {
 	z-index: 0;
 }
 .my-button>div{
-	z-index: 3;
+	z-index: 1;
 }
 .landing-content>.containers>h2{
 	font-weight: 600;
