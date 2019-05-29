@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterExpoRequest;
 use QrCode;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ExpoRegisterMail;
 use App\ExpoMember;
 
 class ExpoController extends Controller
@@ -34,8 +36,8 @@ class ExpoController extends Controller
         }while($otp_exist);
 
         $expo->otp = $otp;
-        $expo->save();
-
+        Mail::to($expo->email)->send(new ExpoRegisterMail($expo));
+        //$expo->save();
         return redirect('/');
     }
 }
