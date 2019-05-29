@@ -37,7 +37,7 @@ class ExpoController extends Controller
 
         $expo->otp = $otp;
         Mail::to($expo->email)->send(new ExpoRegisterMail($expo));
-        //$expo->save();
+        $expo->save();
         return redirect('/');
     }
 }
