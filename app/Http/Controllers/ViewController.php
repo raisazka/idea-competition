@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\ContactUs;
 class ViewController extends Controller
 {
-    public function SendMessage(Request $request){
+    public function SendMessage(Request $request)
+    {
         $message = new ContactUs;
         $message->name = $request->name;
         $message->email = $request->email;

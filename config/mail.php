@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'admin@bncc.net'),
-        'name' => env('MAIL_FROM_NAME', 'BNCC'),
+        'name' => env('MAIL_FROM_NAME', 'BNCC Idea Competition'),
     ],
 
     /*

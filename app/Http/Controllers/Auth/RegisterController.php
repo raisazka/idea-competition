@@ -7,9 +7,7 @@ use App\Member;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use App\Mail\RegisterMail;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -77,7 +75,8 @@ class RegisterController extends Controller
     public function registerUser(Request $request)
     {
         $messages = [
-            'unique' => 'Already Taken'
+            'unique' => 'Already Taken',
+            'phone.max' => 'Maximum 12 Digits'
          ];
 
          $this->validate($request, [
@@ -128,7 +127,6 @@ class RegisterController extends Controller
             'ktp' => $fileNametoStore[$i],
         ]);
        }
-       Mail::to($email[0])->send(new RegisterMail);
        return redirect()->route('user.dashboard');
     }
 }
