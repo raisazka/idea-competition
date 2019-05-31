@@ -22,6 +22,7 @@
                             <th scope="col">E-Mail</th>
                             <th scope="col">Whatsapp</th>
                             <th scope="col">KTP</th>
+                            <th scope="col">CV</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,9 @@
                                 <a href="{{asset('storage/ktp/'.$member->ktp)}}">
                                 <img src="{{asset('storage/ktp/'.$member->ktp)}}" alt="no-image" height="50" width="100">
                                 </a>
+                            </td>
+                            <td>
+                              <a href="{{asset('storage/cv/'.$member->cv)}}">Show CV</a>
                             </td>
                           @endforeach
                         </tbody>

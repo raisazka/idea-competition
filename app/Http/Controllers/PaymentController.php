@@ -24,7 +24,7 @@ class PaymentController extends Controller
     public function upload(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'payment' => 'required|max:2048|mimes:jpg,jpeg,png'
+            'payment' => 'required|max:2048|mimes:jpg,jpeg,png,pdf'
         ]);
             
         if($validator->fails()){
