@@ -325,6 +325,20 @@
             </div>
         </div>
     </div>
+    <div id="footer" class="footer container-fluid row" style="width:100%; margin:0;background-color:#365676;">
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 d-flex justify-kiri">
+            <div style="max-width:10em;">
+                <h5 class="text-center" style="transform:translateY(2em); color:white">Organized by:</h5>
+                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/BNCC.png')}}" class="img-fluid" style="max-width:10em;" alt="BNCC"></a>
+            </div>
+        </div>
+        <div class=" col-lg-6 col-md-6 col-xs-12 col-sm-12 d-flex justify-kanan">
+            <div style="max-width:10em;" >
+                <h5 class="text-center" style="transform:translateY(2em); color:white">Powered by:</h5>
+                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/binus.png')}}" class="img-fluid" style="max-width:10em;" alt="Binus"></a>
+            </div>
+        </div>
+    </div>
  </div> 
 
 <script src="{{asset('js/app.js')}}"></script>

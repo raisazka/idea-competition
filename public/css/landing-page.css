@@ -117,6 +117,13 @@ body {
     text-decoration: none;
     outline: none !important;
 }
+.justify-kiri{
+	justify-content: start;
+}
+.justify-kanan{
+	justify-content: end;
+}
+
 .navbar {
 	position: fixed;
 	z-index: 4;
@@ -936,6 +943,12 @@ form {
 		.contact-left {
 			width: 100%;
 			margin: 10vh 0;
+		}
+		.justify-kiri{
+			justify-content: center;
+		}
+		.justify-kanan{
+			justify-content: center;
 		}
 		.contact-left>img {
 			width: 70%;
