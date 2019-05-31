@@ -44,13 +44,12 @@ class HomeController extends Controller
             return back()->withErrors($validator);
         }
         $member = Member::findOrFail($id);
-        $fileNametoStore2 = $this->uploadFile($request->cv, 'public/cv');
+        $file = $this->uploadFile($request->file('cv'), 'public/cv');
         $member->update([
             'phone' => $request->phone,
             'line' => $request->line,
-            'cv' => $fileNametoStore2
+            'cv' => $file
         ]);
-
         return back()->with('success', 'Success Update Member Data');
     }
 
