@@ -130,7 +130,7 @@
                     <div class="row container">
                     @guest   
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
-                            <a class="anti-a" href="{{url('login')}}"><button type="submit">LOGIN</button></a>
+                            <a class="anti-a" href="{{url('user-login')}}"><button type="submit">LOGIN</button></a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
                             <a class="anti-a" href="{{url('regis')}}"><button type="submit">REGISTER</button></a>
