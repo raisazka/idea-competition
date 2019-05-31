@@ -104,6 +104,9 @@ class RegisterController extends Controller
        $ktp = $request->file('ktp');
        
        $count = count($email);
+       if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
         
         $group = new User;
         $group->name = $name;
@@ -126,6 +129,6 @@ class RegisterController extends Controller
         ]);
        }
        Mail::to($email[0])->send(new RegisterMail);
-       return redirect()->route('index.login');
+       return redirect()->route('user.dashboard');
     }
 }

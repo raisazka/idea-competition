@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
+    <title>Contestant Registration</title>
     <link rel="stylesheet" href="css/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="css/regis.css">
+    <link rel="shortcut icon" href="image/BIC.png">
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
     <form action="{{route('user.register')}}" method="post" class="form-form-form" enctype="multipart/form-data">
         @csrf
         <div class="content-promosi text-center container">
-            <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            <a href="http://bic.bncc.net/">
+                <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            </a>
             <h1>With</h1>
-            <img src="image/tiket.png" alt="">
+            <a href="https://www.tiket.com/" target="_blank">
+                <img src="image/tiket.png" alt="">
+            </a>
             <h3>BNCC Idea Competition</h3>
-            <h3>Solve The Case With Your Best IT Solution</h3>
-            <h3>Registration Deadline : 12 june 2019</h3>
+            <h3>Solve the Case with Your Best IT Solution</h3>
+            <h3>Registration Deadline : 14 June 2019</h3>
         </div>
         <div class="container-fluid form-container">  
             <h5 style="font-size:3em; margin-bottom:1em; text-decoration:underline" class="text-center">Registration</h5>
@@ -40,8 +45,8 @@
                             </span>
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                            <label for="Whatsapp">Whatsapp Number</label>
-                            <input type="text" class="form-control @error('phone.0') is-invalid @enderror" id="Whatsapp" value="{{ old('phone.0') }}" autocomplete="phone" name="phone[0]" placeholder="WhatsApp Number" required autofocus>
+                            <label for="Whatsapp">WhatsApp Number</label>
+                            <input type="text" class="form-control @error('phone.0') is-invalid @enderror" id="Whatsapp" value="{{ old('phone.0') }}" autocomplete="phone" name="phone[]" placeholder="WhatsApp Number" required autofocus>
                             <span class="phone_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('phone.0'))
                                     {{ $errors->first('phone.0') }}
@@ -106,8 +111,8 @@
                             </span>
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                            <label for="Whatsapp">Whatsapp Number</label>
-                            <input type="text" class="form-control @error('phone.1') is-invalid @enderror" id="Whatsapp1" value="{{ old('phone.1') }}" autocomplete="phone" name="phone[1]" placeholder="WhatsApp Number" required autofocus>
+                            <label for="Whatsapp">WhatsApp Number</label>
+                            <input type="text" class="form-control @error('phone.1') is-invalid @enderror" id="Whatsapp1" value="{{ old('phone.1') }}" autocomplete="phone" name="phone[]" placeholder="WhatsApp Number" required autofocus>
                             <span class="phone_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('phone.1'))
                                     {{ $errors->first('phone.1') }}
@@ -173,7 +178,7 @@
                         </span>
                     </div>
                     <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <label for="Whatsapp">Whatsapp Number</label>
+                        <label for="Whatsapp">WhatsApp Number</label>
                         <input type="text" class="form-control @error('phone.2') is-invalid @enderror" id="Whatsapp2" value="{{ old('phone.2') }}" autocomplete="phone" name="phone[]" placeholder="WhatsApp Number" required autofocus>
                         <span class="phone_wrong" style="color:red; font-weight:700; font-size: .8em">
                             @if ($errors->has('phone.2'))
@@ -230,7 +235,7 @@
             <div class="row">
                 <div class="container-fluid gambar-input col-lg-4 col-md-4 col-sm-12 col-xs-12 "> <img src="image/team.png" class="img-fluid" alt="hello"> </div>
                 <div class="container input-container col-lg-8 col-md-8 col-sm-12 col-xs-12 order-sm-first order-xs-first">
-                    <h1>Grup</h1>
+                    <h1>Group</h1>
                     <div class="row">
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">Group Name</label>
@@ -270,16 +275,17 @@
                         </div>
                         <div class="form-check" style="margin-left:1em;">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                            <label class="form-check-label" for="exampleCheck1">Agree with Terms & Condition</label>
+                            <label class="form-check-label" for="exampleCheck1">I Agree with all the Terms & Conditions</label>
                         </div>
                     </div>
                     <button class=" btn-regis" id="btn-register" type="button">Register</button>
+                    <span class="form_wrong" style="text-align:center;display:block;color:red; font-weight:700; font-size: .8em"></span>
                 </div>
             </div>
         </div>
         <div class="container-fluid form-container " id="info">
             <div class="row">
-            <a href="{{url('login')}}"><h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">already have account? login now</h5></a>
+            <a href="{{url('login')}}"><h5 class="col-12" style="text-decoration:underline; cursor:pointer;" id="try">Already have account? Login now</h5></a>
             </div>
         </div>
     </form>

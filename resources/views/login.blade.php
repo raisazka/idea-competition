@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Contestant Login</title>
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="{{asset('css/regis.css')}}">
+<link rel="shortcut icon" href="image/BIC.png">
     <style>
         #grup > .row > .input-container, #member1 > .row > .input-container{
             padding: 2em;
@@ -29,12 +30,16 @@
     <form action="{{url('login')}}" method="POST">
         @csrf
         <div class="content-promosi text-center container">
-            <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            <a href="http://bic.bncc.net/">
+                <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            </a>
             <h1>With</h1>
-            <img src="image/tiket.png" alt="">
+            <a href="https://www.tiket.com/" target="_blank">
+                <img src="image/tiket.png" alt="">
+            </a>
             <h3>BNCC Idea Competition</h3>
             <h3>Solve The Case WIth Your Best It Solution</h3>
-            <h3>Registration Deadline : 12 june 2019</h3>
+            <h3>Registration Deadline : 14 June 2019</h3>
         </div>
         <div class="container-fluid form-container" id="grup">
             <div class="row">
@@ -68,7 +73,7 @@
         <div class="container-fluid form-container " id="info">
             <div class="row" >
             <a class="col-12 text-right" href="{{url('regis')}}" >
-                <h5  style="text-decoration:underline; cursor:pointer;" id="try">don't have account? register now</h5>
+                <h5  style="text-decoration:underline; cursor:pointer;" id="try">Don't have account? Register now</h5>
             </a>
             </div>
         </div>

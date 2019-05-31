@@ -2,7 +2,7 @@
 var flag1 = 0,flag2 = 0;
 var dis_1;
 var dis_2;
-var email_error ='Email Must be gmail and include @'
+var email_error ='email must be gmail and include @ and .'
 $(document).ready(function(){
     $('#member1').hide();
     $('#member2').hide();
@@ -48,8 +48,7 @@ $(document).ready(function(){
             if(flag1 === 1){
                 $('#plus').hide(1000);
             }
-        }
-        
+        } 
     }
     $("#dis_1").click(function(){
         $("#member1").hide(2000);
@@ -72,7 +71,7 @@ $(document).ready(function(){
     });
 
     var email_v = new RegExp(/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/);
-    var phone_v = new RegExp(/^[0-9]{10,14}$/);
+    var phone_v = new RegExp(/^[0-9]{10,12}$/);
     var line_v = new RegExp(/^[a-zA-Z0-9]*[a-zA-Z0-9|\.|\_|\-|\@]{3,}$/);
     var name_v = new RegExp(/^[A-z]*((\s)*[A-z]){3,}$/);
     
@@ -94,10 +93,11 @@ $(document).ready(function(){
         group = validate_group();
         if(lead === true && mem1 === true && mem2 === true && group === true){
             $('#btn-register').prop('type','submit');
+            $('.form_wrong').empty();
         }
         else{
             $('#btn-register').prop('type','button');
-            alert('plis check your data troughtly')
+            $('.form_wrong').html("there is some error please check your input thoroughly").css('font-size','.8em');
         }
     });
     function req_member1(a){
@@ -140,13 +140,13 @@ $(document).ready(function(){
     function validate_password(a){
         $(a).parent().find('.pass_wrong').empty();
         if($('#password').val().length < 8){
-            $(a).parent().find('.pass_wrong').append("must be at least 8").css('font-size','.8em');   
+            $(a).parent().find('.pass_wrong').append("must be at least 8 characters").css('font-size','.8em');   
             return false;
         }
         else{
             $('#c-password').parent().find('.passc_wrong').empty();
             if(a.val() !== $('#c-password').val()){
-                $('#c-password').parent().find('.passc_wrong').append("confirmastion is wrong").css('font-size','.8em');
+                $('#c-password').parent().find('.passc_wrong').append("Those password didn't match").css('font-size','.8em');
                 return false;
             }
             return true;
@@ -195,7 +195,7 @@ $(document).ready(function(){
     function validate_line(a){
         $(a).parent().find('.line_wrong').empty();
         if(!line_v.test(a.val())){
-            $(a).parent().find('.line_wrong').append("must be alphanumeric or . - _").css('font-size','.8em');
+            $(a).parent().find('.line_wrong').append("can only contain alphabets, numbers, and several symbols ( - _ . )").css('font-size','.8em');
             return false;
         }
         return true;   
@@ -212,7 +212,7 @@ $(document).ready(function(){
     function validate_name(a){
         $(a).parent().find('.name_wrong').empty();
         if(!name_v.test(a.val())){
-            $(a).parent().find('.name_wrong').append("not a number or character").css('font-size','.8em');
+            $(a).parent().find('.name_wrong').append("must not contain symbols").css('font-size','.8em');
             return false;
         }
         return true;
@@ -236,7 +236,7 @@ $(document).ready(function(){
     function validate_phone(a){
         $(a).parent().find('.phone_wrong').empty();
         if(!phone_v.test(a.val())){
-            $(a).parent().find('.phone_wrong').append("min 10 character and no symbol").css('font-size','.8em');
+            $(a).parent().find('.phone_wrong').append("min 10 character and must be numeric").css('font-size','.8em');
             return false;
         }
         return true;
@@ -251,8 +251,8 @@ $(document).ready(function(){
             return false;
         }
         else{
-            if(year < 1996 || year > 2002 ){
-                $(a).parent().find('.dob_wrong').append("must be around 17-24 years old").css('font-size','.8em');
+            if(year < 1994 || year > 2005 ){
+                $(a).parent().find('.dob_wrong').append("must be around 15-24 years old").css('font-size','.8em');
                 return false;
             }
             return true;

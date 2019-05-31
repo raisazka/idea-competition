@@ -16,7 +16,4 @@ class WelcomeController extends Controller
     public function register(){
         return view('registration');
     }
-    public function dashboard(){
-        return view('Dashboard');
-    }
 }

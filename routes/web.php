@@ -15,10 +15,10 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/regis','WelcomeController@register');
 
 Route::get('/user-login','WelcomeController@login')->name('index.login');
-
+Route::post('/contactus','ViewController@SendMessage')->name('contactus');
 Route::get('/login','WelcomeController@login');
 
-Route::get('/dashboard','WelcomeController@dashboard');
+Route::get('/dashboard','HomeController@index')->name('user.dashboard');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
