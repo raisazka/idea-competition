@@ -40,9 +40,13 @@
         </div>
 
         <div class="content-promosi text-center container">
-            <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            <a href="{{url('/')}}">
+                <img src="image/BIC.png" alt="bic" class="img-fluid bic-logo">
+            </a>
             <h1>With</h1>
-            <img src="image/tiket.png" alt="">
+            <a href="https://www.tiket.com/" target="_blank">
+                <img src="image/tiket.png" alt="">
+            </a>
             <h3>BNCC Idea Competition</h3>
             @if (session()->has('success'))
             <div class="alert alert-success">
@@ -75,13 +79,13 @@
                             <label for="Group">Payment status</label><br>
                             <span @if($user->payments == null || $user->payments->status == "Rejected")class="text-danger" @elseif($user->payments->status == "Pending") class="text-warning-dark" @elseif($user->payments->status == "Verified") class="text-success" @else class="text-danger" @endif style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >
                                 @if($user->payments == null)
-                                    You have not paid please proceed payment before 20 june 2019
+                                You have not paid. Please do your payment before 13 June 2019 to access the case.
                                 @elseif($user->payments->status == "Pending")
                                     your payment is waiting to be Verified
                                 @elseif($user->payments->status == "Verified")
                                     Your payment is Verified 
                                 @elseif($user->payments->status == "Rejected")
-                                    Your Payment is Rejected please check it throughtly
+                                    Your Payment is Rejected please check it again
                                 @else
                                     Something is wrong
                                 @endif
@@ -121,7 +125,7 @@
                     <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
                         @csrf
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <label for="Group">Submit Proposal</label><br>
+                        <label for="Group">Submit Proposal</label><br>
                             <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" id="proposal" class=" @error('proposal') is-invalid @enderror"  name="proposal" style="border:none; padding:auto 0;" required autofocus>
                             <br>
                             <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">

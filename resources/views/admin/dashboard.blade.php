@@ -40,7 +40,7 @@
                             <form action="{{route('admin.verify', $user->id)}}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success"{{$user->payments->status == 'Verified' ? 'disabled':'' }}>Verify</button>
+                                <button type="submit" class="btn btn-success"{{$user->payments->status == 'Verified' }}>Verify</button>
                             </form>
                             </td>
                           @endforeach

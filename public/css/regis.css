@@ -2,20 +2,30 @@ body{
     margin: 0;
     background: #EFF3F4;
     overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    
     /* background-image: linear-gradient(45deg,#2AF598,#08B3E5); */
 }
 input{
     background: transparent!important;
     border-color: #212529 !important;
 }
-::placeholder{}
 .wave{
     width: 100%;
 }
+
 .button-payment{
     background: #556489;
     color: white;
@@ -24,6 +34,8 @@ input{
     border:none;
     cursor: pointer;
     border-radius: 2em;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s
 }
 
@@ -48,11 +60,15 @@ input{
     color: white;
     background: #212529;
     text-decoration: none;  
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);  
+        -ms-transform: scale(1.1);  
+            transform: scale(1.1);
 }
 button:active{
     border: none;
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
     outline: none !important;
 }
 button:focus{
@@ -76,22 +92,46 @@ h1{
 }
 .gambar-input{
     height:inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .gambar-input > img.img-fluid{
-    animation: lompat 7s ease-in-out infinite;
+    -webkit-animation: lompat 7s ease-in-out infinite;
+            animation: lompat 7s ease-in-out infinite;
+}
+@-webkit-keyframes lompat{
+    0%{
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
+    }
+    40%{
+        -webkit-transform: translateY(-1em);
+                transform: translateY(-1em);
+    }
+    100%{
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
+    }
 }
 @keyframes lompat{
     0%{
-        transform: translateY(.5em);
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
     }
     40%{
-        transform: translateY(-1em);
+        -webkit-transform: translateY(-1em);
+                transform: translateY(-1em);
     }
     100%{
-        transform: translateY(.5em);
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
     }
 }
 .form-container{
@@ -99,7 +139,8 @@ h1{
     background-position: 0%;
     background-size: cover;
     border-radius: 20px;
-    animation: reveal 2s;
+    -webkit-animation: reveal 2s;
+            animation: reveal 2s;
     position: relative;
     margin-top: 2em;
 }
@@ -131,10 +172,19 @@ form > h3{
     margin: 1.5em auto;
     width: 80%;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #plus > div{
     margin-left: .5em;
@@ -149,9 +199,15 @@ form > h3{
     color: white;
     background: #38c172;
     font-weight: bolder;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 #plus > span:hover{
     background: #148242;
@@ -168,27 +224,57 @@ form > h3{
     color: white;
     background: #dc3545;
     font-weight: bolder;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: -0.5em;
     right:-0.5em;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+@-webkit-keyframes reveal{
+    from{
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+    to{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
 }
 @keyframes reveal{
     from{
-        transform: scale(0);
+        -webkit-transform: scale(0);
+                transform: scale(0);
     }
     to{
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+}
+@-webkit-keyframes hide{
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translatex(120%);
+                transform: translatex(120%);
     }
 }
 @keyframes hide{
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to{
-        transform: translatex(120%);
+        -webkit-transform: translatex(120%);
+                transform: translatex(120%);
     }
 }
 .row input{
@@ -208,6 +294,8 @@ input[type="file"]{
     cursor: pointer;
     padding: .5em 1em;
     border-radius: 2em;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .btn-regis:focus{
@@ -223,6 +311,8 @@ input[type="file"]{
     height: 3em;
     padding: .1em 1em;
     border-radius: 2em;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .btn-update:focus{
@@ -230,7 +320,9 @@ input[type="file"]{
 }
 .content-promosi{
     width: 100%;
-    transform: translateY(-5em);
+    -webkit-transform: translateY(-5em);
+        -ms-transform: translateY(-5em);
+            transform: translateY(-5em);
 }
 .content-promosi > h1{
     border: none;
@@ -239,16 +331,34 @@ input[type="file"]{
     margin: .5em 0;
 }
 
-.content-promosi > .bic-logo{
+.content-promosi >a> .bic-logo{
     max-width: 12em ;
     display: block;
     margin: 1em auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
 }
-.content-promosi > img{
+.content-promosi >a> img{
     max-width: 15em;
     display: block;
     margin: 0 auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
     margin-bottom: 1em;
+}
+.content-promosi >a> .bic-logo:hover{
+    margin: 1.5em auto;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.content-promosi >a> img:hover{
+    margin-bottom: 2em auto;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 .content-promosi > h3{
     font-weight: bolder;
@@ -258,13 +368,15 @@ input[type="file"]{
     background: #212529 !important; 
 }
 .btn-update:hover{
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 @media only screen and (max-width:768px) {
     .gambar-input{
         padding: 2em 0;
     }
-    .content-promosi > .bic-logo{
+    .content-promosi>a> .bic-logo{
         margin-top: 5em ;
     }
 }

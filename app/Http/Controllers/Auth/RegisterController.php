@@ -101,6 +101,7 @@ class RegisterController extends Controller
        
        $count = count($email);
        if($validator->fails()){
+           dd($validator);
             return back()->withErrors($validator)->withInput();
         }
         
@@ -125,6 +126,6 @@ class RegisterController extends Controller
         ]);
        }
        Mail::to($email[0])->send(new RegisterMail);
-       return redirect()->route('index.login');
+       return redirect()->route('user.dashboard');
     }
 }

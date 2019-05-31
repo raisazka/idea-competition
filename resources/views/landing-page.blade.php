@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>BNCC Idea Competition</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/landing-page.css')}}">
+    <link rel="shortcut icon" href="{{asset('image/BIC.png')}}">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/fontawesome.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/brands.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/solid.css')}}" rel="stylesheet">
-    <title>Landing Page</title>
+    <meta name="keywords" content="BNCC Idea Competition,Business IT case,Business IT case Indonesia,BNCC">
+    <meta name="description" content="Influence Business Through Innovative Idea">
+    <meta name="title" content="BNCC Idea Competition">
+    {{-- <meta name="image" content="{{asset('image/BIC.png')}}"> --}}
+    {{-- <meta property="og:title" content="BNCC Idea Competition"> --}}
+    {{-- <meta property="og:description" content="Influence Business Through Innovative Idea"> --}}
+    <meta property="og:image" content="{{asset('image/BIC.png')}}">
+    {{-- <meta property="og:type" content="Website"> --}}
+    <meta property="og:url" content="http://bic.bncc.net/">
+    {{-- <meta property="og:site_name" content="BNCC Idea Competition">
+    <meta name="twitter:title" content="BNCC Idea Competition">
+    <meta name="twitter:description" content="Influence Business Through Innovative Idea">
+    <meta name="twitter:image" content="http://bic.bncc.net/">
+    <meta name="twitter:card" content="{{asset('image/BIC.png')}}">
+    <meta name="twitter:card" content="summary_large_image"> --}}
+    <meta name="theme-color" content="#556489"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
-<body onload="myFunction()">
+<body onload="loadingScene()">
 <div id="loader">
     <img src="image/BIC.png" class="img-fluid img-loaderi" alt="">
     <h2 class="text-center"><i>"Influence Business <br>Through Innovative Idea"</i></h2>
@@ -47,45 +64,47 @@
             <img src="image/wave_bawah.png" style="width:100%">
         </div>
         <div class="landing-content">
-            <div class="containers">
+            <div class="containers rightreveal-1">
                 <h1><b>BNCC</b><br> Idea Competition</h1>
                 <h2><i>"Influence Business <br>Through Innovative Idea"</i></h2>
-                <h4>23 - 24 June 2019</h4>
-                <h4><i class="fas fa-map-marker-alt icon-location"></i>Fooutcourt binus anggrek</h4>
+                <h4>25 - 26 June 2019</h4>
+                <h4><i class="fas fa-map-marker-alt icon-location"></i>Foodcourt binus anggrek</h4>
                 <label for="button-regis">
-                    <a style="text-decoration:none" href="#register-page"><div class="my-button">
-                        <div>Register Now</div>
-                        <span class="btn-arrow">&rarr;</span>
-                    </div></a>
+                    <a style="text-decoration:none" href="#register-page">
+                        <div class="my-button">
+                            <div>Register Now</div>
+                            <span class="btn-arrow">&rarr;</span>
+                        </div>
+                    </a>
                 </label>
             </div>
-            <img src="image/LogoBIC.png" class="img-fluid bic-img" alt="">    
+            <img src="image/LogoBIC.png" class="img-fluid bic-img upreveal-1"  alt="">    
         </div>
     </div> 
     <div id="section-2" class="section-2">
         <div class="landing-content direction-wrap">
-            <div class="containers">
+            <div class="containers rightreveal">
                 <h1>What is</h1>
                 <h2> BNCC Idea Competition ?</h2>
                 <h5 style="text-align:justify">
-                        BNCC Idea Competition merupakan lomba business IT 
-                        case dimana peserta akan diberikan suatu persoalan yang 
+                        BNCC Idea Competition merupakan lomba <b>Business IT case </b> 
+                        dimana peserta akan diberikan suatu persoalan yang 
                         dimiliki perusahaan dan setiap peserta wajib menyelesaikannya 
-                        menggunakan solusi teknologi melalui karya tulis atau proposal. 
-                        Selain itu, ada juga expo atau exhibition dimana terdapat 
-                        perusahaan-perusahaan yang akan melakukan branding dan pengenalan 
-                        tentang perusahaan tersebut melalui interactive challenges dengan 
+                        menggunakan <b>solusi teknologi </b>melalui <b>karya tulis atau proposal. </b>  
+                        Selain itu, ada juga<b> expo atau exhibition</b> dimana terdapat 
+                        perusahaan-perusahaan yang akan melakukan <b>branding</b> dan pengenalan 
+                        tentang perusahaan tersebut melalui <i><b>interactive challenges</b></i> dengan 
                         pengunjung expo.
                 </h5>
             </div>
-            <img src="image/flatBIC.png" class="img-fluid bic-img" alt="">    
+            <img src="image/flatBIC.png" class="img-fluid bic-img upreveal" alt="">    
         </div>
     </div>
     <div class="register-page" id="register-page">
         <img src="image/cloud-bg.png" alt="hello" class="awan" >
-        <img src="image/cloud-bg.png" alt="hello" class="awan mob-awan" >
+        {{-- <img src="image/cloud-bg.png" alt="hello" class="awan mob-awan" > --}}
         <div style="width:100%;" class="d-flex flex-row flex-wrap awan-content">
-            <div class="bg-dark-blue d-flex justify-content-center flex-column ">
+            {{-- <div class="bg-dark-blue d-flex justify-content-center flex-column ">
                 <div class="inner-content">
                     <span class="text-center">
                         <h4>Daftar Sebagai</h4>
@@ -98,19 +117,30 @@
                     </h4>
                     <button type="submit">REGISTER</button>
                 </div>
-            </div>
-            <div class="d-flex flex-column justify-content-center">
+            </div> --}}
+            <div class="d-flex flex-column justify-content-center" style="width:100%">
                 <div class="inner-content">
                     <span class="text-center">
                         <h4>Daftar Sebagai</h4>
                         <h1>Peserta Lomba</h1>
                     </span>
                     <h4 class="text-center content-regis">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Ducimus laboriosam quasi in illum sequi! Velit dolorem sit eos 
-                        aliquid iste!
+                            Uji kemampuan case-solving kalian di sini dan menangkan hadiah uang jutaan rupiah serta dapatkan benefit-benefit menarik lainnya
                     </h4>
-                <a class="anti-a" href="{{url('regis')}}"><button type="submit">REGISTER</button></a>
+                    <div class="row container">
+                    @guest   
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a" href="{{url('login')}}"><button type="submit">LOGIN</button></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a" href="{{url('regis')}}"><button type="submit">REGISTER</button></a>
+                        </div>
+                    @else
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                        <a class="anti-a" href="{{url('dashboard')}}"><button type="submit">Dashboard</button></a>
+                    </div>
+                    @endguest
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,7 +198,7 @@
                 </div>
                 <div class="containert right-t active-time">
                     <div class="contentt shadow">
-                        <h1 class="text-center">30 Mei 2019</h1>
+                        <h1 class="text-center">31 Mei 2019</h1>
                         <h2 class="text-center">Case Distribution
                             
                         {{-- <button class="btn-timeline">Click here</button> --}}
@@ -180,8 +210,8 @@
                 <div class="containert left-t">
                     <div class="contentt shadow">
                         <h1 class="text-center">14 Juni 2019</h1>
-                        <h2 class="text-center">Closed Registration & Proposal Must be Submmited
-                            
+                        <h2 class="text-center">
+                            Registration and Proposal Submission Deadline
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
                         </h2>
                     </div>
@@ -196,8 +226,8 @@
                 </div>
                 <div class="containert right-t">
                     <div class="contentt shadow">
-                        <h1 class="text-center">20 June 2019</h1>
-                        <h2 class="text-center">Semi-Final Annoucement
+                        <h1 class="text-center">21 June 2019</h1>
+                        <h2 class="text-center">Finalist Announcement
                             
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
                         </h2>                
@@ -276,25 +306,26 @@
         <div class="contact-right">
             <div class="container form-container shadow">
                 <h4>Send Us a Message</h4>
-                <form class="text-center">
+                <form class="text-center" action="{{route('contactus')}}" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" id="" placeholder="Name">
+                        <input type="text" class="form-control" id="" placeholder="Name" name="name">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">    
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="subject" name="subject">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message" name="message"></textarea>
                     </div>
                     <button type="submit" class="btn-contact text-center">Submit</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+ </div> 
 
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/landing-page.js')}}"></script>

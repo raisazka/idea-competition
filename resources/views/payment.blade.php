@@ -26,8 +26,16 @@
         <h1 class="text-header">Payment</h1>
         <div class="card-payment">
             <ol class="list-group list-group-flush no-bg">
-                <li class="list-group-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique maiores dolorem exercitationem itaque sed quam amet repellat obcaecati ex, unde accusamus mollitia, nulla assumenda totam quos, quis ad! Ad, perspiciatis maxime. Eaque magni laborum dolores corrupti cumque animi perferendis doloremque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius dolor tempora sed?</li>
-                <li class="list-group-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos veniam ex sed alias fuga ut quisquam earum saepe. Quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui praesentium saepe, ratione ad illo ullam veniam officiis provident rem eius ea sed, odio ducimus animi corrupti, accusantium explicabo iusto excepturi.</li>
+                <li class="list-group-item">
+                        1. Pembayaran sebesar Rp 150.000 (per tim) dilakukan secara transfer ke rekening BCA 5271734761 a.n. Jodhy Dwiharsono Putra
+                </li>
+                <li class="list-group-item">2. Setelah melakukan pembayaran, setiap tim wajib meng-upload bukti pembayarannya di dashboard masing-masing
+                        - File bukti pembayaran harap di-rename dengan format berikut : [nama team]_BNCCIdeaCompetition
+                        - Jenis file yang dapat diupload hanya .jpg, .jpeg, .png, atau .pdf dengan ukuran maksimal 2 MB</li>
+                <li class="list-group-item">3. Setelah diupload, silakan menunggu beberapa hari untuk verifikasi bukti pembayaran</li>
+                <li class="list-group-item">
+                        4. Case untuk BNCC Idea Competition baru dapat diakses apabila pembayaran sudah diverifikasi
+                </li>
             </ol>
         </div>    
     </div>
@@ -57,6 +65,7 @@
         </div>
     </form>  
 </div>
+<a href="{{url('dashboard')}}" style="text-decoration:underline; margin:5em 0;">Back to Dashboard</a>
         
     <img src="image/wave_bawah.png" class="wave wave_bawah">
 <script src="{{asset('js/app.js')}}"></script>

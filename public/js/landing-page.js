@@ -1,9 +1,9 @@
 var position = $(window).scrollTop(); 
 var temp;
-var section2 = $('#section-2').height();
+var section2;
 var ctr=0;
 var myVar;
-function myFunction() {
+function loadingScene() {
 myVar = setTimeout(showPage, 3000);
 }
 function showPage() {
@@ -14,7 +14,18 @@ function showPage() {
 function done(){
     $('#loader').css('display','none');
 }
+function divreach(a){
+    
+
+}
 $(document).ready(function(){
+   var hT = $('#home-div').offset().top,
+    hH = $('#home-div').outerHeight(),
+    wH = $(window).height();
+    section2 = hT+hH-wH;
+
+    $('.upreveal-1').css('animation','upreveal 1s ease-in-out');
+    $('.rightreveal-1').css('animation','rightreveal 1s ease-in-out')
     let opentoggle = () =>{
         $(".btn-burger").toggleClass("btn-burger-toggle");   
         $('.navbar').toggleClass('navbar-mobile');
@@ -37,18 +48,7 @@ $(document).ready(function(){
 });
 
 $(document).scroll(function(){
-    temp = (position-1)+1.2;
-    var scroll = $(window).scrollTop();
-    if(scroll > temp) {
-        if(ctr%2==0){
-            $('.navbar').css('top','-80px');
-        }
-    } else {
-        $('.navbar').css('top','0');
-    }
-    position = scroll;
-    temp = (position-1) + 0.001;
-    if($(window).scrollTop() > section2){
+    if($(window).scrollTop() > $('#section-2').offset().top){
         $('.navbar').addClass('nav-have');
         $('.no-burger').addClass('nav-color');
         $('.btn-burger>span').removeClass('color-super-dark');
@@ -57,5 +57,22 @@ $(document).scroll(function(){
         $('.navbar').removeClass('nav-have');
         $('.no-burger').removeClass('nav-color');
         $('.btn-burger>span').addClass('color-super-dark');
+    }
+    temp = (position-1)+1.2;
+    var scroll = $(window).scrollTop();
+    if(scroll > temp) {
+        if(ctr%2==0){
+            $('.navbar').css('transform','translateY(-80px)');
+        }
+    } else {
+        $('.navbar').css('transform','translateY(0)');
+    }
+    position = scroll;
+    temp = (position-1) + 0.001;
+    if($(window).scrollTop() + $(window).height() > $('.upreveal').offset().top){
+        $('.upreveal').css('animation','upreveal 1s ease-in-out');
+    }
+    if($(window).scrollTop() + $(window).height() > $('.rightreveal').offset().top){
+        $('.rightreveal').addClass('rightmotion');
     }
 });
