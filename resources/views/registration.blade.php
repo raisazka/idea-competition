@@ -37,10 +37,10 @@
                     <div class="row">
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="name">Full Name</label>
-                            <input type="text" class="form-control @error('member_name.0') is-invalid @enderror" value="{{ old('member_name.0') }}" autocomplete="member_name" name="member_name[]" id="name" placeholder="Full Name" required autofocus>
+                            <input type="text" class="form-control @error('member_name.0') is-invalid @enderror" value="{{ old('member_name.0') }}" autocomplete="member_name" name="member_name[0]" id="name" placeholder="Full Name" required autofocus>
                             <span class="name_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('member_name.0'))
-                                    {{ $errors->first('member_name') }}
+                                    {{ $errors->first('member_name.0') }}
                                 @endif
                             </span>
                         </div>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control @error('email.0') is-invalid @enderror" name="email[]" id="email" value="{{ old('email.0') }}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
+                            <input type="email" class="form-control @error('email.0') is-invalid @enderror" name="email[0]" id="email" value="{{ old('email.0') }}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
                             <span class="email_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('email.0'))
                                     {{ $errors->first('email.0') }}
@@ -66,7 +66,7 @@
                     <div class="row">
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="Line">Line Id</label>
-                            <input type="text" class="form-control @error('line.0') is-invalid @enderror" id="Line" name="line[]" value="{{ old('line.0') }}" placeholder="Line Id" required autofocus> 
+                            <input type="text" class="form-control @error('line.0') is-invalid @enderror" id="Line" name="line[0]" value="{{ old('line.0') }}" placeholder="Line Id" required autofocus> 
                             <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('line.0'))
                                     {{ $errors->first('line.0') }}
@@ -75,7 +75,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="dob">Date Of Birth</label>
-                            <input type="date" min="1997-01-01" max="2002-01-01" name="dob[]" value="{{ old('dob.0') }}" class="form-control  @error('dob.0') is-invalid @enderror" id="dob" placeholder="Date Of Birth" required autofocus>
+                            <input type="date" min="1997-01-01" max="2002-01-01" name="dob[0]" value="{{ old('dob.0') }}" class="form-control  @error('dob.0') is-invalid @enderror" id="dob" placeholder="Date Of Birth" required autofocus>
                             <span class="dob_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('dob.0'))
                                     {{ $errors->first('dob.0') }}
@@ -84,7 +84,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                             <label for="ktp">Kartu Mahasiswa</label>
-                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.0') is-invalid @enderror" value="{{ old('ktp.0') }}" id="ktp" name="ktp[]" required autofocus>
+                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.0') is-invalid @enderror" value="{{ old('ktp.0') }}" id="ktp" name="ktp[0]" required autofocus>
                             <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('ktp.0'))
                                     {{ $errors->first('ktp.0') }}
@@ -103,7 +103,7 @@
                     <div class="row">
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="name">Full Name</label>
-                            <input type="text" class="form-control @error('member_name.1') is-invalid @enderror" value="{{ old('member_name.1') }}" autocomplete="member_name" name="member_name[]" id="name1" placeholder="Full Name" required autofocus>
+                            <input type="text" class="form-control @error('member_name.1') is-invalid @enderror" value="{{ old('member_name.1') }}" autocomplete="member_name" name="member_name[1]" id="name1" placeholder="Full Name" required autofocus>
                             <span class="name_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('member_name.1'))
                                     {{ $errors->first('member_name.1') }}
@@ -121,7 +121,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control @error('email.1') is-invalid @enderror" name="email[]" id="email1" value="{{ old('email.1') }}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
+                            <input type="email" class="form-control @error('email.1') is-invalid @enderror" name="email[1]" id="email1" value="{{ old('email.1') }}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
                             <span class="email_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('email.1'))
                                     {{ $errors->first('email.1') }}
@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
                             <label for="Line">Line Id</label>
-                            <input type="text" class="form-control @error('line.1') is-invalid @enderror" id="Line1" name="line[]" value="{{ old('line.1') }}" placeholder="Line Id" required autofocus> 
+                            <input type="text" class="form-control @error('line.1') is-invalid @enderror" id="Line1" name="line[1]" value="{{ old('line.1') }}" placeholder="Line Id" required autofocus> 
                             <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('line.1'))
                                     {{ $errors->first('line.1') }}
