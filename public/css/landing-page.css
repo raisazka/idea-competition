@@ -118,10 +118,10 @@ body {
     outline: none !important;
 }
 .justify-kiri{
-	justify-content: start;
+	justify-content: flex-start;
 }
 .justify-kanan{
-	justify-content: end;
+	justify-content: flex-end;
 }
 
 .navbar {
