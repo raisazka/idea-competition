@@ -29,7 +29,22 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::where('id', Auth::user()->id)->first();
-        return view('Dashboard')->with('user',$user);
+        $ctr = 0;
+        $cv = 0;
+        $message= "";
+        foreach($user->members as $member){
+            $ctr++;
+            if($member->cv != null){
+                $cv++;
+            }
+        } 
+        if($ctr == $cv){
+            $message = "CVOK";
+        }
+        else{
+            $message = "NONE";
+        }
+        return view('Dashboard')->with('user',$user)->with('message',$message);
     }
 
     public function updateMemberData(Request $request,$id)

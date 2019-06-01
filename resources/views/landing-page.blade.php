@@ -118,7 +118,7 @@
                     <button type="submit">REGISTER</button>
                 </div>
             </div> --}}
-            <div class="d-flex flex-column justify-content-center" style="width:100%">
+            <div  class="d-flex flex-column justify-content-center" style="width:100%">
                 <div class="inner-content">
                     <span class="text-center">
                         <h4>Daftar Sebagai</h4>

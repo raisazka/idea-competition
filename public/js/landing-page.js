@@ -69,10 +69,10 @@ $(document).scroll(function(){
     }
     position = scroll;
     temp = (position-1) + 0.001;
-    if($(window).scrollTop() + $(window).height() > $('.upreveal').offset().top){
-        $('.upreveal').css('animation','upreveal 1s ease-in-out');
-    }
-    if($(window).scrollTop() + $(window).height() > $('.rightreveal').offset().top){
-        $('.rightreveal').addClass('rightmotion');
-    }
+    // if($(window).scrollTop() + $(window).height() > $('.upreveal').offset().top){
+    //     $('.upreveal').css('animation','upreveal 1s ease-in-out');
+    // }
+    // if($(window).scrollTop() + $(window).height() > $('.rightreveal').offset().top){
+    //     $('.rightreveal').addClass('rightmotion');
+    // }
 });
