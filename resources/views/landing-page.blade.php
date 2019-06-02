@@ -45,6 +45,7 @@
                     <a href="#section-2">What is BIC</a>
                     <a href="#register-page">Registration</a>
                     <a href="#time-line">Timeline</a>
+                    <a href="#faq">FAQ</a>
                     <a href="#contact-us">Contact Us</a>
                 </div>
                 <button class="btn-burger">
@@ -60,6 +61,7 @@
             <div class="section-navbar-list"><a href="#section-2">What is BIC</a></div>
             <div class="section-navbar-list"><a href="#register-page">Registration</a></div>
             <div class="section-navbar-list"><a href="#time-line">Timeline</a></div>
+            <div class="section-navbar-list"><a href="#faq">FAQ</a></div>
             <div class="section-navbar-list"> <a href="#contact-us">Contact Us</a></div>
             <img src="image/wave_bawah.png" style="width:100%">
         </div>

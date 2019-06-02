@@ -1044,6 +1044,9 @@ form {
 		margin: 0 auto;
 		display: block;
 	}
+	.faq > div > h1{
+		margin-top: 1.2em;
+	}
 }
 	@media only screen and (max-width:768px) {
 		.awan{
