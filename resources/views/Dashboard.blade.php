@@ -11,6 +11,11 @@
     <link href="{{asset('fontawesome-free-5.8.2-web/css/fontawesome.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/brands.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/solid.css')}}" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <img src="image/wave_atas.png" class="wave wave_atas">
@@ -104,7 +109,7 @@
                     </div>
                 @if($user->payments == null)
                 @elseif($user->payments->status == "Verified")    
-                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">    
+                    <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">    
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">Proposal Tempalte</label><br>
                             <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pegerjaan case BIC</span>
@@ -113,7 +118,7 @@
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
                         </div>
                     </div>
-                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">    
+                    <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">    
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">BIC Case</label><br>
                             <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Selesaikan Case ini sebelum tanggal 14 Juni 2019</span>
@@ -122,22 +127,47 @@
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
                         </div>
                     </div>
-                    <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center">
-                        @csrf
-                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <label for="Group">Submit Proposal</label><br>
-                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" id="proposal" class=" @error('proposal') is-invalid @enderror"  name="proposal" style="border:none; padding:auto 0;" required autofocus>
-                            <br>
-                            <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
-                                @if ($errors->has('proposal'))
-                                    {{ $errors->first('proposal') }}
-                                @endif
-                            </span>
-                        </div>
-                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <button class="button-payment" type="button" id="btn-proposal">Submit Proposal</button>
-                        </div>
-                    </form>
+                        @if($message == "CVOK")
+                        <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">
+                            @csrf
+                            <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">Submit Proposal</label><br>
+                                <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" id="proposal" class=" @error('proposal') is-invalid @enderror"  name="proposal" style="border:none; padding:auto 0;" required autofocus>
+                                <br>
+                                <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('proposal'))
+                                        {{ $errors->first('proposal') }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                
+                                    <button class="button-payment" type="button" id="btn-proposal">Submit Proposal</button>
+                            </div>
+                        </form>
+                        @elseif($message== "NONE")
+                            <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">
+                                <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <label for="Group">Submit Proposal</label><br>
+                                    <span class="text-danger" style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Upload CV semua member untuk bisa submit proposal</span>
+                                </div>
+                                <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    @foreach ($user->members as $member)
+                                        @if($member->cv == null)
+                                            @if($loop->first)    
+                                                <a class="button-payment" href="#cv" style="color:white;transform :scale(.8);display:inline-block;">CV Leader</a>
+                                            @elseif($loop->index == 1)
+                                                <a class="button-payment" href="#cv1" style="color:white;transform :scale(.8);display:inline-block;">CV Member 1</a>
+                                            @elseif($loop->index == 2)
+                                                <a class="button-payment" href="#cv2" style="color:white;transform :scale(.8);display:inline-block;">CV Member 2</a>
+                                            @else
+                                                Something is wrong
+                                            @endif
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
                     @endif
                 </div>
             </div>
@@ -214,7 +244,7 @@
                                 </span>
                             </div>               --}}
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
-                                <label @if($loop->first)for="cv" @elseif($loop->index ==1)for="cv1" @else for="cv2" @endif>Curriculum Vitae</label>
+                                <label @if($loop->first)for="cv" @elseif($loop->index ==1)for="cv1" @else for="cv2" @endif>@if($member->cv!=null)<b>Update</b> @endif Curriculum Vitae</label>
                                 <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('cv') is-invalid @enderror" @if($loop->first)id="cv" @elseif($loop->index ==1)id="cv1" @else id="cv2" @endif name="cv" required autofocus>
                                 <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('cv'))
