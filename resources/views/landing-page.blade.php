@@ -178,27 +178,13 @@
     <div class="time-line" id="time-line">
         <h1>TIMELINE</h1>
         <div class="timeline">
-            {{-- <div class="try-time-line try-time-left">
-                <div class="containert left-t active-time">
-                    <div class="contentt shadow">
-                        <h1 class="text-center">24 Mei 2019</h1>
-                        <h2 class="text-center">Open Registration
-                            
-                        <button class="btn-timeline">Click here to Register</button>
-                        </h2>
-                    </div>
-                </div>
-                <div class="containert-icon">
-                    <img class="img-fluid" src="image/OpenRegis1-01.png" alt="openregis">
-                </div>
-            </div> --}}
             <div class="try-time-line try-time-right">
                 <div class="containert-icon">
                     <img class="img-fluid" src="image/Distribution-01.png" alt="openregis">
                 </div>
                 <div class="containert right-t active-time">
                     <div class="contentt shadow">
-                        <h1 class="text-center">31 Mei 2019</h1>
+                        <h1 class="text-center">03 Juni 2019</h1>
                         <h2 class="text-center">Case Distribution
                             
                         {{-- <button class="btn-timeline">Click here</button> --}}
@@ -209,7 +195,7 @@
             <div class="try-time-line try-time-left">
                 <div class="containert left-t">
                     <div class="contentt shadow">
-                        <h1 class="text-center">14 Juni 2019</h1>
+                        <h1 class="text-center">17 Juni 2019</h1>
                         <h2 class="text-center">
                             Registration and Proposal Submission Deadline
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
@@ -270,8 +256,62 @@
             </div>
         </div>
     </div>
-    <div class="location" id="location">
-        
+    {{-- <div class="location row container-fluid" id="location">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex flex-column justify-content-around align-items-center">
+            <h1 style="color:white">Apa aja yang akan ada di BIC ?</h1>
+            <div class="promotion-card row left-border right-border shadow">
+                <div style="border-right:1px solid grey" class="promotion-logo col-sm-12 col-md-12 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="promotion-content col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                    <h3>BIC Final Presentation</h3>
+                    <p>
+                        disini kamu akan melihat para finalis dari lomba BNCC Idea Competition menyampaikan ide mereka di depan para juri secara langsung dan dapatkan keseruannya
+                    </p>
+                </div>
+            </div>
+            <div class="promotion-card row left-border right-border shadow">
+                <div style="border-right:1px solid grey" class="promotion-logo col-sm-12 col-md-12 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="promotion-content col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                    <h3>BIC Final Presentation</h3>
+                    <p>
+                        disini kamu akan melihat para finalis dari lomba BNCC Idea Competition menyampaikan ide mereka di depan para juri secara langsung dan dapatkan keseruannya
+                    </p>
+                </div>
+            </div>
+            <div class="promotion-card row left-border right-border shadow">
+                <div style="border-right:1px solid grey" class="promotion-logo col-sm-12 col-md-12 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="promotion-content col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                    <h3>BIC Final Presentation</h3>
+                    <p>
+                        disini kamu akan melihat para finalis dari lomba BNCC Idea Competition menyampaikan ide mereka di depan para juri secara langsung dan dapatkan keseruannya
+                    </p>
+                </div>
+            </div>
+            <div class="promotion-card row left-border right-border shadow">
+                <div style="border-right:1px solid grey" class="promotion-logo col-sm-12 col-md-12 col-lg-2 col-xl-2 d-flex justify-content-center align-items-center">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="promotion-content col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                    <h3>BIC Final Presentation</h3>
+                    <p>
+                        disini kamu akan melihat para finalis dari lomba BNCC Idea Competition menyampaikan ide mereka di depan para juri secara langsung dan dapatkan keseruannya
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 container d-flex flex-column justify-content-center"> --}}
+            {{-- <h1 style="color:white;font-size:2.5em;font-weight:bold;">Location</h1>
+            <div id="map"></div>
+            <div style="color:white;margin-top:1.2em;">
+                <h3>Foodcourt Binus Anggrek</h3>
+                <h3>25 - 26 June 2019</h3>
+            </div> --}}
+        </div>
     </div>
     <div class="contact-us" id="contact-us">
         <div class="contact-left">
@@ -315,7 +355,7 @@
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                     </div>
                     <div class="form-group">    
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="subject" name="subject">
+                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject" name="subject">
                     </div>
                     <div class="form-group">
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message" name="message"></textarea>
@@ -329,13 +369,13 @@
         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 d-flex justify-kiri">
             <div style="max-width:10em;">
                 <h5 class="text-center" style="transform:translateY(2em); color:white">Organized by:</h5>
-                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/BNCC.png')}}" class="img-fluid" style="max-width:10em;" alt="BNCC"></a>
+                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/BNCC.png')}}" class="img-fluid" style="max-width:8em;" alt="BNCC"></a>
             </div>
         </div>
         <div class=" col-lg-6 col-md-6 col-xs-12 col-sm-12 d-flex justify-kanan">
             <div style="max-width:10em;" >
                 <h5 class="text-center" style="transform:translateY(2em); color:white">Powered by:</h5>
-                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/binus.png')}}" class="img-fluid" style="max-width:10em;" alt="Binus"></a>
+                <a href="http://bncc.net/" target="_blank" class="anti-a"><img src="{{asset('image/binus.png')}}" class="img-fluid" style="max-width:8em;" alt="Binus"></a>
             </div>
         </div>
     </div>
@@ -343,5 +383,6 @@
 
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/landing-page.js')}}"></script>
+{{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjXXUDGAmsn2Ac1_-oRQUgDG7sNTQbWw&callback=initMap" async defer></script> --}}
 </body>
 </html>
