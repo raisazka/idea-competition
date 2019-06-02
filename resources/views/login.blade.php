@@ -17,9 +17,6 @@
             border-radius: 20px;
             background: none;
         }
-        .wave{
-            animation: wavy 5s ease-in-out infinite;
-        }
         .input-container > h1{
             margin-bottom: .5em;
         }
@@ -41,6 +38,11 @@
             <h3>Solve The Case WIth Your Best It Solution</h3>
             <h3>Registration Deadline : 14 June 2019</h3>
         </div>
+        @if (session()->has('success'))
+            <div class="alert alert-success text-center">
+                {{session()->get('success')}}
+            </div>
+            @endif
         <div class="container-fluid form-container" id="grup">
             <div class="row">
                 <div class="container-fluid gambar-input col-lg-4 col-md-4 col-sm-12 col-xs-12 "> <img src="image/team.png" class="img-fluid" alt="hello"> </div>
@@ -72,7 +74,10 @@
         </div>
         <div class="container-fluid form-container " id="info">
             <div class="row" >
-            <a class="col-12 text-right" href="{{url('regis')}}" >
+            <a class="col-6 text-left" href="{{url('forget-password')}}" >
+                <h5  style="text-decoration:underline; cursor:pointer;" id="try">Forgot Password? Click here to reset</h5>
+            </a>
+            <a class="col-6 text-right" href="{{url('regis')}}" >
                 <h5  style="text-decoration:underline; cursor:pointer;" id="try">Don't have account? Register now</h5>
             </a>
             </div>

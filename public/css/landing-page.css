@@ -31,6 +31,43 @@
 	border-bottom-right-radius: 1em;
 	border-top-right-radius: 1em;
 }
+.faq{
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #556489;	
+}
+.faq > div > img{
+	max-width: 100%;
+	display: block;
+}
+.faq-card{
+	width: 95%;
+	display: block;
+	margin: 1em auto;
+	background-color: white;
+}
+.faq-caption{
+	background: white;
+	width: 100%;
+	cursor:pointer;
+	padding: .4em .5em;
+}
+.fa-arrow-left{
+	color: green;
+	transition: .5s ease-in-out;
+}
+.active-des{
+	transform: rotate(-90deg);
+	color: red;
+}
+.faq-desc{
+	padding: .2em .5em;
+	text-align: justify;
+	border-top: 1px solid #181818;
+	background: white;
+	width: 100%;
+}
 .footer{
 	background-color: #f5f5f5;
 }
@@ -563,6 +600,7 @@ button:focus{
 	padding: 0;
 }
 
+
 .container-sosmed>i {
 	font-size: 2em;
 	margin-right: .5em;
@@ -1001,6 +1039,14 @@ form {
 	.email-big {
 		display: block;
 	}
+	.faq > div > img{
+		max-width: 50%;
+		margin: 0 auto;
+		display: block;
+	}
+	.faq > div > h1{
+		margin-top: 1.2em;
+	}
 }
 	@media only screen and (max-width:768px) {
 		.awan{
@@ -1130,6 +1176,9 @@ form {
 		}
 		.contentt{
 			padding: 20px 0px;
+		}
+		.faq>.row{
+			padding: 0;
 		}
   }
     @keyframes time {

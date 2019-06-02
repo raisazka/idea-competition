@@ -16,7 +16,7 @@ Route::get('/regis','WelcomeController@register');
 
 Route::get('/user-login','WelcomeController@login')->name('index.login');
 Route::post('/contactus','ViewController@SendMessage')->name('contactus');
-//Route::get('/login','WelcomeController@login');
+// Route::get('/login','WelcomeController@login');
 
 Route::get('/dashboard','HomeController@index')->name('user.dashboard');
 Route::get('/forget-password', 'ForgetPasswordController@index');
