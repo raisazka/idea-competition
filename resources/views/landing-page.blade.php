@@ -256,6 +256,66 @@
             </div>
         </div>
     </div>
+    <div class="faq row" id="faq">
+        <div class="row col-xs-12 col-md-12 col-xl-10 col-lg-10" style="margin:0;display:flex;justify-content:center;align-items:center;">
+            <div class="col-xs-12 col-md-12 col-xl-6 col-lg-6">
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Apa itu BNCC Idea Competition (BIC)?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc"> BNCC Idea Competition merupakan lomba Business IT case dimana peserta akan diberikan suatu persoalan yang dimiliki perusahaan dan setiap peserta wajib menyelesaikannya menggunakan solusi teknologi melalui karya tulis atau proposal.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Siapa saja yang bisa ikut berpartisipasi dalam lomba ini?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Orang yang berstatus mahasiswa aktif di Universitas yang ada di Indonesia</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Apakah semua anggota tim harus berasal dari universitas yang sama?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc"> Tidak, peserta dengan asal universitas yang berbeda dapat mendaftarkan diri dalam satu tim yang sama.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa jumlah anggota yang dapat saya daftarkan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Peserta dapat mendaftarkan diri secara individu maupun tim. Jumlah maksimal anggota dari tim yang dapat didaftarkan adalah tiga orang.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Apakah saya bisa menambahkan anggota jika saya telah mendaftarkan diri secara individu?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc"> Ya, kamu masih bisa menambahkan anggota baru asalkan kamu belum melakukan pembayaran biaya lomba.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa jumlah proposal yang dapat saya upload?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Tidak ada batasan, karena hasil dari semua individu ataupun tim akan diseleksi secara online untuk menentukan individu atau tim mana yang akan maju ke tahap berikutnya.</div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-12 col-xl-6 col-lg-6">
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Kapan pemberitahuan tentang tahap selanjutnya dan dimana tahap final akan dilaksanakan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Pengumuman peserta yang lolos akan diberitahukan melalui email atau pada dashboard setiap tim. Tahap final dari BNCC Idea Competition akan dilaksanakan pada tanggal 25-26 Juni 2019 di foodcourt, binus anggrek.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa lama proses pembuatan proposal diperbolehkan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc"> Setelah melakukan registrasi dan melakukan pembayaran biaya lomba, maka tombol untuk men-download case akan muncul dan peserta dapat langsung mengerjakan proposal sampai batas akhir pengumpulan, yaitu Senin, 17 Juni 2019.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Siapa yang akan melakukan seleksi?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Seleksi akan dilakukan oleh pihak terpilih yang berasal dari sponsor, bukan oleh panitia.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Apakah ada outline atau template untuk mengerjakan case yang diberikan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Ada, template atau outline dapat di-download dalam dashboard masing-masing tim/peserta.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Apa saja aspek penilaian dalam lomba ini?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Yang akan dinilai adalah solusi yang dihasilkan, dampak, implementasi teknologi, pemahaman kasus, dan cara penyampaian.</div>
+                </div>
+                <div class="faq-card">
+                    <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa banyak tim yang akan berlomba?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
+                    <div class="faq-desc">Tidak ada batasan, karena hasil dari semua individu ataupun tim akan diseleksi secara online untuk menentukan individu atau tim mana yang akan maju ke tahap berikutnya.</div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center col-xs-12 col-md-12 col-xl-2 col-lg-2 order-first order-md-last order-xs-last">
+            <h1 style="color:white; font-size:2.5em;font-weight:bold;margin-bottom:1.2em" class="text-center">FAQ</h1>
+            <img src="image/faq.png" alt="faq">
+        </div>
+    </div>
     {{-- <div class="location row container-fluid" id="location">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex flex-column justify-content-around align-items-center">
             <h1 style="color:white">Apa aja yang akan ada di BIC ?</h1>
@@ -311,8 +371,8 @@
                 <h3>Foodcourt Binus Anggrek</h3>
                 <h3>25 - 26 June 2019</h3>
             </div> --}}
-        </div>
-    </div>
+        {{-- </div>
+    </div> --}}
     <div class="contact-us" id="contact-us">
         <div class="contact-left">
             <img src="image/contact-us.png" alt="">

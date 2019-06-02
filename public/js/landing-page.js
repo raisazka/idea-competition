@@ -25,12 +25,16 @@ map = new google.maps.Map(document.getElementById('map'),{zoom: 15, center: ulur
 marker = new google.maps.Marker({position: uluru, map: map});
 }
 $(document).ready(function(){
-    
+    $('.faq-desc').slideToggle();
    var hT = $('#home-div').offset().top,
     hH = $('#home-div').outerHeight(),
     wH = $(window).height();
     section2 = hT+hH-wH;
-
+    $('.faq-caption').click(function(){
+        console.log('masuk');
+        $(this).parent().find('.faq-desc').slideToggle("slow");
+        $(this).find('i').toggleClass('active-des');
+    });
     $('.upreveal-1').css('animation','upreveal 1s ease-in-out');
     $('.rightreveal-1').css('animation','rightreveal 1s ease-in-out')
     let opentoggle = () =>{
