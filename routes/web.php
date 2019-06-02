@@ -19,6 +19,8 @@ Route::post('/contactus','ViewController@SendMessage')->name('contactus');
 //Route::get('/login','WelcomeController@login');
 
 Route::get('/dashboard','HomeController@index')->name('user.dashboard');
+Route::get('/forget-password', 'ForgetPasswordController@index');
+Route::patch('/forget-password', 'ForgetPasswordController@forgetPassword')->name('forget-password');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
