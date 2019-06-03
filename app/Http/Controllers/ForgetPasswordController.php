@@ -21,7 +21,7 @@ class ForgetPasswordController extends Controller
         }else if($username->members->first()->dob === $request->dob){
             $username->password = Hash::make(str_replace("-","",$username->members->first()->dob));
             $username->save();
-            return redirect('/user-login')->with('success',"Your password has been reset to leader's DOB");
+            return redirect('/user-login')->with('success',"Your password has been reset to leader's DOB (YYYYMMDD)");
         }else{
             return back()->with('error', 'DOB does not match')->withInput();
         }

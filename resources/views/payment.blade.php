@@ -29,8 +29,8 @@
                 <li class="list-group-item">
                         1. Pembayaran sebesar Rp 150.000 (per tim) dilakukan secara transfer ke rekening BCA 5271734761 a.n. Jodhy Dwiharsono Putra
                 </li>
-                <li class="list-group-item">2. Setelah melakukan pembayaran, setiap tim wajib meng-upload bukti pembayarannya di dashboard masing-masing
-                        - File bukti pembayaran harap di-rename dengan format berikut : [nama team]_BNCCIdeaCompetition
+                <li class="list-group-item">2. Setelah melakukan pembayaran, setiap tim wajib meng-upload bukti pembayarannya di dashboard masing-masing<br>
+                        - File bukti pembayaran harap di-rename dengan format berikut : [nama team]_BNCCIdeaCompetition<br>
                         - Jenis file yang dapat diupload hanya .jpg, .jpeg, .png, atau .pdf dengan ukuran maksimal 2 MB</li>
                 <li class="list-group-item">3. Setelah diupload, silakan menunggu beberapa hari untuk verifikasi bukti pembayaran</li>
                 <li class="list-group-item">

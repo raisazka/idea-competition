@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Payment');
     }
+    public function proposals()
+    {
+        return $this->hasOne('App\Proposal');
+    }
 }
