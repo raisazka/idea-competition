@@ -71,12 +71,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    
+
     public function registerUser(Request $request)
     {
         $messages = [
             'unique' => 'Already Taken',
-            'phone.max' => 'Maximum 12 Digits'
+            'phone.max' => 'Maximum 12 Digits',
+            'ktp.max' => 'Max File 2MB',
+	        'mimes' => 'file format must be jpg,png,jpeg' 
          ];
 
          $this->validate($request, [
@@ -102,7 +104,6 @@ class RegisterController extends Controller
        $line = $request->line;
        $ktp = $request->file('ktp');
        
-       dd($request->file('ktp'));
        $count = count($email);
         
         $group = new User;
@@ -125,6 +126,6 @@ class RegisterController extends Controller
             'ktp' => $fileNametoStore[$i],
         ]);
        }
-       return redirect()->route('user.dashboard');
+       return redirect()->route('home');
     }
 }

@@ -24,7 +24,7 @@
             </a>
             <h3>BNCC Idea Competition</h3>
             <h3>Solve the Case with Your Best IT Solution</h3>
-            <h3>Registration Deadline : 14 June 2019</h3>
+            <h3>Registration Deadline : 17 June 2019</h3>
         </div>
         <div class="container-fluid form-container">  
             <h5 style="font-size:3em; margin-bottom:1em; text-decoration:underline" class="text-center">Registration</h5>

@@ -92,7 +92,7 @@
                             <label for="Group">Payment status</label><br>
                             <span @if($user->payments == null || $user->payments->status == "Rejected")class="text-danger" @elseif($user->payments->status == "Pending") class="text-warning-dark" @elseif($user->payments->status == "Verified") class="text-success" @else class="text-danger" @endif style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >
                                 @if($user->payments == null)
-                                You have not paid. Please do your payment before 13 June 2019 to access the case.
+                                You have not paid. Please do your payment before 16 June 2019 to access the case.
                                 @elseif($user->payments->status == "Pending")
                                     your payment is waiting to be Verified
                                 @elseif($user->payments->status == "Verified")
@@ -119,8 +119,8 @@
                 @elseif($user->payments->status == "Verified")    
                     <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">    
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <label for="Group">Proposal Tempalte</label><br>
-                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pegerjaan case BIC</span>
+                            <label for="Group">Proposal Template</label><br>
+                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pengerjaan case BIC</span>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
@@ -129,7 +129,7 @@
                     <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">    
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <label for="Group">BIC Case</label><br>
-                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Selesaikan Case ini sebelum tanggal 14 Juni 2019</span>
+                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Selesaikan Case ini sebelum tanggal 17 Juni 2019</span>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
@@ -269,11 +269,13 @@
             </div>
         </div>
         @endforeach
-        @if($count<3)
-        <div id="plus" data-toggle="modal" data-target="#exampleModal">
-            <span>+</span>
-            <div class="text-success">Add New Member</div>
-        </div>
+        @if($user->payments == null)  
+            @if($count<3)
+            <div id="plus" data-toggle="modal" data-target="#exampleModal">
+                <span>+</span>
+                <div class="text-success">Add New Member</div>
+            </div>
+            @endif
         @endif
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
