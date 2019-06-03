@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Member;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\PaymentMail;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -32,7 +30,6 @@ class AdminController extends Controller
         $users = User::findOrFail($id);
         $users->payments->status = 'Verified';
         $users->payments->save();
-        Mail::to($users->members[0]->email)->send(new PaymentMail);
         return back()->with('success', 'Success Verify Payment');
     }
 }

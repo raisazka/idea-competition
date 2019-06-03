@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'unique' => 'Already Taken',
             'phone.max' => 'Maximum 12 Digits',
             'ktp.max' => 'Max File 2MB',
-	        'mimes' => 'file format must be jpg,png,jpeg' 
+	        'mimes' => 'File format must be jpg,png,jpeg' 
          ];
 
          $this->validate($request, [
