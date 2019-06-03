@@ -132,7 +132,7 @@
                             <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Selesaikan Case ini sebelum tanggal 17 Juni 2019</span>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
+                            <a href="{{route('case.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
                         </div>
                     </div>
                         @if($message == "CVOK")

@@ -21,9 +21,14 @@ class ProposalController extends Controller
         return view('proposal');
     }
 
-    public function download()
+    public function downloadProposal()
     {
-        return Storage::download('public/proposal/test.pdf');
+        return Storage::download('public/proposal/template-proposal.pdf');
+    }
+
+    public function downloadCase()
+    {
+        return Storage::download('public/template/case.pdf');
     }
     
     public function upload(Request $request)
