@@ -57,9 +57,9 @@ var name_v = new RegExp(/^[A-z]*((\s)*[A-z]){3,}$/);
         }
     });
     $('#btn-proposal').click(function(){
-        var propo
+        var propo;
         propo = validate_file($('#proposal'));
-        if(line === true && phone === true && cv === true){
+        if(propo === true){
             $(this).prop('type','submit');
         }
         else{

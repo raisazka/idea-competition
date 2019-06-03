@@ -139,7 +139,7 @@
                         <form action="{{route('proposal.upload')}}" enctype="multipart/form-data" method="POST" class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">
                             @csrf
                             <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <label for="Group">Submit Proposal</label><br>
+                            <label for="Group">@if($user->proposals == null)Submit Proposal @else Update Submitted Proposal @endif</label><br>
                                 <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" id="proposal" class=" @error('proposal') is-invalid @enderror"  name="proposal" style="border:none; padding:auto 0;" required autofocus>
                                 <br>
                                 <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
@@ -150,7 +150,7 @@
                             </div>
                             <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                 
-                                    <button class="button-payment" type="button" id="btn-proposal">Submit Proposal</button>
+                                    <button class="button-payment" type="button" id="btn-proposal">@if($user->proposals == null)Submit Proposal @else Update Proposal @endif</button>
                             </div>
                         </form>
                         @elseif($message== "NONE")
