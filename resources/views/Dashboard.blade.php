@@ -22,7 +22,7 @@
     <div class="form-form-form">
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content" style="border:none">
                     <div class="modal-header" style="border:none">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -56,6 +56,14 @@
             @if (session()->has('success'))
             <div class="alert alert-success">
                 {{session()->get('success')}}
+            </div>
+            @elseif(count($errors)!=0)
+            <div class="alert alert-danger">
+                    Add Member Failed!!
+                </div>
+            @elseif (session()->has('error'))
+            <div class="alert alert-danger">
+                {{session()->get('error')}}
             </div>
             @endif
         </div>
@@ -261,7 +269,91 @@
             </div>
         </div>
         @endforeach
+        @if($count<3)
+        <div id="plus" data-toggle="modal" data-target="#exampleModal">
+            <span>+</span>
+            <div class="text-success">Add New Member</div>
+        </div>
+        @endif
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content"  style="border:none; border-radius:1.5em;">
+                  <div class="modal-body">
+                <h2 class="container">Add Member</h2>
+                <form action="{{route('user.add')}}" method="POST" enctype="multipart/form-data" class="form-form-form">
+                    @csrf
+                    <div class="container-fluid input-container col-lg-12 col-md-12 col-sm-12 col-xs-12 ">        
+                        <div class="row">
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                <label for="name_add">Full Name</label>
+                                <input type="text" class="form-control" value="{{ old('member_name_add') }}" autocomplete="member_name_add" name="member_name_add" id="name_add" placeholder="Full Name" required autofocus>
+                                <span class="name_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('member_name_add'))
+                                        {{ $errors->first('member_name_add') }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                <label for="Whatsapp_add">WhatsApp Number</label>
+                                <input type="text" class="form-control" id="Whatsapp_add" value="{{ old('phone_add') }}" autocomplete="phone_add" name="phone_add" placeholder="WhatsApp Number" required autofocus>
+                                <span class="phone_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('phone_add'))
+                                        {{ $errors->first('phone_add') }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                <label for="email_add">Email</label>
+                                <input type="email" class="form-control @error('email_add') is-invalid @enderror" name="email_add" id="email_add" value="{{ old('email_add') }}" aria-describedby="emailHelp" placeholder="Email Address" required autofocus>
+                                <span class="email_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('email_add'))
+                                        {{ $errors->first('email_add') }}
+                                    @endif
+                                </span>
+                            </div>              
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                <label for="Line_add">Line Id</label>
+                                <input type="text" class="form-control @error('line_add') is-invalid @enderror" id="Line_add" name="line_add" value="{{ old('line_add') }}" placeholder="Line Id" required autofocus> 
+                                <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('line_add'))
+                                        {{ $errors->first('line_add') }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                <label for="dob_add">Date Of Birth</label>
+                                <input type="date" min="1997-01-01" max="2002-01-01" name="dob_add" value="{{ old('dob_add') }}" class="form-control  @error('dob_add') is-invalid @enderror" id="dob_add" placeholder="Date Of Birth" required autofocus>
+                                <span class="dob_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('dob_add'))
+                                        {{ $errors->first('dob_add') }}
+                                    @endif
+                                </span>
+                            </div>
+                            <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
+                                <label for="ktp_add">Kartu Mahasiswa</label>
+                                <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp_add') is-invalid @enderror" value="{{ old('ktp_add') }}" id="ktp_add" name="ktp_add" required autofocus>
+                                <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
+                                    @if ($errors->has('ktp_add'))
+                                        {{ $errors->first('ktp_add') }}
+                                    @endif
+                                </span>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center justify-content-md-end justify-content-lg-end">
+                        <button class="btn-update " style="margin-right:15px;" id="btn-add-member" type="button">Add Member</button>
+                    </div>    
+                </form>
+                <span class="button-dismiss"  data-dismiss="modal">X</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
     <img src="image/wave_bawah.png" class="wave wave_bawah">
     <script src="js/app.js"></script>
     <script src="js/dashboard-home.js"></script>

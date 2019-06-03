@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-
+    
     public function registerUser(Request $request)
     {
         $messages = [
@@ -102,6 +102,7 @@ class RegisterController extends Controller
        $line = $request->line;
        $ktp = $request->file('ktp');
        
+       dd($request->file('ktp'));
        $count = count($email);
         
         $group = new User;
