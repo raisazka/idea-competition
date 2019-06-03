@@ -42,7 +42,7 @@ class ProposalController extends Controller
         $fileNameWithExt = $request->proposal->getClientOriginalName();
         $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
         $extension = $request->proposal->getClientOriginalExtension();
-        $fileNametoStore = $filename.'_'.time().'.'.$extension;
+        $fileNametoStore = Auth::user()->username.'_'.$filename.'_'.time().'.'.$extension;
         if($proposal == null){
             Proposal::create([
                 'user_id' => Auth::user()->id,

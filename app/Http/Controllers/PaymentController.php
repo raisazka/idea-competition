@@ -36,7 +36,7 @@ class PaymentController extends Controller
         $fileNameWithExt = $request->payment->getClientOriginalName();
         $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
         $extension = $request->payment->getClientOriginalExtension();
-        $fileNametoStore = $filename.'_'.time().'.'.$extension;
+        $fileNametoStore = Auth::user()->username.'_'.$filename.'_'.time().'.'.$extension;
         $path= $request->payment->storeAs('public/payment', $fileNametoStore);
 
         if($payment == null){
@@ -48,6 +48,7 @@ class PaymentController extends Controller
         }else{
             unlink(storage_path('app/public/payment/'.$payment->payment));
             $payment->payment = $fileNametoStore;
+            $payment->status = "Pending";
             $payment->save();
         }
         return redirect('home')->with('success', 'Success Upload payment');
