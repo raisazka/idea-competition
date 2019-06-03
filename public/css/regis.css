@@ -315,6 +315,10 @@ input[type="file"]{
     -o-transition: .5s;
     transition: .5s;
 }
+.btn-dangering{
+    background-color: #dc3545!important;
+    border-color: #dc3545!important;
+}
 .btn-update:focus{
     outline: none!important;
 }

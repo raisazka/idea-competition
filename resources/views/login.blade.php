@@ -36,7 +36,7 @@
             </a>
             <h3>BNCC Idea Competition</h3>
             <h3>Solve The Case WIth Your Best It Solution</h3>
-            <h3>Registration Deadline : 14 June 2019</h3>
+            <h3>Submit Deadline : 17 June 2019</h3>
         </div>
         @if (session()->has('success'))
             <div class="alert alert-success text-center">

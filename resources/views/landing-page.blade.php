@@ -70,7 +70,7 @@
                 <h1><b>BNCC</b><br> Idea Competition</h1>
                 <h2><i>"Influence Business <br>Through Innovative Idea"</i></h2>
                 <h4>25 - 26 June 2019</h4>
-                <h4><i class="fas fa-map-marker-alt icon-location"></i>Foodcourt binus anggrek</h4>
+                <h4><i class="fas fa-map-marker-alt icon-location"></i>Foodcourt Binus Anggrek</h4>
                 <label for="button-regis">
                     <a style="text-decoration:none" href="#register-page">
                         <div class="my-button">
@@ -267,7 +267,7 @@
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Siapa saja yang bisa ikut berpartisipasi dalam lomba ini?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
-                    <div class="faq-desc">Orang yang berstatus mahasiswa aktif di Universitas yang ada di Indonesia</div>
+                    <div class="faq-desc">Orang yang berstatus mahasiswa aktif di Universitas yang ada di Indonesia.</div>
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Apakah semua anggota tim harus berasal dari universitas yang sama?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
@@ -283,17 +283,17 @@
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa jumlah proposal yang dapat saya upload?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
-                    <div class="faq-desc">Tidak ada batasan, karena hasil dari semua individu ataupun tim akan diseleksi secara online untuk menentukan individu atau tim mana yang akan maju ke tahap berikutnya.</div>
+                    <div class="faq-desc">Setiap individu maupun tim hanya boleh mendaftarkan 1 (satu) proposal, yaitu yang terakhir kali diupload pada dashboard masing-masing.</div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-12 col-xl-6 col-lg-6">
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Kapan pemberitahuan tentang tahap selanjutnya dan dimana tahap final akan dilaksanakan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
-                    <div class="faq-desc">Pengumuman peserta yang lolos akan diberitahukan melalui email atau pada dashboard setiap tim. Tahap final dari BNCC Idea Competition akan dilaksanakan pada tanggal 25-26 Juni 2019 di foodcourt, binus anggrek.</div>
+                    <div class="faq-desc">Pengumuman peserta yang lolos akan diberitahukan melalui email atau pada dashboard setiap tim. Tahap final dari BNCC Idea Competition akan dilaksanakan pada tanggal 25-26 Juni 2019 di Foodcourt Binus Anggrek.</div>
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa lama proses pembuatan proposal diperbolehkan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
-                    <div class="faq-desc"> Setelah melakukan registrasi dan melakukan pembayaran biaya lomba, maka tombol untuk men-download case akan muncul dan peserta dapat langsung mengerjakan proposal sampai batas akhir pengumpulan, yaitu Senin, 17 Juni 2019.</div>
+                    <div class="faq-desc"> Setelah melakukan registrasi dan melakukan pembayaran biaya lomba, maka tombol untuk men-download case akan muncul dan peserta dapat langsung mengerjakan proposal sampai batas akhir pengumpulan yaitu Senin, 17 Juni 2019.</div>
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Siapa yang akan melakukan seleksi?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
@@ -313,7 +313,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-column justify-content-center col-xs-12 col-md-12 col-xl-2 col-lg-2 order-first order-md-last order-xs-last">
+        <div class="d-flex flex-column justify-content-center col-xs-12 col-md-12 col-xl-2 col-lg-2 order-first  order-md-last order-xs-last">
             <h1 style="color:white; font-size:2.5em;font-weight:bold;margin-bottom:1.2em" class="text-center">FAQ</h1>
             <img src="image/faq.png" alt="faq">
         </div>

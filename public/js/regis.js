@@ -236,7 +236,7 @@ $(document).ready(function(){
     function validate_phone(a){
         $(a).parent().find('.phone_wrong').empty();
         if(!phone_v.test(a.val())){
-            $(a).parent().find('.phone_wrong').append("min 10 character and must be numeric").css('font-size','.8em');
+            $(a).parent().find('.phone_wrong').append("min 10 max 12 numeric and must be numeric").css('font-size','.8em');
             return false;
         }
         return true;

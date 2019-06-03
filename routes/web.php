@@ -35,6 +35,7 @@ Route::get('/payments', 'PaymentController@index')->name('payment.index');
 Route::post('/payments', 'PaymentController@upload')->name('payment.upload');
 Route::get('/edit-group', 'GroupController@index')->name('group.index');
 Route::patch('/edit-group', 'GroupController@update')->name('group.update');
+Route::post('/add-member','HomeController@addUser')->name('user.add');
 
 Route::prefix('god')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
