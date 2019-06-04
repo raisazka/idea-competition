@@ -83,7 +83,7 @@ class HomeController extends Controller
                 'line' => $line,
                 'ktp' => $fileNametoStore,
             ]);
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success','Add member success');
     }
     public function updateMemberData(Request $request,$id)
     {
@@ -101,7 +101,8 @@ class HomeController extends Controller
         $member->update([
             'phone' => $request->phone,
             'line' => $request->line,
-            'cv' => $file
+            'cv' => $file,
+            'cv_check' => null
         ]);
         return back()->with('success', 'Success Update Member Data');
     }

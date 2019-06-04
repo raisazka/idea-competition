@@ -24,6 +24,8 @@ class CreateMembersTable extends Migration
             $table->date('dob');
             $table->string('ktp');
             $table->string('cv')->nullable();
+            $table->string('cv_check')->nullable();
+            $table->string('ktp_check')->nullable();
             $table->timestamps();
         });
     }

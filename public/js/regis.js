@@ -221,12 +221,12 @@ $(document).ready(function(){
         $(a).parent().find('.ktp_wrong').empty();
         var ext = a.val().split('.').pop().toLowerCase();
         if(a.val()===""){
-            $(a).parent().find('.ktp_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
+            $(a).parent().find('.ktp_wrong').append("must be .png .jpg or .jpeg").css('font-size','.8em');
             return false;
         }
         else{
-            if($.inArray(ext, ['png','jpg','jpeg','pdf']) == -1) {
-                $(a).parent().find('.ktp_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
+            if($.inArray(ext, ['png','jpg','jpeg']) == -1) {
+                $(a).parent().find('.ktp_wrong').append("must be .png .jpg or .jpeg").css('font-size','.8em');
                 return false;
             }
             return true;
