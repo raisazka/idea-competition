@@ -84,7 +84,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                             <label for="ktp">Kartu Mahasiswa</label>
-                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.0') is-invalid @enderror" value="{{ old('ktp.0') }}" id="ktp" name="ktp[0]" required autofocus>
+                            <input type="file" accept=".png,.jpg,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.0') is-invalid @enderror" value="{{ old('ktp.0') }}" id="ktp" name="ktp[0]" required autofocus>
                             <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('ktp.0'))
                                     {{ $errors->first('ktp.0') }}
@@ -150,7 +150,7 @@
                         </div>
                         <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                             <label for="ktp">Kartu Mahasiswa</label>
-                            <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.1') is-invalid @enderror" value="{{ old('ktp.1') }}" id="ktp1" name="ktp[]" required autofocus>
+                            <input type="file" accept=".png,.jpg,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.1') is-invalid @enderror" value="{{ old('ktp.1') }}" id="ktp1" name="ktp[]" required autofocus>
                             <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
                                 @if ($errors->has('ktp.1'))
                                     {{ $errors->first('ktp.1') }}
@@ -217,7 +217,7 @@
                     </div>
                     <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                         <label for="ktp">Kartu Mahasiswa</label>
-                        <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.2') is-invalid @enderror" value="{{ old('ktp.2') }}" id="ktp2" name="ktp[]" required autofocus>
+                        <input type="file" accept=".png,.jpg,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('ktp.2') is-invalid @enderror" value="{{ old('ktp.2') }}" id="ktp2" name="ktp[]" required autofocus>
                         <span class="ktp_wrong" style="color:red; font-weight:700; font-size: .8em">
                             @if ($errors->has('ktp.2'))
                                 {{ $errors->first('ktp.2') }}
