@@ -86,24 +86,43 @@ class HomeController extends Controller
         return redirect()->route('home')->with('success','Add member success');
     }
     public function updateMemberData(Request $request,$id)
-    {
+    {   
         $validator = Validator::make($request->all(),[
             "phone" => 'required|max:12',
-            "line" => 'required|max:255|alpha_dash',
-            "cv" => 'required'
+            "line" => 'required|max:255|alpha_dash'
         ]);
 
         if($validator->fails()){
             return back()->withErrors($validator);
         }
+
         $member = Member::findOrFail($id);
-        $file = $this->uploadFile($request->file('cv'), 'public/cv');
-        $member->update([
-            'phone' => $request->phone,
-            'line' => $request->line,
-            'cv' => $file,
-            'cv_check' => null
-        ]);
+        if($member->cv !=null){
+            if($request->file('cv')==null){
+                $member->update([
+                    'phone' => $request->phone,
+                    'line' => $request->line
+                ]);    
+            }
+            else{
+                $file = $this->uploadFile($request->file('cv'), 'public/cv');
+                $member->update([
+                    'phone' => $request->phone,
+                    'line' => $request->line,
+                    'cv' => $file
+                ]);    
+            }
+        }
+        else
+        {
+            $file = $this->uploadFile($request->file('cv'), 'public/cv');
+            $member->update([
+                'phone' => $request->phone,
+                'line' => $request->line,
+                'cv' => $file,
+                'cv_check' => null
+            ]);
+        }
         return back()->with('success', 'Success Update Member Data');
     }
 
