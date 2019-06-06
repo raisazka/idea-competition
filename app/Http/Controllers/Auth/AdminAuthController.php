@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Auth;
+use User;
 
 class AdminAuthController extends Controller
 {
@@ -26,7 +27,7 @@ class AdminAuthController extends Controller
             'email'   => 'required|email',
             'password' => 'required|min:6'
           ]);
-
+            
           if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)){
               return redirect()->intended(route('admin.dashboard'));
           }
