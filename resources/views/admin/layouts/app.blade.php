@@ -56,9 +56,14 @@
                         }
                     }
                 }
+                foreach($contactus as $contact){
+                    if($contact->viewed == 1){
+                        $cont++;
+                    }
+                }
                 @endphp 
                 <li class="nav-item">
-                <a class="nav-link" href="{{route('admin.auth.login')}}">Payment <span class="ml-1 mr-1 badge badge-pill badge-danger">{{$pending}}</span><span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('admin.auth.login')}}">Payment <span class="ml-1 mr-1 badge badge-pill badge-danger">{{$pending}}</span><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.cv_check')}}">CV & KTM<span class="ml-1 mr-1 badge badge-pill badge-danger">{{$cv+$ktp}}</span><span class="sr-only">(current)</span></a>
@@ -66,8 +71,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.proposal_check')}}">Proposal Uploaded<span class="ml-1 mr-1 badge badge-pill badge-success">{{$proposal}}</span><span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" >Contact us<span class="ml-1 mr-1 badge badge-pill badge-danger">{{count($contactus)}}</span><span class="sr-only">(current)</span></a>
+                <li class="nav-item" >
+                <a class="nav-link" href="{{route('admin.contact_us')}}">Contact us<span class="ml-1 mr-1 badge badge-pill badge-danger">{{$cont}}</span><span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <a class="btn anti-a nav-item btn-rounded btn-danger color-white" href="{{ route('admin.auth.logout') }}"
