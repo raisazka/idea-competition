@@ -32,6 +32,7 @@ Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
 Route::get('/downlaod-proposal', 'ProposalController@downloadProposal')->name('proposal.download');
 Route::get('/download-case', 'ProposalController@downloadCase')->name('case.download');
 Route::post('/upload-proposal', 'ProposalController@upload')->name('proposal.upload');
+Route::post('/contact-us-message', 'AdminController@readContactUs')->name('admin.readmessage');
 Route::get('/payments', 'PaymentController@index')->name('payment.index');
 Route::post('/payments', 'PaymentController@upload')->name('payment.upload');
 Route::get('/edit-group', 'GroupController@index')->name('group.index');
@@ -44,14 +45,15 @@ Route::prefix('god')->group(function () {
     //Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
     Route::get('login', 'Auth\AdminAuthController@login')->name('admin.auth.login');
     Route::get('/check_cv','AdminController@cv_check')->name('admin.cv_check');
-    Route::get('/contact_us','AdminController@Contact_admin')->name('admin.contact_us');
-    Route::get('/proposal_check','AdminController@proposal_check')->name('admin.proposal_check');
+    Route::get('/contact_us','AdminController@contact_admin')->name('admin.contact_us');
+    Route::get('/edit-data/{id}','AdminController@editDataView')->name('admin.edit-data');
     Route::post('login', 'Auth\AdminAuthController@loginAdmin')->name('admin.auth.loginAdmin');
+    Route::get('/proposal_check','AdminController@proposal_check')->name('admin.proposal_check');
     Route::post('logout', 'Auth\AdminAuthController@logout')->name('admin.auth.logout');
     Route::patch('verify-payment/{id}', 'AdminController@verifyPayment')->name('admin.verify');
     Route::patch('reject-payment/{id}', 'AdminController@rejectPayment')->name('admin.reject');
     Route::patch('verify-cv/{id}', 'AdminController@verifycv')->name('admin.cv.verify');
     Route::patch('verify-ktm/{id}', 'AdminController@verifyktm')->name('admin.ktm.verify');
-    
+    Route::patch('/admin_update_data','AdminController@updateUserData')->name('admin.update_data');
   });
   

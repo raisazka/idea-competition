@@ -39,8 +39,8 @@ foreach($users as $user){
 <div class="row">
 @foreach ($users as $user)
     <div class="col-12 row container-fluid my-2 mx-auto pt-4 pb-4 shadow" style="max-width:90%;">
-        <h4 class="col-lg-12 col-md-12 col-sm-12" class="small-t"><b> Group Name : </b><u>{{$user->name}} </u></h4>
-        <h4 class="col-lg-12 col-md-12 col-sm-12" class="small-t"><b> User name  : </b><u> {{$user->username}}</u> </h4>
+        <h5 class="col-lg-12 col-md-12 col-sm-12" class="small-t"><b> Group Name : </b><u>{{$user->name}} </u></h5>
+        <h5 class="col-lg-12 col-md-12 col-sm-12" class="small-t"><b> User name  : </b><u> {{$user->username}}</u> </h5>
     @foreach($user->members as $member)
         <div class="container col-lg-4 col-xl-4 col-md-12 col-xs-12">
             <div class="card shadow " style="width: 90%;">
@@ -146,6 +146,9 @@ foreach($users as $user){
             </div>
         </div>
         @endforeach
+        <div class="col-12 my-3 text-center">
+            <a href="{{route('admin.edit-data',$user->id)}}" class="btn btn-primary "> Edit Group data</a>
+        </div>
     </div>
 </div>
 @endforeach
