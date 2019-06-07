@@ -82,21 +82,18 @@
         </div>
     </div>
     <div class="register-page" id="register-page">
-        <img src="image/cloud-bg.png" alt="hello" class="awan" >
-        <img src="image/cloud-bg.png" alt="hello" class="awan mob-awan" >
-        <div style="width:100%;" class="d-flex flex-row flex-wrap awan-content">
-            <div class="bg-dark-blue d-flex justify-content-center flex-column ">
-                <div class="inner-content">
-                    <span class="text-center">
-                        <h4>Daftar Sebagai</h4>
-                        <h1>Peserta Expo</h1>
-                    </span>
-                    <h4 class="text-center content-regis">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Ducimus laboriosam quasi in illum sequi! Velit dolorem sit eos 
-                        aliquid iste!
-                    </h4>
-                    <a class="anti-a" href="{{route('expo.regis')}}"><button type="submit">REGISTER</button></a>
+        <img src="image/cloud-bg.png" alt="hello" class="awan">
+        <div class="register-content-cloud row">
+            <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12 bg-dark-blue">
+                <div class="general-rule container-fluid">
+                    <h1>General Rules </h1>
+                    <img src="image/Rules.png" alt="rules" class="img-fluid" style="max-width:10em;">
+                    <ul>
+                        <li><h5>Setiap tim terdiri dari 1-3 orang yang merupakan mahasiswa aktif dari universitas di Indonesia</h5></li>
+                        <li><h5>Setiap peserta wajib berkewarganegaraan Indonesia</h5></li>
+                        <li><h5>Setiap tim wajib melakukan registrasi dan membayar uang pendaftaran sejumlah Rp 150.000 untuk umum dan Rp 75.000 untuk binusian</h5></li>
+                        <li><h5>Seleksi tahap pertama dilakukan secara online, 10 tim yang terpilih nantinya akan dihubungi panitia untuk lanjut ke tahap presentasi</h5></li>
+                    </ul>
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-center">
