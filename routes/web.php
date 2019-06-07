@@ -28,7 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/member-regis', 'Auth\RegisterController@registerUser')->name('user.register');
 Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('member.update');
 Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
-Route::get('/downlaod-proposal', 'ProposalController@downloadProposal')->name('proposal.download');
+Route::get('/download-proposal', 'ProposalController@downloadProposal')->name('proposal.download');
 Route::get('/download-case', 'ProposalController@downloadCase')->name('case.download');
 Route::post('/upload-proposal', 'ProposalController@upload')->name('proposal.upload');
 Route::post('/contact-us-message', 'AdminController@readContactUs')->name('admin.readmessage');
