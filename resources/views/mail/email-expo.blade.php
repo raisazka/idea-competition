@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Document</title>
 </head>
 <body>
-    {!! QrCode::size(250)->generate(url('expo/'.$otp)); !!}
+    <img src="{!!$message->embedData($qr, 'QrCode.png', 'image/png')!!}">
+<h1>Your OTP Code is: {{$otp}}</h1>
 </body>
 </html>

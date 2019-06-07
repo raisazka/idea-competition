@@ -23,7 +23,6 @@ Route::get('/dashboard','WelcomeController@dashboard');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::post('/logins','Auth\LoginController@authenticate')->name('user.logins');
 Route::post('/member-regis', 'Auth\RegisterController@registerUser')->name('user.register');
 Route::patch('/update-member/{id}', 'HomeController@updateMemberData')->name('member.update');
 Route::get('/proposal', 'ProposalController@index')->name('proposal.index');
@@ -36,6 +35,7 @@ Route::patch('/edit-group', 'GroupController@update')->name('group.update');
 Route::get('/register-expo', 'ExpoController@create')->name('expo.regis');
 Route::post('/register-expo', 'ExpoController@register')->name('expo.store');
 Route::get('/get-qr', 'ExpoController@index')->name('index.qr');
+Route::get('expo/{otp}', 'ExpoController@getPersonData')->name('expo.data');
 
 Route::prefix('god')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');

@@ -21,6 +21,12 @@ class ExpoController extends Controller
         return view('register-expo');
     }
 
+    public function getPersonData($otp)
+    {
+        $person = ExpoMember::where('otp', $otp)->first();
+        return response()->json($person);
+    }
+
     public function register(RegisterExpoRequest $request)
     {
         $expo = new ExpoMember;
@@ -35,8 +41,9 @@ class ExpoController extends Controller
             $otp_exist = ExpoMember::where('otp', $otp)->first();
         }while($otp_exist);
 
+        $qr = QrCode::format('png')->size(250)->generate(route('expo.data', $otp));
         $expo->otp = $otp;
-        Mail::to($expo->email)->send(new ExpoRegisterMail($expo));
+        Mail::to($expo->email)->send(new ExpoRegisterMail($expo, $qr));
         $expo->save();
         return redirect('/');
     }

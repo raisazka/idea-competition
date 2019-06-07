@@ -19,10 +19,12 @@ class ExpoRegisterMail extends Mailable
      */
 
     protected $expo;
+    protected $qr;
 
-    public function __construct(ExpoMember $expo)
+    public function __construct(ExpoMember $expo, $qr)
     {
         $this->expo = $expo;
+        $this->qr = $qr;
     }
 
     /**
@@ -34,7 +36,8 @@ class ExpoRegisterMail extends Mailable
     {
         return $this->view('mail.email-expo')
                     ->with([
-                        'otp' => $this->expo->otp
+                        'otp' => $this->expo->otp,
+                        'qr' => $this->qr
                     ]);
     }
 }
