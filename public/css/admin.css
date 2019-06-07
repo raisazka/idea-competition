@@ -1,0 +1,52 @@
+html{
+    margin:0;
+}
+body{
+    margin: 0;
+}
+.anti-a{
+    text-decoration: none;
+    cursor: none;
+    outline: none;
+    cursor: pointer;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.btn-rounded{
+    border-radius: 20em;
+}
+.color-white{
+    color: white !important;
+}
+.card-body>.row>.p-2>p.col-6{
+    margin: 0;
+    padding: .1em;
+}
+.black-theme{
+    background: #343a40;
+    color: white;
+}
+.position-card{
+    position: relative;
+}
+.numbering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 20em;
+    background: red;
+    color: white;
+    top: -2vh;
+    left: -2vh;
+    position: absolute;
+}
+
+@media only screen and (max-width:500px){
+    .small-t{
+        font-size: 8px;
+    }
+}
+

@@ -86,13 +86,32 @@ var name_v = new RegExp(/^[A-z]*((\s)*[A-z]){3,}$/);
         $(a).parent().find('.cv_wrong').empty();
         var ext = a.val().split('.').pop().toLowerCase();
         if(a.val()===""){
-            $(a).parent().find('.cv_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
-            return false;
+            var temp;
+            var idf = a.attr('id');
+            if(idf === "cv"){
+                temp = '#cv_old';
+            }
+            else if(idf === "cv1"){
+                temp = '#cv1_old';
+            }
+            else if(idf === "cv2"){
+                temp = '#cv2_old';
+            }
+            else{
+                $(a).parent().find('.cv_wrong').append("something is wrong").css('font-size','.8em');
+                return false;
+            }
+            if($(temp).val()===""){
+                $(a).parent().find('.cv_wrong').append("please upload your cv").css('font-size','.8em');
+                return false;
+            }
+            else{
+                return true;
+            }
         }
         else{
             if($.inArray(ext, ['png','jpg','jpeg','pdf']) == -1) {
-                $(a).parent().find('.cv_wrong').append("must be .png .pdf .jpg or .jpeg").css('font-size','.8em');
-                return false;
+                return true;
             }
             else{
                 if(a[0].files[0].size>2197152){

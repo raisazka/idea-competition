@@ -23,12 +23,12 @@ class ProposalController extends Controller
 
     public function downloadProposal()
     {
-        return Storage::download('public/proposal/template-proposal.pdf');
+        return Storage::download('public/template/BIC-Rulebook.pdf');
     }
 
     public function downloadCase()
     {
-        return Storage::download('public/template/case.pdf');
+        return Storage::download('public/template/BIC-Case.pdf');
     }
     
     public function upload(Request $request)
@@ -47,7 +47,7 @@ class ProposalController extends Controller
         $fileNameWithExt = $request->proposal->getClientOriginalName();
         $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
         $extension = $request->proposal->getClientOriginalExtension();
-        $fileNametoStore = $filename.'_'.time().'.'.$extension;
+        $fileNametoStore = Auth::user()->username.'_'.$filename.'_'.time().'.'.$extension;
         if($proposal == null){
             Proposal::create([
                 'user_id' => Auth::user()->id,

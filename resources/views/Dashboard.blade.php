@@ -118,9 +118,9 @@
                 @if($user->payments == null)
                 @elseif($user->payments->status == "Verified")    
                     <div class="row d-md-flex d-lg-flex align-items-md-end align-items-lg-end">    
-                        <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                            <label for="Group">Proposal Template</label><br>
-                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Template yang harus dipakai dalam pengerjaan case BIC</span>
+                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <label for="Group">BIC Rulebook</label><br>
+                            <span style="border-radius:0; border:none;font-weight:900;font-size:1em;padding:6px 0;" >Rulebook dan template proposal BIC</span>
                         </div>
                         <div class="form-group col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <a href="{{route('proposal.download')}}" class="anti-a"> <button class="button-payment">Download Now</button></a>
@@ -253,12 +253,13 @@
                             </div>               --}}
                             <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12 form-ktp">
                                 <label @if($loop->first)for="cv" @elseif($loop->index ==1)for="cv1" @else for="cv2" @endif>@if($member->cv!=null)<b>Update</b> @endif Curriculum Vitae</label>
-                                <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('cv') is-invalid @enderror" @if($loop->first)id="cv" @elseif($loop->index ==1)id="cv1" @else id="cv2" @endif name="cv" required autofocus>
+                                <input type="file" accept=".pdf,.png,.jpg,.PDF,.PNG,.JPG,.JPEG,.jpeg" class="form-control @error('cv') is-invalid @enderror" @if($loop->first)id="cv" @elseif($loop->index ==1)id="cv1" @else id="cv2" @endif name="cv" autofocus>
                                 <span class="cv_wrong" style="color:red; font-weight:700; font-size: .8em">
                                     @if ($errors->has('cv'))
                                         {{ $errors->first('cv') }}
                                     @endif
                                 </span>
+                            <input type="hidden" value="{{$member->cv}}" @if($loop->first)id="cv_old" @elseif($loop->index ==1)id="cv1_old" @else id="cv2_old" @endif>
                             </div>  
                         </div>
                         <div class="row d-md-flex d-lg-flex align-items-md-center align-items-lg-center justify-content-md-end justify-content-lg-end">

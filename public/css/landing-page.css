@@ -17,6 +17,15 @@
 	background-color: white;
 	border: none;
 }
+.register-content-cloud{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
 .promotion-card >div> i{
 	font-size: 3em;
 }
@@ -226,20 +235,15 @@ body {
 }
 .register-page{
 	background: #EFF3F4;
-	/* background-image: url('../image/cloud-bg.png'); */
-	height: 100vh;
 	overflow: hidden !important;
 	min-height: 100vh;
 	width: 100%;
-	animation: awan 3s infinite;
+	position: relative;
 }
 .awan{
 	will-change: transform;
 	width: 95%;
 	height: 100vh;
-	overflow: hidden;
-	position: absolute;
-	transform: matrix3d(0,0,-100px);
 	text-align: center;
 	object-fit: cover;
 	animation: try 10s infinite;
@@ -247,9 +251,7 @@ body {
 	-webkit-animation-timing-function: ease-in-out;
 
 }
-.mob-awan{
-	display: none;
-}
+
 @keyframes try{
 	0%{
 		transform: translateX(1.5em);
@@ -261,30 +263,21 @@ body {
 		transform: translateX(1.5em);
 	}
 }
-/* @keyframes awan{
-	0%{
-		background-position-x: 45%;
-	}
-	50%{
-		background-position-x: 55%;
-	}
-	100%{
-		background-position-x: 45%;
-	}
-} */
-.awan-content{
-	height: 100%;
-	position: absolute;
-}
-.awan-content > div{
-	width: 50%;
-	height: 100%;
-}
+
 .bg-dark-blue{
 	background-color: #7288AF;
-	mix-blend-mode: multiply;
 }
-
+.bg-dark-blue *{
+	color: white;
+}
+.general-rule{
+	display: flex;
+	height: 100%;
+	margin: 1em 0;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
 .span-1{
 background-color: white;
 	width: 28px;
@@ -722,35 +715,17 @@ form {
 	flex-wrap: wrap;
 }
 .inner-content{
-	/* height: 65%; */
-	height: 80%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 }
-.bg-dark-blue>.inner-content>span> h1{
-	color: rgba(255, 255, 255,1);
-}
-.bg-dark-blue > .inner-content h4{
-	font-weight: 100;
-	color: rgba(255, 255, 255, .7);
-}
+
 .content-regis{
 	width: 55%;
 }
-.bg-dark-blue > .inner-content > button{
-	border: solid 2px rgba(255, 255, 255, .7);
-	background: none;
-	width: 8em;
-	font-size: 1.8em;
-	height: 2.2em;
-	border-radius: 8em;
-	color: rgba(255, 255, 255, .7);
-	transition: .5s;
-	font-weight: bold;
-	cursor: pointer;
-}
+
 .inner-content h1{
 	color:#556489;
 	font-size: 3.2em;
@@ -777,11 +752,6 @@ form {
 	background: #181818;
 	border: none;
 	color: white;	
-}
-.bg-dark-blue > .inner-content > button:hover{
-	background: rgba(255, 255, 255, .7);
-	border: none;
-	color: #7288AF;
 }
 /* Place the container to the left */
 
@@ -904,7 +874,7 @@ form {
 	}
 	.register-page{
 		background: #EFF3F4;
-		height: 100vh;
+		min-height: 100vh;
 		width: 100%;
 		position: relative;
 		overflow: hidden;
@@ -913,23 +883,9 @@ form {
 		will-change: transform;
 		transform: translateZ(-100px);
 	}
-	.awan-content > div{
-		width: 100%;
-		height: 100vh;
-	}
-	/* .awan{
-		object-position: 50% 0%;
-	} */
-	.mob-awan{
-		display: block;
-		top: 100vh;
-		object-position: 50% 0%;
-	}
+	
 	.content-regis{
 		width: 80%;
-	}
-	.bg-dark-blue button{
-		font-size: 1.5em;
 	}
 	.landing-content>.containers{
 		padding: 0 0 20% 0;
@@ -1047,6 +1003,9 @@ form {
 	.faq > div > h1{
 		margin-top: 1.2em;
 	}
+	.register-page{
+		height: 10vh;
+	}
 }
 	@media only screen and (max-width:768px) {
 		.awan{
@@ -1104,7 +1063,6 @@ form {
 		}
 		.register-page{
 			background: #EFF3F4;
-			height: 100vh;
 			width: 100%;
 			position: relative;
 			overflow: hidden;
@@ -1113,26 +1071,14 @@ form {
 			will-change: transform;
 			transform: translateZ(-100px);
 		}
-		.awan-content > div{
-			width: 100%;
-			height: 100vh;
-		}
-		.awan{
-			object-position: 50% 0%;
-		}
-		.mob-awan{
-			display: block;
-			top: 100vh;
-			object-position: 50% 0%;
-		}
 		.content-regis{
 			width: 80%;
 		}
-		.bg-dark-blue button{
-			font-size: 1.5em;
-		}
 		.landing-content>.containers{
 			padding: 0 0 20% 0;
+		}
+		.register-page{
+			height: 150vh;
 		}
 	}
 	@media only screen and (max-width:500px) {
@@ -1179,6 +1125,9 @@ form {
 		}
 		.faq>.row{
 			padding: 0;
+		}
+		.register-page{
+			height: 200vh;
 		}
   }
     @keyframes time {

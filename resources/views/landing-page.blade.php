@@ -103,80 +103,53 @@
         </div>
     </div>
     <div class="register-page" id="register-page">
-        <img src="image/cloud-bg.png" alt="hello" class="awan" >
-        {{-- <img src="image/cloud-bg.png" alt="hello" class="awan mob-awan" > --}}
-        <div style="width:100%;" class="d-flex flex-row flex-wrap awan-content">
-            {{-- <div class="bg-dark-blue d-flex justify-content-center flex-column ">
-                <div class="inner-content">
-                    <span class="text-center">
-                        <h4>Daftar Sebagai</h4>
-                        <h1>Peserta Expo</h1>
-                    </span>
-                    <h4 class="text-center content-regis">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Ducimus laboriosam quasi in illum sequi! Velit dolorem sit eos 
-                        aliquid iste!
-                    </h4>
-                    <button type="submit">REGISTER</button>
+        <img src="image/cloud-bg.png" alt="hello" class="awan">
+        <div class="register-content-cloud row">
+            <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12 bg-dark-blue">
+                <div class="general-rule container-fluid">
+                    <h1>General Rules </h1>
+                    <img src="image/Rules.png" alt="rules" class="img-fluid" style="max-width:10em;">
+                    <ul>
+                        <li><h5>Setiap tim terdiri dari 1-3 orang yang merupakan mahasiswa aktif dari universitas di Indonesia</h5></li>
+                        <li><h5>Setiap peserta wajib berkewarganegaraan Indonesia</h5></li>
+                        <li><h5>Setiap tim wajib melakukan registrasi dan membayar uang pendaftaran sejumlah Rp 150.000 untuk umum dan Rp 75.000 untuk binusian</h5></li>
+                        <li><h5>Seleksi tahap pertama dilakukan secara online, 10 tim yang terpilih nantinya akan dihubungi panitia untuk lanjut ke tahap presentasi</h5></li>
+                    </ul>
                 </div>
-            </div> --}}
-            <div  class="d-flex flex-column justify-content-center" style="width:100%">
+            </div>
+            <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12">
                 <div class="inner-content">
                     <span class="text-center">
-                        <h4>Daftar Sebagai</h4>
-                        <h1>Peserta Lomba</h1>
-                    </span>
+                            <h4>Daftar Sebagai</h4>
+                            <h1>Peserta Lomba</h1>
+                        </span>
                     <h4 class="text-center content-regis">
-                            Uji kemampuan case-solving kalian di sini dan menangkan hadiah uang jutaan rupiah serta dapatkan benefit-benefit menarik lainnya
-                    </h4>
+                                Uji kemampuan case-solving kalian di sini dan menangkan hadiah uang jutaan rupiah serta dapatkan benefit-benefit menarik lainnya
+                        </h4>
                     <div class="row container">
-                    @guest   
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
-                            <a class="anti-a" href="{{url('user-login')}}"><button type="submit">LOGIN</button></a>
+                        @guest
+                        <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a" href="{{url('user-login')}}">
+                                <button type="submit">LOGIN</button>
+                            </a>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
-                            <a class="anti-a" href="{{url('regis')}}"><button type="submit">REGISTER</button></a>
+                        <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a" href="{{url('regis')}}">
+                                <button type="submit">REGISTER</button>
+                            </a>
                         </div>
-                    @else
-                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
-                        <a class="anti-a" href="{{url('dashboard')}}"><button type="submit">Dashboard</button></a>
-                    </div>
-                    @endguest
+                        @else
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a" href="{{url('dashboard')}}">
+                                <button type="submit">Dashboard</button>
+                            </a>
+                        </div>
+                        @endguest
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{-- <div class="event-exp" id="event-exp">
-            <p id="tescar">hello world</p>
-            <div class="" style="text-align:center; width:50%; height:10%;">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">0</li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1">1</li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2">2</li>
-            </div>
-
-        <div id="carouselExampleIndicators" class="carousel slide content" data-ride="carousel">
-            <div class="carousel-inner explaination">
-                <div class="carousel-item active">
-                    lorem1
-                </div>
-                <div class="carousel-item">
-                    Lorem.
-                </div>
-                <div class="carousel-item">
-                    Lorem, ipsum.
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>    
-        </div>
-    </div> --}}
     <div class="time-line" id="time-line">
         <h1>TIMELINE</h1>
         <div class="timeline">
@@ -186,10 +159,9 @@
                 </div>
                 <div class="containert right-t active-time">
                     <div class="contentt shadow">
-                        <h1 class="text-center">03 Juni 2019</h1>
-                        <h2 class="text-center">Case Distribution
-                            
-                        {{-- <button class="btn-timeline">Click here</button> --}}
+                        <h1 class="text-center">05 Juni 2019</h1>
+                        <h2 class="text-center">
+				            Open registration and case distribution
                         </h2>                
                     </div>
                 </div>
