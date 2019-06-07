@@ -22,33 +22,34 @@ class AdminController extends Controller
         $contactus = ContactUs::All();
         return view('admin.dashboard', compact('users','contactus'));
     }
-    public function cv_check()
+    public function cvCheck()
     {
         $users = User::All();
         $contactus = ContactUs::All();
         return view('admin.cv_check', compact('users','contactus'));
     }
-    public function proposal_check()
+    public function proposalCheck()
     {
         $users = User::All();
         $contactus = ContactUs::All();
         return view('admin.proposal_check', compact('users','contactus'));
     }
-    public function contact_admin()
+    public function contactAdmin()
     {
         $users = User::All();
         $contactus = ContactUs::All();
         return view('admin.contact_us', compact('users','contactus'));
     }
-    public function updateUserData(Request $req){
-        $id = $req->user_id;
+
+    public function updateUserData(Request $request){
+        $id = $request->user_id;
         $messages = [
             'unique' => 'Already Taken',
             'phone.max' => 'Maximum 12 Digits',
             'ktp.max' => 'Max File 2MB',
 	        'mimes' => 'file format must be jpg,png,jpeg' 
          ];
-         $this->validate($req, [
+         $this->validate($request, [
             "name"  => "required|string|min:5",
             "username" => 'required|string|alpha_dash',
             "member_name.*" => 'required|max:255',
@@ -57,27 +58,28 @@ class AdminController extends Controller
             "line.*" => 'required|max:255|alpha_dash',
             "dob.*" => 'required|date',
          ], $messages);
-         if($req->password!=null)
+
+         if($request->password!=null)
          {
-            $this->validate($req,[
+            $this->validate($request,[
                 "password" => 'string|min:6'
             ],$messages);
          }
          
        
-        $name = $req->name;
-        $username = $req->username;
-        $password = $req->password;
-        $m_name = $req->member_name;
-        $email = $req->email;
-        $dob = $req->dob;
-        $phone = $req->phone;
-        $line = $req->line;
+        $name = $request->name;
+        $username = $request->username;
+        $password = $request->password;
+        $m_name = $request->member_name;
+        $email = $request->email;
+        $dob = $request->dob;
+        $phone = $request->phone;
+        $line = $request->line;
         
         $user = User::findorFail($id);
         $user->name = $name;
         $user->username = $username;
-        if($req->password != null){
+        if($request->password != null){
             $user->password = Hash::make($password);
         }
         $i=0;
@@ -106,14 +108,14 @@ class AdminController extends Controller
         return view('admin.dashboard-2', compact('members'));
     }
 
-    public function readContactUs (Request $req)
+    public function readContactUs(Request $request)
     {
-        $id = $req->id;
-        if($req->message == "read")
+        $id = $request->id;
+        if($request->message == "read")
         {
             $read = 2;
         }   
-        else if($req->message == "unread"){
+        else if($request->message == "unread"){
             $read = 1;
         }
         else{
@@ -123,7 +125,7 @@ class AdminController extends Controller
         $contact = ContactUs::findorFail($id);
         $contact->viewed = $read;
         $contact->save();
-        return back()->with('success', 'Success '.$req->message);
+        return back()->with('success', 'Success '.$request->message);
     }
     public function verifyPayment($id)
     {
@@ -132,14 +134,14 @@ class AdminController extends Controller
         $users->payments->save();
         return back()->with('success', 'Success Verify Payment');
     }
-    public function verifycv($id)
+    public function verifyCv($id)
     {
         $member = Member::findOrFail($id);
         $member->cv_check = 'Verified';
         $member->save();
         return back()->with('success', 'Success Verify cv');
     }
-    public function verifyktm($id)
+    public function verifyKtm($id)
     {
         $member = Member::findOrFail($id);
         $member->ktp_check = 'Verified';
