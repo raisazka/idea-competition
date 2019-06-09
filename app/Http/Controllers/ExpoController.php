@@ -37,7 +37,7 @@ class ExpoController extends Controller
         $expo->dob = $request->dob;
 
         do{
-            $otp = str_random(7);
+            $otp = strtoupper(str_random(7));
             $otp_exist = ExpoMember::where('otp', $otp)->first();
         }while($otp_exist);
 
