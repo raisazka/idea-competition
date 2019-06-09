@@ -102,6 +102,38 @@
             <img src="image/flatBIC.png" class="img-fluid bic-img upreveal" alt="">    
         </div>
     </div>
+    <div class="expo row" id="expo" style="height:100vh">
+        <div class="col-6 m-0 p-0">
+            <div id="carouselId" class="carousel slide" data-ride="carousel">
+                <div class="carousel-logo-indicator mx-auto">
+                    <div class="indicator-container">
+                        <div data-target="#carouselId" data-slide-to="0">ab</div>
+                        <div data-target="#carouselId" data-slide-to="1">d</div>
+                        <div data-target="#carouselId" data-slide-to="2">c</div>
+                    </div>
+                </div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div style="height:100vh;background:salmon;"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style="height:100vh;background:green;"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style="height:100vh;background:yellow;"></div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="register-page" id="register-page">
         <img src="image/cloud-bg.png" alt="hello" class="awan">
         <div class="register-content-cloud row">
@@ -414,7 +446,6 @@
         </div>
     </div>
  </div> 
-
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/landing-page.js')}}"></script>
 {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjXXUDGAmsn2Ac1_-oRQUgDG7sNTQbWw&callback=initMap" async defer></script> --}}

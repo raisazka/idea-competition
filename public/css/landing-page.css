@@ -11,6 +11,24 @@
 	height: 50vh;
 	width: 50vh;
 }
+.carousel-control-next-icon:after
+{
+  content: '>';
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+.carousel-control-prev-icon:after {
+	font-size: 2em;
+	font-family: "Font Awesome 5 Free";
+	content: "\f100";
+}
+.carousel-control-next-icon:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f101";
+	font-size: 2em;
+}
 .promotion-card{
 	padding: 1em;
 	width: 95%;
@@ -552,7 +570,25 @@ button:focus{
 	text-decoration: none;
 	color: #d3d3d3;
 }
-
+#carouselId::after,#carouselId::before{
+	display: none;
+}
+.indicator-container{
+	display: flex;
+	width: 80%;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+.carousel-logo-indicator{
+	display: flex;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	justify-content: center;
+	
+}
 .flex-centers {
 	display: flex;
 	justify-content: center;

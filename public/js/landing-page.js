@@ -52,10 +52,8 @@ $(document).ready(function(){
         opentoggle();
     });
     $('.carousel').carousel({
-        interval: 1500
-    });
-    
-    
+        interval: 6000
+      });
 });
 
 $(document).scroll(function(){
@@ -78,6 +76,7 @@ $(document).scroll(function(){
     } else {
         $('.navbar').css('transform','translateY(0)');
     }
+
     position = scroll;
     temp = (position-1) + 0.001;
     // if($(window).scrollTop() + $(window).height() > $('.upreveal').offset().top){

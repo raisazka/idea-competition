@@ -16,7 +16,7 @@
     @guest('admin')
         <a href="{{ route('admin.auth.login') }}">Login</a>
     @else
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:sticky; top:0;z-index:3;">
         <span class="navbar-brand">Admin BIC</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
             @endguest
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top:3em;">
         <div class="d-flex justify-content-between align-items-center row" style="margin:3em 0;">
         <h3 class="col-md-12 col-xs-12 col-lg-4 col-xl-4 text-center">Registered : {{count($users)}} Team</h3>
             @yield('app-title')
