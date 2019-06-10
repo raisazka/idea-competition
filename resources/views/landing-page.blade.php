@@ -30,10 +30,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body onload="loadingScene()">
+@if(session('message'))
+<div id="loader">
+        <h1 class="text-center"> Thankyou for register</h1>
+        <img src="image/BIC.png" class="img-fluid " alt="">
+        <h3 class="text-center" style="width:80%;">we have send an email to your email account which is used as ticket at BNCC Idea Competition</h3>
+    <img src="image/BIC.png" class="img-fluid img-loaderi" alt="">
+    <h2 class="text-center"><i>"Influence Business <br>Through Innovative Idea"</i></h2>
+</div>
+@else
 <div id="loader">
     <img src="image/BIC.png" class="img-fluid img-loaderi" alt="">
     <h2 class="text-center"><i>"Influence Business <br>Through Innovative Idea"</i></h2>
 </div>
+@endif
 <div class="body-content">
     <div class="landing-page" id="home-div">
         <div class="navbar" style="">
