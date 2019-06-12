@@ -29,16 +29,22 @@
     <meta name="theme-color" content="#556489"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
-<body onload="loadingScene()">
 @if(session('message'))
-<div id="loader">
-        <h1 class="text-center"> Thankyou for register</h1>
-        <img src="image/BIC.png" class="img-fluid " alt="">
-        <h3 class="text-center" style="width:80%;">we have send an email to your email account which is used as ticket at BNCC Idea Competition</h3>
-    <img src="image/BIC.png" class="img-fluid img-loaderi" alt="">
-    <h2 class="text-center"><i>"Influence Business <br>Through Innovative Idea"</i></h2>
+<body>
+<div id="register-message">
+    <h1 class="text-center font-weight-bold">Thankyou For Registering</h1>
+    <img src="{{asset('image/BIC.png')}}" alt="bic" class="img-fluid bic-message">
+    <div style="width:90%; text-align:justify;">
+        <h4 style="margin-bottom:1em;">Please check your inbox and 
+            find an email from <b><i>admin@bncc.net</i></b> that contains your ticket for BNCC Idea 
+            Competition Expo. Make sure to <b><i>take a screenshot of your ticket</i></b> (including the QR Code 
+            and OTP Code) because it will be used a lot during BNCC Idea Competition Expo.</h4>
+        <h4 style="margin-bottom:1em;">If you <b><i>don't get any email from admin@bncc.net</i></b> within an hour after you registered, please don't hesitate to contact us so we can send you another email :)</h4>        
+    </div>
+    <button type="button" id="close-notice" class="btn btn-success shadow">Ok I Understand</button>
 </div>
 @else
+<body onload="loadingScene()">
 <div id="loader">
     <img src="image/BIC.png" class="img-fluid img-loaderi" alt="">
     <h2 class="text-center"><i>"Influence Business <br>Through Innovative Idea"</i></h2>
@@ -112,35 +118,66 @@
             <img src="image/flatBIC.png" class="img-fluid bic-img upreveal" alt="">    
         </div>
     </div>
-    <div class="expo row" id="expo" style="height:100vh">
-        <div class="col-6 m-0 p-0">
-            <div id="carouselId" class="carousel slide" data-ride="carousel">
-                <div class="carousel-logo-indicator mx-auto">
-                    <div class="indicator-container">
-                        <div data-target="#carouselId" data-slide-to="0">ab</div>
-                        <div data-target="#carouselId" data-slide-to="1">d</div>
-                        <div data-target="#carouselId" data-slide-to="2">c</div>
+    <div class="expo" id="expo" style="background-color:#eff3f4">
+        <div class="row m-0">
+            <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 p-0">
+                <div id="carouselId" class="carousel slide" data-ride="carousel">
+                    {{-- <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol> --}}
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div>
+                                <div class="inner-carousel-content">
+                                    <h1 class="font-weight-bold" style="font-size:3em;color:#556489">EXPO</h1>
+                                    <img src="{{asset('image/expo.png')}}" alt="" style="max-width:15em;" >
+                                    <h4>
+                                        Expo dimana terdapat booth-booth dari perusahaan IT dan pengunjung booth bisa mendapatkan merchandise exclusive dari perusahaan dengan gratis
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class="carousel-item">
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+
+                            </div>
+                        </div> --}}
+                    </div>
+                    {{-- <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a> --}}
+                </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12 bg-dark-blue height">
+                <div class="inner-content color-white">
+                    <span class="text-center">
+                            <h4 class="color-white-fade">Daftar Sebagai</h4>
+                            <h1 class="color-white">Peserta Expo</h1>
+                        </span>
+                    <h4 class="text-center content-expo color-white-fade">
+                            Dapatkan kesempatan mengikuti seminar dan talkshow teknologi serta bisnis secara <b class="font-weight-bold color-white-fade">gratis</b>
+                            dan juga merchandise exclusive dari perusahaan dengan daftar sebagai peserta expo
+                        </h4>
+                    <div class="row container">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                            <a class="anti-a btn-regis-expo" href="{{route('expo.regis')}}" >
+                                <button type="submit">REGISTER</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div style="height:100vh;background:salmon;"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div style="height:100vh;background:green;"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div style="height:100vh;background:yellow;"></div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
     </div>
@@ -149,7 +186,7 @@
         <div class="register-content-cloud row">
             <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12 bg-dark-blue">
                 <div class="general-rule container-fluid">
-                    <h1>General Rules </h1>
+                    <h1 class="text-center">General Rules Lomba</h1>
                     <img src="image/Rules.png" alt="rules" class="img-fluid" style="max-width:10em;">
                     <ul>
                         <li><h5>Setiap tim terdiri dari 1-3 orang yang merupakan mahasiswa aktif dari universitas di Indonesia</h5></li>

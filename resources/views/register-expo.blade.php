@@ -67,7 +67,7 @@
     <img src="image/wave_atas_expo.png" class="wave wave_atas">
 @if ($errors->any())
     <div class="alert alert-danger" style="transform:translateY(-3.5em);">
-        {{$errors}}
+        There is something wrong !!!
     </div>    
 @endif
     <form action="{{route('expo.store')}}" class="form-form-form" method="POST" style="width:100%;">

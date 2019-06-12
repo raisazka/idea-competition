@@ -7,7 +7,6 @@ var email_error ='email must be gmail or yahoo and include @ and .';
 $(document).ready(function(){
     
     function showPage() {
-        alert("ada");
         $('#loader').css({"display": "flex", "filter": "opacity(1)"});
     }
     var email_v = new RegExp(/^[a-z0-9](\.?[a-z0-9]){5,}@((?:(g(oogle)?mail)|yahoo)\.com)$/);
@@ -44,7 +43,7 @@ $(document).ready(function(){
         $(a).parent().find('.email_wrong').empty();
         if(!email_v.test(a.val())){
             $(a).parent().find('.email_wrong').append(email_error).css('font-size','.8em');
-            return false;
+            return true;
         }
         return true;
     }
@@ -74,8 +73,8 @@ $(document).ready(function(){
             return false;
         }
         else{
-            if(year < 1994 || year > 2005 ){
-                $(a).parent().find('.dob_wrong').append("must be around 15-24 years old").css('font-size','.8em');
+            if(year < 1950 || year > 2012 ){
+                $(a).parent().find('.dob_wrong').append("please input an correct dob").css('font-size','.8em');
                 return false;
             }
             return true;
