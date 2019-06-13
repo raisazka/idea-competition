@@ -8,6 +8,7 @@ use QrCode;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ExpoRegisterMail;
 use App\ExpoMember;
+use Carbon;
 
 class ExpoController extends Controller
 {
@@ -21,10 +22,19 @@ class ExpoController extends Controller
         return view('register-expo');
     }
 
-    public function getPersonData($otp)
+    public function updateAbsensi($otp)
     {
+        $date = Carbon::now();
         $person = ExpoMember::where('otp', $otp)->first();
-        return response()->json($person);
+        if($date->toDateString() == '2019-06-13'){
+            $person->absen1 == 1;
+        }else if($date->toDateString() == '2019-06-14'){
+            $person->absen2 == 1;
+        }else{
+            echo 'Event has not started yet';
+        }
+        $person->save();
+        echo 'Success';
     }
 
     public function register(RegisterExpoRequest $request)
