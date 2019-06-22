@@ -13,3 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('expo/{otp}', 'ExpoController@updateAbsensi')->name('expo.data');

@@ -26,15 +26,71 @@ class ExpoController extends Controller
     {
         $date = Carbon::now();
         $person = ExpoMember::where('otp', $otp)->first();
-        if($date->toDateString() == '2019-06-13'){
-            $person->absen1 == 1;
-        }else if($date->toDateString() == '2019-06-14'){
-            $person->absen2 == 1;
+        if($date->toDateString() == '2019-06-25'){
+            if($person->absen1 == 1){
+                $respon = array(
+                    'response' => "Success",
+                    'status' => 'Sudah Pernah Absen hari 1',
+                    'name' => $person->name,
+                    'email' => $person->email,
+                    'dob' => $person->dob,
+                    'phone' => $person->phone,
+                    'gender' => $person->gender,
+                    ) ;
+            }
+            else{
+                $person->update([
+                    'absen1' => 1
+                ]);
+                $respon = array(
+                    'response' => "Success",
+                    'status' => "Absen hari 1 sukses",
+                    'name' => $person->name,
+                    'email' => $person->email,
+                    'dob' => $person->dob,
+                    'phone' => $person->phone,
+                    'gender' => $person->gender,
+                ) ;
+            }
+            //echo 'Absen hari 1 sukses';
+        }else if($date->toDateString() == '2019-06-26'){
+            if($person->absen2 == 1){
+                $respon = array(
+                    'response' => "Success",
+                    'status' => 'Sudah Pernah Absen hari 2',
+                    'name' => $person->name,
+                    'email' => $person->email,
+                    'dob' => $person->dob,
+                    'phone' => $person->phone,
+                    'gender' => $person->gender,
+                    ) ;
+            } else{
+                $person->update([
+                    'absen2' => 1
+                ]);
+                $respon = array(
+                    'response' => "Success",
+                    'status' => 'Absen hari 2 sukses',
+                    'name' => $person->name,
+                    'email' => $person->email,
+                    'dob' => $person->dob,
+                    'phone' => $person->phone,
+                    'gender' => $person->gender,
+                    ) ;
+            }
         }else{
-            echo 'Event has not started yet';
+            $respon = array(
+                'response' => "Success",
+                'status' => "Expo has not started yet/Invalid OTP",
+                'name' => $person->name,
+                'email' => $person->email,
+                'dob' => $person->dob,
+                'phone' => $person->phone,
+                'gender' => $person->gender,
+                ) ;
         }
-        $person->save();
-        echo 'Success';
+        $posts[0] = $respon;
+    	return response()->json(['data' => $posts], 200, [], JSON_NUMERIC_CHECK);
     }
 
     public function register(RegisterExpoRequest $request)
