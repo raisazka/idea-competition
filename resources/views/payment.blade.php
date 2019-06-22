@@ -27,12 +27,12 @@
         <div class="card-payment">
             <ol class="list-group list-group-flush no-bg">
                 <li class="list-group-item">
-                        1. Pembayaran sebesar Rp 150.000 (per tim) dilakukan secara transfer ke rekening BCA 5271734761 a.n. Jodhy Dwiharsono Putra
+                        1. Pembayaran sebesar Rp 150.000 (per tim) atau Rp 75.000 (khusus binusian) dilakukan secara transfer ke rekening BCA 5271734761 a.n. Jodhy Dwiharsono Putra
                 </li>
                 <li class="list-group-item">2. Setelah melakukan pembayaran, setiap tim wajib meng-upload bukti pembayarannya di dashboard masing-masing<br>
                         - File bukti pembayaran harap di-rename dengan format berikut : [nama team]_BNCCIdeaCompetition<br>
                         - Jenis file yang dapat diupload hanya .jpg, .jpeg, .png, atau .pdf dengan ukuran maksimal 2 MB</li>
-                <li class="list-group-item">3. Setelah diupload, silakan menunggu beberapa hari untuk verifikasi bukti pembayaran</li>
+                <li class="list-group-item">3. Setelah diupload, silakan menunggu beberapa hari untuk verifikasi bukti pembayaran atau chat contact person untuk mempercepat proses verifikasi</li>
                 <li class="list-group-item">
                         4. Case untuk BNCC Idea Competition baru dapat diakses apabila pembayaran sudah diverifikasi
                 </li>

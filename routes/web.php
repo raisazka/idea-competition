@@ -44,6 +44,7 @@ Route::get('expo/{otp}', 'ExpoController@getPersonData')->name('expo.data');
 
 Route::prefix('god')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/expolist','AdminController@ExpoList')->name('admin.expolist');
     Route::get('/view-member', 'AdminController@viewMember')->name('admin.member');
     Route::get('login', 'Auth\AdminAuthController@login')->name('admin.auth.login');
     Route::get('/check-cv','AdminController@cvCheck')->name('admin.cv_check');

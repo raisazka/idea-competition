@@ -1125,6 +1125,27 @@ form {
 		height: 10vh;
 	}
 }
+.sponsor{
+	width: 100%;
+	min-height: 100vh;
+}
+.sponsor-header > h1 {
+	margin-top: .5rem;
+}
+.sponsor-header>span{
+	height: 2px;
+	min-width: 10em;
+	background-color: #000000;
+}
+.sponsor-header{
+	width: 90%;
+	margin: 2em auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
 	@media only screen and (max-width:768px) {
 		.awan{
 			animation: none;

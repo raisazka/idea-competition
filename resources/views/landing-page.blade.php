@@ -59,7 +59,7 @@
             <div class="nav-right">
                 <div class="no-burger">
                     <a href="#section-2">What is BIC</a>
-                    <a href="#register-page">Registration</a>
+                    <a href="#expo">Registration</a>
                     <a href="#time-line">Timeline</a>
                     <a href="#faq">FAQ</a>
                     <a href="#contact-us">Contact Us</a>
@@ -75,7 +75,7 @@
         <div class="section-navbar">
             <img src="image/wave_atas.png" style="width:100%;">
             <div class="section-navbar-list"><a href="#section-2">What is BIC</a></div>
-            <div class="section-navbar-list"><a href="#register-page">Registration</a></div>
+            <div class="section-navbar-list"><a href="#expo">Registration</a></div>
             <div class="section-navbar-list"><a href="#time-line">Timeline</a></div>
             <div class="section-navbar-list"><a href="#faq">FAQ</a></div>
             <div class="section-navbar-list"> <a href="#contact-us">Contact Us</a></div>
@@ -122,11 +122,11 @@
         <div class="row m-0">
             <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 p-0">
                 <div id="carouselId" class="carousel slide" data-ride="carousel">
-                    {{-- <ol class="carousel-indicators">
+                    <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol> --}}
+                    </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="carousel-item">
+                        <div class="carousel-item">
                             <div>
 
                             </div>
@@ -148,26 +148,26 @@
                             <div>
 
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
-                    {{-- <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a> --}}
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-6 col-xl-6 col-md-6 col-xs-12 bg-dark-blue height">
+            <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 bg-dark-blue height">
                 <div class="inner-content color-white">
                     <span class="text-center">
-                            <h4 class="color-white-fade">Daftar Sebagai</h4>
+                            <h4 class="color-white">Daftar Sebagai</h4>
                             <h1 class="color-white">Peserta Expo</h1>
-                        </span>
-                    <h4 class="text-center content-expo color-white-fade">
-                            Dapatkan kesempatan mengikuti seminar dan talkshow teknologi serta bisnis secara <b class="font-weight-bold color-white-fade">gratis</b>
+                    </span>
+                    <h4 class="text-center content-expo color-white">
+                            Dapatkan kesempatan mengikuti seminar dan talkshow teknologi serta bisnis secara <b class="font-weight-bold color-white">gratis</b>
                             dan juga merchandise exclusive dari perusahaan dengan daftar sebagai peserta expo
                         </h4>
                     <div class="row container">
@@ -189,7 +189,7 @@
                     <h1 class="text-center">General Rules Lomba</h1>
                     <img src="image/Rules.png" alt="rules" class="img-fluid" style="max-width:10em;">
                     <ul>
-                        <li><h5>Setiap tim terdiri dari 1-3 orang yang merupakan mahasiswa aktif dari universitas di Indonesia</h5></li>
+                        <li><h5>Setiap tim terdiri dari 1-3 orang yang merupakan pelajar atau mahasiswa aktif di Indonesia</h5></li>
                         <li><h5>Setiap peserta wajib berkewarganegaraan Indonesia</h5></li>
                         <li><h5>Setiap tim wajib melakukan registrasi dan membayar uang pendaftaran sejumlah Rp 150.000 untuk umum dan Rp 75.000 untuk binusian</h5></li>
                         <li><h5>Seleksi tahap pertama dilakukan secara online, 10 tim yang terpilih nantinya akan dihubungi panitia untuk lanjut ke tahap presentasi</h5></li>
@@ -248,7 +248,7 @@
             <div class="try-time-line try-time-left">
                 <div class="containert left-t">
                     <div class="contentt shadow">
-                        <h1 class="text-center">17 Juni 2019</h1>
+                        <h1 class="text-center">22 Juni 2019</h1>
                         <h2 class="text-center">
                             Registration and Proposal Submission Deadline
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
@@ -265,7 +265,7 @@
                 </div>
                 <div class="containert right-t">
                     <div class="contentt shadow">
-                        <h1 class="text-center">21 June 2019</h1>
+                        <h1 class="text-center">23 June 2019</h1>
                         <h2 class="text-center">Finalist Announcement
                             
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
@@ -276,7 +276,7 @@
             <div class="try-time-line try-time-left">
                 <div class="containert left-t">
                     <div class="contentt shadow">
-                        <h1 class="text-center">22 June 2019</h1>
+                        <h1 class="text-center">23 June 2019</h1>
                         <h2 class="text-center">Technical Meeting
                             
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
@@ -297,7 +297,7 @@
                         <h2 class="text-center">BIC Finale & Expo
                             
                         {{-- <button class="btn-timeline">Click here for more info</button> --}}
-                        </h2>                
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -306,6 +306,65 @@
                     <h2 style="height:0;">2007</h2>
                     <p style="height:0;">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                     </div>
+            </div>
+        </div>
+    </div>
+    <div class="sponsor " id="sponsor-platinum">
+        <div class="sponsor-header">
+            <span></span>
+            <h1>Platinum Sponsor</h1>
+            <span></span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="{{asset('image/404.png')}}" style="max-width:25em;" alt="">
+        </div>
+        <div class="sponsor-header">
+            <span></span>
+            <h1>Gold Sponsor</h1>
+            <span></span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="width:100%;">
+            <div class="d-flex justify-content-center align-items-center" style="flex-flow:wrap;">
+                <img src="{{asset('image/logo/Hacktiv8.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+            </div>
+        </div>
+        <div class="sponsor-header">
+            <span></span>
+            <h1>Silver Sponsor</h1>
+            <span></span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="width:100%;">
+            <div class="d-flex justify-content-center align-items-center" style="flex-flow:wrap;">
+                <img src="{{asset('image/logo/Hacktiv8.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+            </div>
+        </div>
+        <div class="sponsor-header">
+            <span></span>
+            <h1>Exhibitor</h1>
+            <span></span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="width:100%;">
+            <div class="d-flex justify-content-center align-items-center" style="flex-flow:wrap;">
+                <img src="{{asset('image/logo/Hacktiv8.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+            </div>
+        </div>
+        <div class="sponsor-header">
+            <span></span>
+            <h1>Media Partner's</h1>
+            <span></span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="width:100%;">
+            <div class="d-flex justify-content-center align-items-center" style="flex-flow:wrap;">
+                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
             </div>
         </div>
     </div>
@@ -344,7 +403,7 @@
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span>Berapa lama proses pembuatan proposal diperbolehkan?</span> <i class="fas fa-arrow-left text-align:left"></i></div>
-                    <div class="faq-desc"> Setelah melakukan registrasi dan melakukan pembayaran biaya lomba, maka tombol untuk men-download case akan muncul dan peserta dapat langsung mengerjakan proposal sampai batas akhir pengumpulan yaitu Senin, 17 Juni 2019.</div>
+                    <div class="faq-desc"> Setelah melakukan registrasi dan melakukan pembayaran biaya lomba, maka tombol untuk men-download case akan muncul dan peserta dapat langsung mengerjakan proposal sampai batas akhir pengumpulan yaitu Sabtu, 22 Juni 2019.</div>
                 </div>
                 <div class="faq-card">
                     <div class="faq-caption d-flex flex-row justify-content-between align-items-center"><span> Siapa yang akan melakukan seleksi?</span> <i class="fas fa-arrow-left text-align:left"></i></div>

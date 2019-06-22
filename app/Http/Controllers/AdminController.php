@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Member;
 use App\ContactUs;
+use App\ExpoMember;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -21,6 +22,13 @@ class AdminController extends Controller
         $users = User::All();
         $contactus = ContactUs::All();
         return view('admin.dashboard', compact('users','contactus'));
+    }
+    public function ExpoList(){
+        $users = User::All();
+        $contactus = ContactUs::All();
+        $expo = ExpoMember::All();
+        $counter = count($expo);
+        return view('admin.expo-list',compact('expo','counter','users','contactus'));
     }
     public function cvCheck()
     {

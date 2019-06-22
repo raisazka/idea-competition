@@ -72,7 +72,10 @@
                     <a class="nav-link" href="{{route('admin.proposal_check')}}">Proposal Uploaded<span class="ml-1 mr-1 badge badge-pill badge-success">{{$proposal}}</span><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item" >
-                <a class="nav-link" href="{{route('admin.contact_us')}}">Contact us<span class="ml-1 mr-1 badge badge-pill badge-danger">{{$cont}}</span><span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('admin.contact_us')}}">Contact us<span class="ml-1 mr-1 badge badge-pill badge-danger">{{$cont}}</span><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.expolist')}}">Peserta Expo<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <a class="btn anti-a nav-item btn-rounded btn-danger color-white" href="{{ route('admin.auth.logout') }}"
