@@ -11,6 +11,72 @@
 	height: 50vh;
 	width: 50vh;
 }
+
+.carousel-indicators li {
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	background:#818994;
+}
+.carousel-indicators li.active{
+	background: #131f33;
+}
+.expo{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.inner-content>.row>div>a.anti-a.btn-regis-expo>button{
+	border-color: #BFC6D8;
+	color: #BFC6D8;
+}
+.inner-content>.row>div>a.anti-a.btn-regis-expo>button:hover{
+	border-color: none;
+	background-color:white;
+	color: black;
+}
+.expo > .row > .bg-dark-blue.height{
+	min-height: 100vh;
+}
+.carousel-item{
+	width: 100%;
+	text-align: center;
+}
+.carousel-item > div{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	height: 85vh;
+}
+.color-white{
+	color: white !important;
+}
+.color-white-fade{
+	color: #BFC6D8!important;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+.carousel-control-prev-icon:after {
+	font-size: 2em;
+	font-family: "Font Awesome 5 Free";
+	content: "\f100";
+	color: #131f33;
+}
+.carousel-control-next-icon:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f101";
+	font-size: 2em;
+	color: #131f33;
+}
 .promotion-card{
 	padding: 1em;
 	width: 95%;
@@ -28,6 +94,15 @@
 }
 .promotion-card >div> i{
 	font-size: 3em;
+}
+.inner-carousel-content{
+	height: 100%;
+	width: 80%;
+	margin: 0 1em;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
 }
 .promotion-content{
 	text-align: justify;
@@ -123,6 +198,24 @@
 	justify-content: center;
 	align-items: center;
 	-webkit-transition:  .5s ease-in-out;
+	transition: .5s ease-in-out;
+  }
+  .bic-message{
+	  max-width: 15em;
+	  margin: 1.5em;
+  }
+  #register-message{
+	position: absolute;
+	z-index: 99;
+	padding: 2em 0;
+	width: 100%;
+	min-height: 100vh;
+	background: #131f33;
+	display: flex;
+	color: white;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 	transition: .5s ease-in-out;
   }
   .img-loaderi{
@@ -552,7 +645,28 @@ button:focus{
 	text-decoration: none;
 	color: #d3d3d3;
 }
-
+#carouselId::after,#carouselId::before{
+	display: none;
+}
+.indicator-container{
+	display: flex;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.indicator-container > div{
+	margin: 0 2em 1em;
+}
+.carousel-logo-indicator{
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+	justify-content: center;
+	
+}
 .flex-centers {
 	display: flex;
 	justify-content: center;
@@ -724,6 +838,10 @@ form {
 
 .content-regis{
 	width: 55%;
+}
+.content-expo{
+	width: 80%;
+	text-align: justify;
 }
 
 .inner-content h1{
@@ -1007,6 +1125,27 @@ form {
 		height: 10vh;
 	}
 }
+.sponsor{
+	width: 100%;
+	min-height: 100vh;
+}
+.sponsor-header > h1 {
+	margin-top: .5rem;
+}
+.sponsor-header>span{
+	height: 2px;
+	min-width: 10em;
+	background-color: #000000;
+}
+.sponsor-header{
+	width: 90%;
+	margin: 2em auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
 	@media only screen and (max-width:768px) {
 		.awan{
 			animation: none;
@@ -1085,6 +1224,9 @@ form {
 		.bic-img {
 			max-width: 80%;
 			margin: 20% 0;
+		}
+		.bic-message{
+			max-width: 12em;
 		}
 		.containert {
 			width: 100%;

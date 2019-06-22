@@ -106,11 +106,11 @@ class ExpoController extends Controller
             $otp = strtoupper(str_random(7));
             $otp_exist = ExpoMember::where('otp', $otp)->first();
         }while($otp_exist);
-
+        
         $qr = QrCode::format('png')->size(250)->generate(route('expo.data', $otp));
         $expo->otp = $otp;
         Mail::to($expo->email)->send(new ExpoRegisterMail($expo, $qr));
         $expo->save();
-        return redirect('/');
+        return redirect('/')->with('message','done');
     }
 }

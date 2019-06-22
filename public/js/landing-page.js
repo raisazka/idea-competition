@@ -14,10 +14,7 @@ function showPage() {
 function done(){
     $('#loader').css('display','none');
 }
-function divreach(a){
-    
 
-}
 var map,marker;
 function initMap() {
 var uluru = {lat: -6.201473, lng: 106.781548};
@@ -25,6 +22,13 @@ map = new google.maps.Map(document.getElementById('map'),{zoom: 15, center: ulur
 marker = new google.maps.Marker({position: uluru, map: map});
 }
 $(document).ready(function(){
+    $('#close-notice').click(function(){
+        $('#register-message').css('filter','opacity(0)');
+        setTimeout(function(){
+            $('#register-message').css('display','none');
+        },600);
+        $('.body-content').css('display','block');
+    });
     $('.faq-desc').slideToggle();
    var hT = $('#home-div').offset().top,
     hH = $('#home-div').outerHeight(),
@@ -52,10 +56,9 @@ $(document).ready(function(){
         opentoggle();
     });
     $('.carousel').carousel({
-        interval: 1500
-    });
-    
-    
+        interval: 6000
+      });
+    console.log($('#abc'));
 });
 
 $(document).scroll(function(){
@@ -78,6 +81,7 @@ $(document).scroll(function(){
     } else {
         $('.navbar').css('transform','translateY(0)');
     }
+
     position = scroll;
     temp = (position-1) + 0.001;
     // if($(window).scrollTop() + $(window).height() > $('.upreveal').offset().top){

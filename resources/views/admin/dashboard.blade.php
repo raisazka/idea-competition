@@ -34,7 +34,7 @@ foreach($users as $user){
 @endif
 <div class="row">
 @foreach ($users as $user)
-<div class="container mb-5 col-lg-3 col-xl-3 col-md-6 col-xs-12">
+<div class="container mb-5 col-lg-4 col-xl-4 col-md-6 col-xs-12">
     <div class="card shadow " style="width: 20rem;">
         @if($user->payments!=null)
         <a class="anti-a" href="{{asset('storage/payment/'.$user->payments->payment)}}">

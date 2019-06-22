@@ -18,6 +18,13 @@ body{
     
     /* background-image: linear-gradient(45deg,#2AF598,#08B3E5); */
 }
+.expo-regis-body{
+    background: #556489;
+    color: #EFF3F4;
+}
+.expo-regis-body *{
+    border-color: #EFF3F4 !important;
+}
 input{
     background: transparent!important;
     border-color: #212529 !important;
@@ -25,7 +32,23 @@ input{
 .wave{
     width: 100%;
 }
-
+.animate-logo{
+    animation: animation-logo 5s infinite ease-in-out;
+}
+@keyframes animation-logo{
+    0%{
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
+    }
+    40%{
+        -webkit-transform: translateY(-1em);
+                transform: translateY(-1em);
+    }
+    100%{
+        -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
+    }
+}
 .button-payment{
     background: #556489;
     color: white;
@@ -168,6 +191,11 @@ form > h3{
 .form-ktp > input:focus{
     outline: none;
 }
+.form-gender > .form-control{
+    border: solid .1em #181818;
+    border-radius: 20em;
+    background: none;
+}
 #plus{
     margin: 1.5em auto;
     width: 80%;
@@ -298,6 +326,12 @@ input[type="file"]{
     -o-transition: .5s;
     transition: .5s;
 }
+.btn-regis-expo{
+    margin: 0;
+    background-color: #EFF3F4 !important;
+    color: #181818 !important;
+}
+
 .btn-regis:focus{
     outline: none!important;
 }
@@ -328,11 +362,20 @@ input[type="file"]{
         -ms-transform: translateY(-5em);
             transform: translateY(-5em);
 }
+.content-promosi-expo{
+    transform: translate(0);
+}
+.bic-logo-expo{
+    width: 10em;
+}
 .content-promosi > h1{
     border: none;
     font-weight: bolder;
     margin: 0;
     margin: .5em 0;
+}
+.tiket-logo{
+    width: 12em;
 }
 
 .content-promosi >a> .bic-logo{
@@ -364,12 +407,23 @@ input[type="file"]{
         -ms-transform: scale(1.1);
             transform: scale(1.1);
 }
+.container-fluid>.row>.animate-logo.content-promosi>a> .bic-logo-expo:hover{
+    -webkit-transform: scale(1.1) ;
+        -ms-transform: scale(1.1) ;
+            transform: scale(1.1) ;
+}
 .content-promosi > h3{
     font-weight: bolder;
 }
 .btn-regis:hover{ 
     color:#EFF3F4;
     background: #212529 !important; 
+}
+.btn-regis-expo:hover{
+    background-color: #EFF3F4 !important;
+    color: #181818 !important;
+    margin: none;
+    transform: scale(1.2);
 }
 .btn-update:hover{
     -webkit-transform: scale(1.05);
@@ -385,6 +439,9 @@ input[type="file"]{
     }
     #try{
         font-size: 1em;
+    }
+    .small-justify-center{
+        justify-content: center!important;
     }
 }
   
