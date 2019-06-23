@@ -54,6 +54,14 @@ return [
            'driver' => 'token',
            'provider' => 'admins',
        ],
+       'corporate' => [
+        'driver' => 'session',
+        'provider' => 'corporates',
+    ],
+    'corporate-api' => [
+        'driver' => 'token',
+        'provider' => 'corporates',
+    ],
     ],
 
     /*
@@ -81,6 +89,10 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Corporate::class,
         ],
     ],
 

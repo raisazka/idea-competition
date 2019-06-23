@@ -60,3 +60,11 @@ Route::prefix('god')->group(function () {
     Route::patch('/admin-update-data','AdminController@updateUserData')->name('admin.update_data');
   });
   
+Route::prefix('corporate')->group(function(){
+  Route::get('/', 'CorporateController@index')->name('corporate.dashboard');
+  Route::get('login', 'CorporateAuthController@login')->name('corporate.auth.login');
+  Route::post('login', 'CorporateAuthController@loginAdmin')->name('corporate.auth.loginCorporate');
+  Route::post('attend', 'CorporateController@attendBooth')->name('corporate.attend');
+  Route::post('gamification', 'GamificationController@play')->name('gamification.play');
+  Route::get('gamification', 'GamificationController@index')->name('gamification.index');
+});
