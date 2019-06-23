@@ -90,7 +90,7 @@ return [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
         ],
-        'admins' => [
+        'corporates' => [
             'driver' => 'eloquent',
             'model' => App\Corporate::class,
         ],
@@ -119,6 +119,11 @@ return [
         ],
         'admins' => [
             'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+        'corporates' => [
+            'provider' => 'corporates',
             'table' => 'password_resets',
             'expire' => 15,
         ],

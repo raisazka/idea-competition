@@ -11,6 +11,8 @@ use User;
 class CorporateAuthController extends Controller
 {
 
+    use AuthenticatesUsers;
+
     public function __construct()
     {
         $this->middleware('guest:corporate')->except('logout');

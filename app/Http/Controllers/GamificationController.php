@@ -55,13 +55,13 @@ class GamificationController extends Controller
         if($a == null || $b == null || $c ==null || $d == null){
            $z = 0;
         }else if($z > $a->countArea){
-            $z = $a;
+            $z = $a->countArea;
         }
-        else if($z > $b->countArea || $b == null){
-            $z = $b;
+        else if($z > $b->countArea){
+            $z = $b->countArea;
         }
         else if($z > $c->countArea){
-            $z = $c;
+            $z = $c->countArea;
         }
 
         $user = ExpoMember::where('otp', $request->otp)->first();

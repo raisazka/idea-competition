@@ -44,8 +44,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest('admin')
-                            <li><a href="{{ route('admin.auth.login') }}">Login</a></li>
-                            <li><a href="{{ route('admin.register') }}">Register</a></li>
+                            <li><a href="{{ route('corporate.auth.login') }}">Login</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

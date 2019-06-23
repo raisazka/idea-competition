@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('corporate.layouts.app')
 
 @section('title', 'login here')
 
@@ -11,7 +11,7 @@
                 <div class="panel-heading">Admin Login</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('admin.auth.loginAdmin') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('corporate.auth.loginCorporate') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -39,16 +39,6 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
                             </div>
                         </div>
 

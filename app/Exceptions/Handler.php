@@ -57,6 +57,7 @@ class Handler extends ExceptionHandler
             break;
             case 'corporate':
             $login = 'corporate.auth.login';
+            break;
           default:
             $login = 'index.login';
             break;
