@@ -68,3 +68,13 @@ Route::prefix('corporate')->group(function(){
   Route::post('gamification', 'GamificationController@play')->name('gamification.play');
   Route::get('gamification', 'GamificationController@index')->name('gamification.index');
 });
+
+Route::get('gamification/search', 'GamificationController@searchIndex')->name('member.search.index'); 
+Route::get('gamification/search-member', 'GamificationController@searchMember')->name('member.search');
+
+Route::prefix('contestant')->group(function(){
+  Route::get('/', 'ContestantController@index')->name('contestant.dashboard');
+  Route::get('login', 'Auth\ContestantAuthController@login')->name('contestant.auth.login');
+  Route::post('login', 'Auth\ContestantAuthController@loginContestant')->name('contestant.auth.loginContestant');
+  Route::post('attend', 'ContestantController@attend')->name('contestant.attend');
+});
