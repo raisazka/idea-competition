@@ -14,4 +14,5 @@ class AttendBooth extends Model
     {
         return $this->belongsTo('App\Corporate', 'corporate_id');
     }
+
 }

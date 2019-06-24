@@ -54,14 +54,22 @@ return [
            'driver' => 'token',
            'provider' => 'admins',
        ],
-       'corporate' => [
+       'contestant' => [
         'driver' => 'session',
-        'provider' => 'corporates',
-    ],
-    'corporate-api' => [
-        'driver' => 'token',
-        'provider' => 'corporates',
-    ],
+        'provider' => 'contestants',
+        ],
+        'contestant-api' => [
+            'driver' => 'token',
+            'provider' => 'contestants',
+        ],
+            'corporate' => [
+            'driver' => 'session',
+            'provider' => 'corporates',
+            ],
+        'corporate-api' => [
+            'driver' => 'token',
+            'provider' => 'corporates',
+        ],
     ],
 
     /*
@@ -81,7 +89,7 @@ return [
     |
     */
 
-    'providers' => [
+ 'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
@@ -89,6 +97,10 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
+        ],
+        'contestants' => [
+            'driver' => 'eloquent',
+            'model' => App\Contestant::class,
         ],
         'corporates' => [
             'driver' => 'eloquent',
@@ -119,6 +131,11 @@ return [
         ],
         'admins' => [
             'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+        'contestants' => [
+            'provider' => 'contestants',
             'table' => 'password_resets',
             'expire' => 15,
         ],

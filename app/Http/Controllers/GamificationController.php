@@ -45,15 +45,9 @@ class GamificationController extends Controller
         ->where('c.area', 'Area 3')
          ->where('em.otp', $request->otp)
         ->groupBy('c.area')->first();
-        
-       $d = DB::table('attend_booths as ab')
-        ->join('expo_members as em', 'ab.expo_member_id', 'em.id')
-        ->join('corporates as c', 'ab.corporate_id', 'c.id')
-        ->where('em.otp', $request->otp)
-        ->get();   
-        
+    
         $z = 99;
-        if($a == null || $b == null || $c == null || $d == null){
+        if($a == null || $b == null || $c == null){
            $z = 0;
            $a = new stdClass();
            $b =  new stdClass();
@@ -100,5 +94,21 @@ class GamificationController extends Controller
         }else if($z == 0){
             return back()->with('error', 'You Can\'t Play, Minimum 1 Booth per Area');
         }
+    }
+
+    public function searchMember(Request $request)
+    {
+        $members = ExpoMember::where('otp', $request->otp)->first();
+        if($members == null){
+            return back()->with('error', 'OTP Not Found');
+        }else if(count($members->attend) == 0){
+            return back()->with('error', 'You Haven\'t Visited a Booth Yet');
+        }
+        return view('search-member', compact('members'));
+    }
+
+    public function searchIndex()
+    {
+        return view('search');
     }
 }

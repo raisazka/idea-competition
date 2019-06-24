@@ -10,4 +10,9 @@ class ExpoMember extends Model
     {
         return $this->hasOne('App\Gamification');
     }
+
+    public function attend()
+    {
+        return $this->hasMany('App\AttendBooth');
+    }
 }
