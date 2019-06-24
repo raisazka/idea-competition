@@ -43,12 +43,13 @@
 
 .area{
     width: 100%;
+    height: 100vh;
     background-color: rgba(115, 101, 152, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 0;
+    z-index: 2000;
 
 }
 
@@ -175,36 +176,6 @@ ul {
 <body>
     
         <div class="area" >
-    <div class="form-form-form">
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content" style="border:none">
-                    <div class="modal-header" style="border:none">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h3>Are you sure want to log out ?</h3>
-                    </div>
-                    <div class="modal-footer d-flex justify-content-between" style="border:none">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-danger" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">Log Out</button>
-    
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-right">
-        <button type="button" class="btn btn-danger float-button" data-toggle="modal" data-target="#exampleModalLong">
-            Log Out <i class="fas fa-sign-out-alt"></i>
-        </button>
-    </div>
         @if(Session::has('error'))
             <div class="alert alert-danger">
                 {{Session::get('error')}}
