@@ -67,4 +67,6 @@ Route::prefix('corporate')->group(function(){
   Route::post('attend', 'CorporateController@attendBooth')->name('corporate.attend');
   Route::post('gamification', 'GamificationController@play')->name('gamification.play');
   Route::get('gamification', 'GamificationController@index')->name('gamification.index');
+  Route::get('show-attendees', 'CorporateController@showAttendees')->name('attendees.show');
+  Route::get('get-expo-member', 'ExpoController@getExpoMemberData');
 });
