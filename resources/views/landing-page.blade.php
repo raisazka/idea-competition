@@ -122,7 +122,7 @@
         <div class="row m-0">
             <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 p-0">
                 <div id="carouselId" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators" style="bottom:0;">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -130,7 +130,7 @@
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div>
-                                <div class="inner-carousel-content">
+                                <div class="inner-carousel-content" style="justify-content:center;">
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">EXPO</h1>
                                     <img src="{{asset('image/expo.png')}}" alt="" style="max-width:15em;" >
                                     <h4 class="text-justify">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="carousel-item">
                             <div>
-                                <div class="inner-carousel-content">
+                                <div class="inner-carousel-content" style="justify-content:center;">
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Fire-Side Chat</h1>
                                     <img src="{{asset('image/Fire-side.png')}}" alt="" style="max-width:15em;" >
                                     <h4  class="text-justify">
@@ -153,7 +153,7 @@
                         </div>
                         <div class="carousel-item">
                             <div>
-                                <div class="inner-carousel-content">
+                                <div class="inner-carousel-content" style="justify-content:center;">
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Leader's Talk</h1>
                                     <img src="{{asset('image/Lead-talk.png')}}" alt="" style="max-width:15em;" >
                                     <h4 class="text-justify">
