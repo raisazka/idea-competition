@@ -122,31 +122,32 @@
         <div class="row m-0">
             <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 p-0">
                 <div id="carouselId" class="carousel slide" data-ride="carousel">
-                    {{-- <ol class="carousel-indicators">
+                    <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
                         <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol> --}}
+                    </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div>
                                 <div class="inner-carousel-content">
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">EXPO</h1>
                                     <img src="{{asset('image/expo.png')}}" alt="" style="max-width:15em;" >
-                                    <h4>
+                                    <h4 class="text-justify">
                                         Expo dimana terdapat booth-booth dari perusahaan IT dan pengunjung booth bisa mendapatkan merchandise exclusive dari perusahaan dengan gratis
                                     </h4>
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="carousel-item">
+                        <div class="carousel-item">
                             <div>
                                 <div class="inner-carousel-content">
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Fire-Side Chat</h1>
                                     <img src="{{asset('image/Fire-side.png')}}" alt="" style="max-width:15em;" >
-                                    <h4>
-                                        Fire-side Chat adalah acara talk-show seputar bisnis dan teknologi untuk peserta Expo BNCC Idea Competition. Tidak hanya mendengarkan moderator dan pembicara bertukar pikiran, Fire-side Chat juga membuka kesempatan bagi para partisipan untuk bertanya jawab langsung dengan  pembicara yang ada. Talk-show ini akan diadakan pada 25-26 Juni 2019, bersamaan dengan Expo BNCC Idea Competition.
-                                    </h4>
+                                    <h4  class="text-justify">
+                                        Fire-side Chat adalah acara talk-show seputar bisnis dan teknologi untuk peserta Expo BNCC Idea Competition.
+                                    </h4>    
+                                    <button class="btn btn-primary">Fire Side-Chat detail</button>
                                 </div>
                             </div>
                         </div>
@@ -156,20 +157,21 @@
                                     <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Leader's Talk</h1>
                                     <img src="{{asset('image/Lead-talk.png')}}" alt="" style="max-width:15em;" >
                                     <h4 class="text-justify">
-                                        Leaders' Talk adalah acara seminar seputar bisnis dan teknologi dari para experts di bidangnya. 
+                                        Leaders' Talk adalah acara seminar seputar bisnis dan teknologi dari para experts di bidangnya.
                                     </h4>
+                                    <button class="btn btn-primary">Leader's Talk detail</button>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
-                    {{-- <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a> --}}
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 col-xl-6 col-md-12 col-xs-12 bg-dark-blue height">
@@ -405,7 +407,7 @@
                 <h3>25 - 26 June 2019</h3>
             </div>
             <a class="anti-a btn btn-primary" href="{{asset('image/expo-map.png')}}">
-                Download Expo Map
+                Download Denah Expo
             </a>
         </div>
     </div>
@@ -726,6 +728,34 @@
                             <br>
                     <h5>
                         Visit Gojek Website : <a href="https://www.go-jek.com/" target="_blank">https://www.go-jek.com</a>
+                    </h5>
+                </div>
+                <div class="modal-footer" style="background-color:#212121;">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Vidvie-->
+    <div class="modal fade" id="Vidvie" tabindex="-1" role="dialog" aria-labelledby="Vidvie" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#212121;color:#ffffff;border-radius:0">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Vidvie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color:#ffffff;">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body" class="d-flex" style="padding: 1rem 2rem;">
+                    <div style="display:flex; align-items:center; justify-content:center;">
+                        <a href="https://vidvie.co.id/" target="_blank" style="margin:0">                        
+                            <img src="{{asset('image/logo/Vidvie.png')}}" style="max-width:15em;" alt="">
+                        </a>
+                    </div>
+                    <h5 style="text-align:justify; width:90% margin:2em auto;">PT. TUNGGAL JAYA PRATAMA adalah agen tunggal resmi dari brand Vidvie untuk pasar Indonesia.
+                        Vidvie merupakan sebuah brand international "Smartphone Accessories" dari Hong Kong yang sudah didistribusikan ke 75 negara termasuk Indonesia.<br>
+                    <h5>
+                        Visit Gojek Website : <a href="https://vidvie.co.id/" target="_blank">https://vidvie.co.id</a>
                     </h5>
                 </div>
                 <div class="modal-footer" style="background-color:#212121;">
