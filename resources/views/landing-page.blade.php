@@ -229,7 +229,7 @@
                 <div class="containert-icon">
                     <img class="img-fluid" src="image/Megaphone-01.png" alt="openregis">
                 </div>
-                <div class="containert right-t active-time">
+                <div class="containert right-t">
                     <div class="contentt shadow">
                         <h1 class="text-center">23 June 2019</h1>
                         <h2 class="text-center">Finalist Announcement
@@ -240,7 +240,7 @@
                 </div>
             </div>
             <div class="try-time-line try-time-left">
-                <div class="containert left-t active-time">
+                <div class="containert left-t ">
                     <div class="contentt shadow">
                         <h1 class="text-center">23 June 2019</h1>
                         <h2 class="text-center">Technical Meeting
@@ -257,7 +257,7 @@
                 <div class="containert-icon">
                     <img class="img-fluid" src="image/DDay-01.png" alt="openregis">
                 </div>
-                <div class="containert right-t">
+                <div class="containert right-t active-time">
                     <div class="contentt shadow">
                         <h1 class="text-center">25-26 June 2019</h1>
                         <h2 class="text-center">BIC Finale & Expo
@@ -407,7 +407,7 @@
                 <h3>25 - 26 June 2019</h3>
             </div>
             <a class="anti-a btn btn-primary" href="{{asset('image/expo-map.png')}}">
-                Download Denah Expo
+                View Denah Expo
             </a>
         </div>
     </div>
