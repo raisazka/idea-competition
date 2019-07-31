@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
-<link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="css/app.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="{{asset('css/regis.css')}}">
+    <link rel="stylesheet" href="css/regis.css">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/fontawesome.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/brands.css')}}" rel="stylesheet">
     <link href="{{asset('fontawesome-free-5.8.2-web/css/solid.css')}}" rel="stylesheet">
@@ -43,8 +43,8 @@
 
 .area{
     width: 100%;
-    height: 100vh;
-    background-color: rgba(115, 101, 152, 1);
+    height:100vh;
+    background-color: #006064;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,13 +52,22 @@
     z-index: 2000;
 
 }
+.contect-area{
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    widows: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 .circles{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -1;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
@@ -68,12 +77,13 @@
     display: block;
     list-style: none;
     width: 20px;
-    height: 20px; 
-    background-color: rgba(255, 255, 255, .6);
+    height: 20px;
+    background-color: rgba(174, 174, 174, .6);
     animation: animate 25s linear infinite;
     bottom: -150px;
     
 }
+
 .circles li:nth-child(1){
     left: 25%;
     width: 80px;
@@ -175,8 +185,38 @@ ul {
 </head>
 <body>
     
-        <div class="area" >
-        @if(Session::has('error'))
+    <div class="area" >
+    <div class="form-form-form">
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="border:none">
+                    <div class="modal-header" style="border:none">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h3>Are you sure want to log out ?</h3>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between" style="border:none">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Log Out</button>
+    
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+        <button type="button" class="btn btn-danger float-button" data-toggle="modal" data-target="#exampleModalLong">
+            Log Out <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+    @if(Session::has('error'))
             <div class="alert alert-danger">
                 {{Session::get('error')}}
             </div>
@@ -186,21 +226,20 @@ ul {
                 {{Session::get('success')}}
             </div>
         @endif
-        <h1 style="border:none; color:white"> Game Booth</h1>
-        <form action="{{route('gamification.play')}}" method="POST" class="bola2" style="color:white !important;">
+        <h1 style="border:none; color:white">{{Auth::User()->name}} Checkpoint</h1>
+        <form action="{{route('contestant.attend')}}" method="POST" class="bola2" style="color:white !important;">
             @csrf
             <div class="form-group">
-                    <label for="exampleFormControlInput1" ><h1 style="border:none;">Input OTP Code</h1></label>
-                    <input type="text" class="form-control" style="border-color:white !important; color:white" name="otp">
-                    <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
-                        @if ($errors->has('otp'))
-                            {{ $errors->first('otp') }}
-                        @endif
-                   </span>
-                </div>
-                <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                <label for="exampleFormControlInput1" ><h1 style="border:none;">Input OTP Code</h1></label>
+                <input type="text" class="form-control" style="border-color:white !important; color:white" name="otp">
+                <span class="line_wrong" style="color:red; font-weight:700; font-size: .8em">
+                    @if ($errors->has('otp'))
+                        {{ $errors->first('otp') }}
+                    @endif
+               </span>
+            </div>
+            <button type="submit" class="btn btn-lg btn-success">Submit</button>
         </form>
-
             <ul class="circles">
                     <li></li>
                     <li></li>

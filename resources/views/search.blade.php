@@ -44,7 +44,8 @@
 .area{
     width: 100%;
     height: 100vh;
-    background-color: rgba(115, 101, 152, 1);
+    background-color:
+#1b1b1b;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,8 +187,8 @@ ul {
                 {{Session::get('success')}}
             </div>
         @endif
-        <h1 style="border:none; color:white"> Game Booth</h1>
-        <form action="{{route('gamification.play')}}" method="POST" class="bola2" style="color:white !important;">
+        <h1 style="border:none; color:white">Search Member by OTP</h1>
+        <form action="{{route('member.search')}}" method="GET" class="bola2" style="color:white !important;">
             @csrf
             <div class="form-group">
                     <label for="exampleFormControlInput1" ><h1 style="border:none;">Input OTP Code</h1></label>
@@ -198,7 +199,7 @@ ul {
                         @endif
                    </span>
                 </div>
-                <button type="submit" class="btn btn-lg btn-success">Submit</button>
+                <button type="submit" class="btn btn-lg btn-success">Search</button>
         </form>
 
             <ul class="circles">
@@ -218,3 +219,4 @@ ul {
 <script src="{{asset('js/dashboard-home.js')}}"></script>
 </body>
 </html>
+

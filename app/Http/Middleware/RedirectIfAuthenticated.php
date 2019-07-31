@@ -28,6 +28,11 @@ class RedirectIfAuthenticated
                 return redirect()->route('corporate.dashboard');
               }
               break;
+              case 'contestant':
+              if (Auth::guard($guard)->check()) {
+                return redirect()->route('contestant.dashboard');
+              }
+              break;
             default:
               if (Auth::guard($guard)->check()) {
                   return redirect('/home');
