@@ -61,6 +61,7 @@
                     <a href="#section-2">What is BIC</a>
                     <a href="#expo">Registration</a>
                     <a href="#time-line">Timeline</a>
+                    <a href="#sponsor-platinum">Sponsor</a>
                     <a href="#faq">FAQ</a>
                     <a href="#contact-us">Contact Us</a>
                 </div>
@@ -77,6 +78,7 @@
             <div class="section-navbar-list"><a href="#section-2">What is BIC</a></div>
             <div class="section-navbar-list"><a href="#expo">Registration</a></div>
             <div class="section-navbar-list"><a href="#time-line">Timeline</a></div>
+            <div class="section-navbar-list"><a href="#sponsor-platinum">Sponsor</a></div>
             <div class="section-navbar-list"><a href="#faq">FAQ</a></div>
             <div class="section-navbar-list"> <a href="#contact-us">Contact Us</a></div>
             <img src="image/wave_bawah.png" style="width:100%">
@@ -147,19 +149,19 @@
                                     <h4  class="text-justify">
                                         Fire-side Chat adalah acara talk-show seputar bisnis dan teknologi untuk peserta Expo BNCC Idea Competition.
                                     </h4>    
-                                    <button class="btn btn-primary">Fire Side-Chat detail</button>
+                                    <button class="btn btn-primary">Fire-Side Chat detail</button>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div>
                                 <div class="inner-carousel-content" style="justify-content:center;">
-                                    <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Leader's Talk</h1>
+                                    <h1 class="font-weight-bold" style="font-size:3em;color:#556489">Leaders' Talk</h1>
                                     <img src="{{asset('image/Lead-talk.png')}}" alt="" style="max-width:15em;" >
                                     <h4 class="text-justify">
                                         Leaders' Talk adalah acara seminar seputar bisnis dan teknologi dari para experts di bidangnya.
                                     </h4>
-                                    <button class="btn btn-primary">Leader's Talk detail</button>
+                                    <button class="btn btn-primary">Leaders' Talk detail</button>
                                 </div>
                             </div>
                         </div>
@@ -327,16 +329,16 @@
                 <a data-toggle="modal" style=" margin:0 2em;" data-target="#Sirclo"><img src="{{asset('image/logo/Sirclo.png')}}" style="max-width:15em; " alt=""></a>
             </div>
         </div>
-        {{-- <div class="sponsor-header">
+        <div class="sponsor-header">
             <span></span>
-            <h1>Media Partner's</h1>
+            <h1>Media Partner</h1>
             <span></span>
         </div>
         <div class="d-flex justify-content-center align-items-center" style="width:100%;">
             <div class="d-flex justify-content-center align-items-center" style="flex-flow:wrap;">
-                <img src="{{asset('image/404.png')}}" style="max-width:20em; margin:2em;" alt="">
+                <img src="{{asset('image/medpart.png')}}" style="max-width:85%; margin:0 0 2em 0;" alt="">
             </div>
-        </div> --}}
+        </div>
     </div >
     <div class="faq row" id="faq">
         <div class="row col-xs-12 col-md-12 col-xl-10 col-lg-10" style="margin:0;display:flex;justify-content:center;align-items:center;">
@@ -399,7 +401,7 @@
         </div>
     </div>
     <div class="location" id="location">
-        <div id="map"></div>
+        {{-- <div id="map"></div> --}}
         <div class="content-map">
             <h1 style="color:white;font-size:2.5em;font-weight:bold;">Location</h1>
             <div style="color:white;margin-top:1.2em;">
@@ -765,6 +767,13 @@
         </div>
     </div>
     <!--End Modals-->
+    <div class="modal fade" id="Tiket" tabindex="-1" role="dialog" aria-labelledby="Tiket" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                <img src="{{asset('')}}" alt="">
+                </div>
+            </div>
+        </div>
     <div id="footer" class="footer container-fluid row" style="width:100%; margin:0;background-color:#365676;">
         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 d-flex justify-kiri">
             <div style="max-width:10em;">
@@ -780,8 +789,8 @@
         </div>
     </div>
  </div> 
+
 <script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/landing-page.js')}}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWjXXUDGAmsn2Ac1_-oRQUgDG7sNTQbWw&callback=initMap" async defer></script>
 </body>
 </html>
