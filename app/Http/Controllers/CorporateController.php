@@ -21,6 +21,12 @@ class CorporateController extends Controller
         return view('corporate.corporate-dashboard');
     }
 
+    public function showAttendees()
+    {
+        $attendees = AttendBooth::where('corporate_id', Auth::user()->id)->get();
+        return view('corporate.show-attendee', compact('attendees'));
+    }
+
     public function attendBooth(Request $request)
     {
         $this->validate($request,[
